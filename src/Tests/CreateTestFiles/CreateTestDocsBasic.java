@@ -10,7 +10,7 @@ import java.util.concurrent.ThreadLocalRandom;
  * This class will create a number of text documents in the given folder that will increment episodes and season to
  * replicate what the classes will be working with.
  */
-public class CreateTestDocs {
+public class CreateTestDocsBasic {
 
     /**
      * Creates a directory in the given directory and with the given name for directory
@@ -53,11 +53,11 @@ public class CreateTestDocs {
      * to be used in testing class
      */
     public static void createDirAndFiles() {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 1; i <=10; i++) {
             String seriesName = "The series of " + i;
             createDirectory(seriesName);
             int numberOfEps = ThreadLocalRandom.current().nextInt(8, 16);
-            for(int j = 0; j < numberOfEps; j++) {
+            for(int j = 1; j <=numberOfEps; j++) {
                 String fileName = "episode: " + j;
                 createTextDocs(fileName, seriesName);
             }
@@ -65,7 +65,7 @@ public class CreateTestDocs {
     }
 
     public static void main(String[] args) {
-        //createDirAndFiles();
+        createDirAndFiles();
     }
 }
 
