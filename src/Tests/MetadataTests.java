@@ -15,6 +15,10 @@ public class MetadataTests {
     /** When the app initially scans the folder and creates a list of different programs
      *  it should have each folder as a series object with first episode as the instance variable
      */
+
+    /** When taking the initial data it takes the first then the last from the directories and
+     *  then iterates normally through
+     */
     @Test
     public void checkInitialSeasons() {
         GetSeriesInfo series = new GetSeriesInfo();

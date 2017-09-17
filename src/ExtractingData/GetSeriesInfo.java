@@ -1,16 +1,18 @@
 package ExtractingData;
 
+import Formatting.NaturalOrderComparator;
 import Metadata.Series;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Scans the given folder and adds the details of series and first episode to a map
  */
 public class GetSeriesInfo {
+
+    private List<Series> seriesList = new ArrayList<>();
 
     //TODO: find name of each series and then create an object for that series and then add the first episode as the current episode
 
@@ -36,24 +38,26 @@ public class GetSeriesInfo {
      * For files walk through then for the first item file encountered make a Series object adding the file
      * then go through until it goes to another directory
      */
-
+    //TODO: try to optimise this method
     /**
      * Creates a list of Series objects that sets the first episode in each folder as first ep in
      * series object
      */
-
     public List<Series> initialScan(File filePath) {
 
-        List<Series> list = new ArrayList<>();
         for (final File fileEntry : filePath.listFiles()) {
             if (fileEntry.isDirectory()) {
                 initialScan(fileEntry);
             } else {
-                File series = fileEntry.getParentFile();
+                String seriesName = fileEntry.getParentFile().getName();
+                if(!isSeriesIncluded(seriesList, seriesName)){
+                    Series toAdd = new Series(seriesName, fileEntry.getName());
+                    seriesList.add(toAdd);
+                }
             }
         }
 
-        return list;
+        return seriesList;
     }
 
     /**
@@ -78,18 +82,22 @@ public class GetSeriesInfo {
         return false;
     }
 
+
+// TODO: delete this method when no longer testing file  path names
     /** Change the method to print different File paths */
     private static void printFile(File filePath) {
         String toString = filePath.toString();
         System.out.println(toString);
+        File parent = filePath.getParentFile();
+        System.out.println(parent.getName());
     }
 
-
-// TODO: most likely best way to iterate through will be using a graph with a boolean for if its
-//       been checked or not
-
     public static void main(String[] args) {
-        File file = new File("series/The series of 0/Episode 0");
-        printFile(file);
+        GetSeriesInfo seriesInfo = new GetSeriesInfo();
+        File file = new File("series/");
+        File[] files = file.listFiles();
+        List<Series> test = seriesInfo.initialScan(file);
+        Collections.sort(test, new NaturalOrderComparator());
+        System.out.println("size of series: " + test.size());
     }
 }

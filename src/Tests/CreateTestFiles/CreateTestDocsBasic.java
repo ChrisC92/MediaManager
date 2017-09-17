@@ -53,16 +53,29 @@ public class CreateTestDocsBasic {
      * to be used in testing class
      */
     public static void createDirAndFiles() {
-        for (int i = 1; i <=10; i++) {
+        for (int i = 1; i <= 12; i++) {
             String seriesName = "The series of " + i;
             createDirectory(seriesName);
             int numberOfEps = ThreadLocalRandom.current().nextInt(8, 16);
-            for(int j = 1; j <=numberOfEps; j++) {
-                String fileName = "episode: " + j;
-                createTextDocs(fileName, seriesName);
+            for (int j = 1; j <= numberOfEps; j++) {
+//                if (numberOfEps > 9) {
+//                    fileName = writeName("episode:", j);
+//                    createTextDocs(fileName, seriesName);
+//                } else {
+                    String fileName = "episode: " + j;
+                    createTextDocs(fileName, seriesName);
+                }
             }
         }
+//    }
+
+    private static String writeName(String name, int epNum) {
+        if (epNum < 10) {
+            return name + "0" + epNum;
+        }
+        return name + epNum;
     }
+
 
     public static void main(String[] args) {
         createDirAndFiles();

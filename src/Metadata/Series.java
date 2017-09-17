@@ -1,5 +1,7 @@
 package Metadata;
 
+import java.util.Comparator;
+
 /**
  * The series class stores each series as a separate object - holds information on the season and current episode
  */
@@ -25,5 +27,11 @@ public class Series {
 
     public void changeCurrentEp(String newCurrent) {
         currentEp = newCurrent;
+    }
+
+
+    @Override
+    public String toString() {
+        return season + "\nCurrent Episode: " + currentEp;
     }
 }
