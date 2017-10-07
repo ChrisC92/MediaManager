@@ -2,7 +2,6 @@ package ExtractingData;
 
 import Formatting.NaturalOrderComparator;
 import Metadata.Series;
-import Metadata.SeriesList;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.io.File;
@@ -13,8 +12,7 @@ import java.util.*;
  */
 public class GetSeriesInfo {
 
-    private List<Series> seriesList = new ArrayList<>();
-    private List<SeriesList> fullSeriesList = new ArrayList<>();
+    private List<Series> fullSeries = new ArrayList<>();
 
     //TODO: find name of each series and then create an object for that series and then add the first episode as the current episode
 
@@ -36,40 +34,16 @@ public class GetSeriesInfo {
     }
 
     /**
-     * TODO:
-     * For files walk through then for the first item file encountered make a Series object adding the file
-     * then go through until it goes to another directory
+     *  Takes the file path and goes through recursively through directories until it reaches a file and then looks
+     *  to store new SeriesFileFormat into the fullSeries variable and if the series is already contained then add the episode
+     *  into that object
+     *  TODO: getSeriesInfo() could be optimised
      */
-    //TODO: try to optimise this method
-    /**
-     * Creates a list of Series objects that sets the first episode in each folder as first ep in
-     * series object
-     */
-    public List<Series> initialScan(File filePath) {
-
-        for (File fileEntry : filePath.listFiles()) {
-            if (fileEntry.isDirectory()) {
-                initialScan(fileEntry);
-            } else {
-                String seriesName = fileEntry.getParentFile().getName();
-                if(!isSeriesIncluded(seriesName)){
-                    Series toAdd = new Series(seriesName, fileEntry.getName());
-                    seriesList.add(toAdd);
-                }
-            }
-        }
-
-        return seriesList;
-    }
-
-    /**
-     *  Method works similarily to the one above however adds all episodes in with the SeriesList class
-     */
-    public List<SeriesList> getInitialInfo(File filePath) {
+    public List<Series> getSeriesInfo(File filePath) {
 
         for(File fileEntry : filePath.listFiles()) {
             if(fileEntry.isDirectory()) {
-                getInitialInfo(fileEntry);
+                getSeriesInfo(fileEntry);
             } else {
                 String seriesName = fileEntry.getParentFile().getName();
                 String episodeName = fileEntry.getName();
@@ -77,19 +51,19 @@ public class GetSeriesInfo {
                  * if it does not contain the series then add the series, first ep and make first ep current ep
                  * if it does contain the series add the episode to the list within the series object
                  */
-                if(isSeriesInlcudedList(seriesName)) {
+                if(isSeriesInlcuded(seriesName)) {
                     addEpisode(seriesName, episodeName);
                 } else {
-                    SeriesList firstSeries = new SeriesList(seriesName);
+                    Series firstSeries = new Series(seriesName);
                     firstSeries.addEpisode(episodeName);
                     firstSeries.setCurrentEp(episodeName);
-                    fullSeriesList.add(firstSeries);
+                    fullSeries.add(firstSeries);
                 }
 
             }
         }
 
-        return fullSeriesList;
+        return fullSeries;
     }
 
     /**
@@ -102,21 +76,9 @@ public class GetSeriesInfo {
         throw new NotImplementedException();
     }
 
-    /**
-     *  Iterates through the list of series and checks if the series is already contained
-     *  in the list and returns true if it does
-     */
-    private boolean isSeriesIncluded(String seriesName) {
-        for(Series series : seriesList) {
-            if(series.getSeasonName().equals(seriesName)) {
-                return true;
-            }
-        }
-        return false;
-    }
 
-    private boolean isSeriesInlcudedList(String seriesName) {
-        for(SeriesList series : fullSeriesList) {
+    private boolean isSeriesInlcuded(String seriesName) {
+        for(Series series : fullSeries) {
             if(series.getSeriesName().equals(seriesName)) {
                 return true;
             }
@@ -128,7 +90,7 @@ public class GetSeriesInfo {
      *  Iterates through the list of series and adds the episode to the correct series
      */
     private void addEpisode(String seriesName, String episodeName) {
-        for(SeriesList series : fullSeriesList) {
+        for(Series series : fullSeries) {
             if(series.getSeriesName().equals(seriesName)) {
                 series.addEpisode(episodeName);
             }
@@ -146,7 +108,7 @@ public class GetSeriesInfo {
     }
 
     private void sortEpisodes() {
-        for(SeriesList series : fullSeriesList) {
+        for(Series series : fullSeries) {
             series.naturalOrdering();
         }
     }
@@ -156,11 +118,13 @@ public class GetSeriesInfo {
         File file = new File("series/");
         File[] files = file.listFiles();
         Arrays.sort(files, new NaturalOrderComparator());
-//        List<Series> test = seriesInfo.initialScan(file);
-        List<SeriesList> test = seriesInfo.getInitialInfo(file);
+//        List<SeriesFileFormat> test = getSeriesInfo.initialScan(file);
+        List<Series> test = seriesInfo.getSeriesInfo(file);
         seriesInfo.sortEpisodes();
         System.out.println("size of series: " + test.size());
     }
 }
 
-//TODO: The code does natural ordering for epsisodes however not for series since theres no arrayList of strings for series
+//TODO: The code does natural ordering for episodes however not for series since theres no arrayList of strings for series
+//TODO: Create a method for sensing if this natural ordering will even be neccesary as most series files
+        // have the format of S01E11

@@ -1,7 +1,10 @@
+package Tests;
+
 import static org.junit.Assert.*;
 
 import ExtractingData.GetSeriesInfo;
 import Metadata.Series;
+import Metadata.SeriesFileFormat;
 import org.junit.Test;
 import java.io.File;
 import java.util.List;
@@ -23,12 +26,12 @@ public class MetadataTests {
     public void checkInitialSeasons() {
         GetSeriesInfo series = new GetSeriesInfo();
         File filePath = new File("series/");
-        List<Series> listSeries = series.initialScan(filePath);
-        String s01Name = listSeries.get(0).getSeasonName();
+        List<Series> listSeries = series.getSeriesInfo(filePath);
+        String s01Name = listSeries.get(0).getSeriesName();
         String expS01Name = "The series of 1";
         assertEquals(expS01Name, s01Name);
-        String s02Name = listSeries.get(1).getSeasonName();
-        String expS02Name = "The series of 2";
+        String s02Name = listSeries.get(1).getSeriesName();
+        String expS02Name = "The series of 10";
         assertEquals(expS02Name, s02Name);
     }
 
@@ -36,11 +39,11 @@ public class MetadataTests {
     public void checkInitialEpisodes() {
         GetSeriesInfo series = new GetSeriesInfo();
         File filePath = new File("series/");
-        List<Series> listSeries = series.initialScan(filePath);
-        String s01ep01Name = listSeries.get(0).currentEp();
+        List<Series> listSeries = series.getSeriesInfo(filePath);
+        String s01ep01Name = listSeries.get(0).getCurrentEp();
         String expEpName = "episode: 1";
         assertEquals(expEpName, s01ep01Name);
-        String s02e01Name = listSeries.get(1).currentEp();
+        String s02e01Name = listSeries.get(1).getCurrentEp();
         assertEquals(expEpName, s02e01Name);
     }
 
