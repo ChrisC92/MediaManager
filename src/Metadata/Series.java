@@ -1,6 +1,5 @@
 package Metadata;
 
-import java.util.Comparator;
 
 /**
  * The series class stores each series as a separate object - holds information on the season and current episode
