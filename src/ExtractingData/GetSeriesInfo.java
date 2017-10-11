@@ -1,6 +1,6 @@
 package ExtractingData;
 
-import Formatting.NaturalOrderComparator;
+import Formatting.SeriesNatOrderComparator;
 import Metadata.Series;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
@@ -13,6 +13,10 @@ import java.util.*;
 public class GetSeriesInfo {
 
     private List<Series> fullSeries = new ArrayList<>();
+
+    public GetSeriesInfo(File filePath) {
+        this.fullSeries = this.getSeriesInfo(filePath);
+    }
 
     //TODO: find name of each series and then create an object for that series and then add the first episode as the current episode
 
@@ -34,15 +38,14 @@ public class GetSeriesInfo {
     }
 
     /**
-     *  Takes the file path and goes through recursively through directories until it reaches a file and then looks
-     *  to store new SeriesFileFormat into the fullSeries variable and if the series is already contained then add the episode
-     *  into that object
-     *  TODO: getSeriesInfo() could be optimised
+     * Takes the file path and goes through recursively through directories until it reaches a file and then looks
+     * to store new SeriesFileFormat into the fullSeries variable and if the series is already contained then add the episode
+     * into that object
+     * TODO: getSeriesInfo() could be optimised
      */
     public List<Series> getSeriesInfo(File filePath) {
-
-        for(File fileEntry : filePath.listFiles()) {
-            if(fileEntry.isDirectory()) {
+        for (File fileEntry : filePath.listFiles()) {
+            if (fileEntry.isDirectory()) {
                 getSeriesInfo(fileEntry);
             } else {
                 String seriesName = fileEntry.getParentFile().getName();
@@ -51,7 +54,7 @@ public class GetSeriesInfo {
                  * if it does not contain the series then add the series, first ep and make first ep current ep
                  * if it does contain the series add the episode to the list within the series object
                  */
-                if(isSeriesInlcuded(seriesName)) {
+                if (isSeriesInlcuded(seriesName)) {
                     addEpisode(seriesName, episodeName);
                 } else {
                     Series firstSeries = new Series(seriesName);
@@ -62,7 +65,6 @@ public class GetSeriesInfo {
 
             }
         }
-
         return fullSeries;
     }
 
@@ -78,8 +80,8 @@ public class GetSeriesInfo {
 
 
     private boolean isSeriesInlcuded(String seriesName) {
-        for(Series series : fullSeries) {
-            if(series.getSeriesName().equals(seriesName)) {
+        for (Series series : fullSeries) {
+            if (series.getSeriesName().equals(seriesName)) {
                 return true;
             }
         }
@@ -87,11 +89,11 @@ public class GetSeriesInfo {
     }
 
     /**
-     *  Iterates through the list of series and adds the episode to the correct series
+     * Iterates through the list of series and adds the episode to the correct series
      */
     private void addEpisode(String seriesName, String episodeName) {
-        for(Series series : fullSeries) {
-            if(series.getSeriesName().equals(seriesName)) {
+        for (Series series : fullSeries) {
+            if (series.getSeriesName().equals(seriesName)) {
                 series.addEpisode(episodeName);
             }
         }
@@ -99,7 +101,10 @@ public class GetSeriesInfo {
 
 
 // TODO: delete this method when no longer testing file  path names
-    /** Change the method to print different File paths */
+
+    /**
+     * Change the method to print different File paths
+     */
     private static void printFile(File filePath) {
         String toString = filePath.toString();
         System.out.println(toString);
@@ -108,23 +113,33 @@ public class GetSeriesInfo {
     }
 
     private void sortEpisodes() {
-        for(Series series : fullSeries) {
+        for (Series series : fullSeries) {
             series.naturalOrdering();
         }
     }
 
+    private void printList() {
+        for(Series series : fullSeries) {
+            System.out.println(series.getSeriesName());
+        }
+    }
+
+    private List<Series> getSeriesList() {
+        return fullSeries;
+    }
+
     public static void main(String[] args) {
-        GetSeriesInfo seriesInfo = new GetSeriesInfo();
         File file = new File("series/");
-        File[] files = file.listFiles();
-        Arrays.sort(files, new NaturalOrderComparator());
-//        List<SeriesFileFormat> test = getSeriesInfo.initialScan(file);
-        List<Series> test = seriesInfo.getSeriesInfo(file);
+        GetSeriesInfo seriesInfo = new GetSeriesInfo(file);
         seriesInfo.sortEpisodes();
-        System.out.println("size of series: " + test.size());
+        List<Series> test = seriesInfo.getSeriesList();
+        Collections.sort(test, new SeriesNatOrderComparator());
+        seriesInfo.printList();
+
+
     }
 }
 
 //TODO: The code does natural ordering for episodes however not for series since theres no arrayList of strings for series
 //TODO: Create a method for sensing if this natural ordering will even be neccesary as most series files
-        // have the format of S01E11
+// have the format of S01E11

@@ -24,8 +24,8 @@ public class MetadataTests {
      */
     @Test
     public void checkInitialSeasons() {
-        GetSeriesInfo series = new GetSeriesInfo();
         File filePath = new File("series/");
+        GetSeriesInfo series = new GetSeriesInfo(filePath);
         List<Series> listSeries = series.getSeriesInfo(filePath);
         String s01Name = listSeries.get(0).getSeriesName();
         String expS01Name = "The series of 1";
@@ -37,8 +37,8 @@ public class MetadataTests {
 
     @Test
     public void checkInitialEpisodes() {
-        GetSeriesInfo series = new GetSeriesInfo();
         File filePath = new File("series/");
+        GetSeriesInfo series = new GetSeriesInfo(filePath);
         List<Series> listSeries = series.getSeriesInfo(filePath);
         String s01ep01Name = listSeries.get(0).getCurrentEp();
         String expEpName = "episode: 1";

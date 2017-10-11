@@ -4,6 +4,7 @@ import Formatting.NaturalOrderComparator;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -18,7 +19,7 @@ public class Series {
 
     public Series(String series) {
         this.series = series;
-        this.episodes = new ArrayList<String>();
+        this.episodes = new ArrayList<>();
     }
 
     public void addEpisode(String epName) {
@@ -62,4 +63,5 @@ public class Series {
     public String getCurrentEp() {
         return currentEp;
     }
+
 }
