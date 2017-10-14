@@ -4,7 +4,6 @@ import Formatting.NaturalOrderComparator;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -15,36 +14,26 @@ public class Series {
 
     private final String series;
     private List<String> episodes;
-    private String currentEp;
+    private String currentEpisode;
 
     public Series(String series) {
         this.series = series;
         this.episodes = new ArrayList<>();
     }
 
+    //TODO: null checker for episodes
+
     public void addEpisode(String epName) {
-        episodes.add(epName);
+            episodes.add(epName);
     }
 
-    public void setCurrentEp(String epName) {
-        boolean containsEp = false;
-        for(String episode : episodes) {
-            if(episode.equals(epName)) {
-                currentEp = episode;
-                containsEp = true;
-            }
+    public void initialCurrentEpAssign(String epName) {
+            currentEpisode = epName;
         }
-
-        if(containsEp) {
-            System.out.println("Current episode has been changed to " + epName);
-        } else {
-            System.out.println(epName + " is not a valid episode. Current episode has not been changed");
-        }
-    }
 
     private boolean containsEp(String epName) {
-        for(String episode : episodes) {
-            if(episode.equals(epName)) {
+        for (String episode : episodes) {
+            if (episode.equals(epName)) {
                 return true;
             }
         }
@@ -55,13 +44,39 @@ public class Series {
         Collections.sort(episodes, new NaturalOrderComparator());
     }
 
-    //TODO: might be worth just making instance variables public
     public String getSeriesName() {
         return series;
     }
 
-    public String getCurrentEp() {
-        return currentEp;
+    public String getCurrentEpisode() {
+        return currentEpisode;
+    }
+
+    public String getEpisode(int index) {
+        if (index >= episodes.size() || index < 0) {
+            System.out.println("Index in valid, returning current episode");
+            return currentEpisode;
+        }
+        return episodes.get(index);
+    }
+
+    /**
+     * This method can be used for when the user wants to choose an episode
+     */
+    public void setCurrentEpisode(String epName) {
+        boolean containsEp = false;
+        for (String episode : episodes) {
+            if (episode.equals(epName)) {
+                currentEpisode = episode;
+                containsEp = true;
+            }
+        }
+
+        if (containsEp) {
+            System.out.println("Current episode has been changed to " + epName);
+        } else {
+            System.out.println(epName + " is not a valid episode. Current episode has not been changed");
+        }
     }
 
 }
