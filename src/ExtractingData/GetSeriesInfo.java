@@ -1,5 +1,6 @@
 package ExtractingData;
 
+import Formatting.SeriesNatOrderComparator;
 import Metadata.Series;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
@@ -17,8 +18,23 @@ public class GetSeriesInfo {
         this.fullSeries = this.getSeriesInfo(filePath);
     }
 
-    public List<Series> getSeriesList() {
-        return fullSeries;
+    //TODO: find name of each series and then create an object for that series and then add the first episode as the current episode
+
+    /**
+     * This method will recursively walk through given folders and list all file names
+     * inside of the this folder
+     */
+    public static void listFiles(File folder) {
+        for (final File fileEntry : folder.listFiles()) {
+            if (!fileEntry.toString().equals("series/.DS_Store")) {
+                if (fileEntry.isDirectory()) {
+                    listFiles(fileEntry);
+                } else {
+                    System.out.println("folder above - " + fileEntry.getParentFile());
+                    System.out.println(fileEntry.getName());
+                }
+            }
+        }
     }
 
     /**
@@ -27,17 +43,13 @@ public class GetSeriesInfo {
      * into that object
      * TODO: getSeriesInfo() could be optimised
      */
-    //TODO: Filter out hidden files for .DS_Store
-    private List<Series> getSeriesInfo(File filePath) {
+    public List<Series> getSeriesInfo(File filePath) {
         for (File fileEntry : filePath.listFiles()) {
             if (fileEntry.isDirectory()) {
                 getSeriesInfo(fileEntry);
             } else {
                 String seriesName = fileEntry.getParentFile().getName();
                 String episodeName = fileEntry.getName();
-                if(episodeName.equals(".DS_Store")){
-                    continue;
-                }
                 /**
                  * if it does not contain the series then add the series, first ep and make first ep current ep
                  * if it does contain the series add the episode to the list within the series object
@@ -47,7 +59,7 @@ public class GetSeriesInfo {
                 } else {
                     Series firstSeries = new Series(seriesName);
                     firstSeries.addEpisode(episodeName);
-                    firstSeries.initialCurrentEpAssign(episodeName);
+                    firstSeries.setCurrentEp(episodeName);
                     fullSeries.add(firstSeries);
                 }
 
@@ -88,6 +100,18 @@ public class GetSeriesInfo {
     }
 
 
+// TODO: delete this method when no longer testing file  path names
+
+    /**
+     * Change the method to print different File paths
+     */
+    private static void printFile(File filePath) {
+        String toString = filePath.toString();
+        System.out.println(toString);
+        File parent = filePath.getParentFile();
+        System.out.println(parent.getName());
+    }
+
     private void sortEpisodes() {
         for (Series series : fullSeries) {
             series.naturalOrdering();
@@ -99,14 +123,23 @@ public class GetSeriesInfo {
             System.out.println(series.getSeriesName());
         }
     }
+
+    private List<Series> getSeriesList() {
+        return fullSeries;
+    }
+
+    public static void main(String[] args) {
+        File file = new File("series/");
+        GetSeriesInfo seriesInfo = new GetSeriesInfo(file);
+        seriesInfo.sortEpisodes();
+        List<Series> test = seriesInfo.getSeriesList();
+        Collections.sort(test, new SeriesNatOrderComparator());
+        seriesInfo.printList();
+
+
+    }
 }
 
-/**
- *  TODO: This will now bypass any stray epsiodes in the as the continue in the seriesInfo() method
- *  will skip over it
- *
- *  This will normally take the actual initial folder as a series which isn't needed unless
- *  there are stray episodes in the folder, one way to fix this would be a method to
- *  see if the first folder in the array of Series objects is empty and if so delete it
- *  but if there are episoedes rename it to 'Unsorted episodes
- */
+//TODO: The code does natural ordering for episodes however not for series since theres no arrayList of strings for series
+//TODO: Create a method for sensing if this natural ordering will even be neccesary as most series files
+// have the format of S01E11

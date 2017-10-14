@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import ExtractingData.GetSeriesInfo;
 import Metadata.Series;
+import Metadata.SeriesFileFormat;
 import org.junit.Test;
 import java.io.File;
 import java.util.List;
@@ -12,7 +13,7 @@ import java.util.List;
 /**
  * The following tests are used to check that classes take the correct and expected data from the files
  */
-public class TestDataInitialTests {
+public class MetadataTests {
 
     /** When the app initially scans the folder and creates a list of different programs
      *  it should have each folder as a series object with first episode as the instance variable
@@ -25,7 +26,7 @@ public class TestDataInitialTests {
     public void checkInitialSeasons() {
         File filePath = new File("series/");
         GetSeriesInfo series = new GetSeriesInfo(filePath);
-        List<Series> listSeries = series.getSeriesList();
+        List<Series> listSeries = series.getSeriesInfo(filePath);
         String s01Name = listSeries.get(0).getSeriesName();
         String expS01Name = "The series of 1";
         assertEquals(expS01Name, s01Name);
@@ -38,11 +39,11 @@ public class TestDataInitialTests {
     public void checkInitialEpisodes() {
         File filePath = new File("series/");
         GetSeriesInfo series = new GetSeriesInfo(filePath);
-        List<Series> listSeries = series.getSeriesList();
-        String s01ep01Name = listSeries.get(0).getCurrentEpisode();
+        List<Series> listSeries = series.getSeriesInfo(filePath);
+        String s01ep01Name = listSeries.get(0).getCurrentEp();
         String expEpName = "episode: 1";
         assertEquals(expEpName, s01ep01Name);
-        String s02e01Name = listSeries.get(1).getCurrentEpisode();
+        String s02e01Name = listSeries.get(1).getCurrentEp();
         assertEquals(expEpName, s02e01Name);
     }
 
