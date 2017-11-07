@@ -5,12 +5,12 @@
 # Your branch is up-to-date with 'origin/master'.
 #
 # Changes to be committed:
-#	modified:   out/production/MediaManager/ExtractingData/GetSeriesInfo.class
-#	modified:   out/production/MediaManager/Metadata/Series.class
-#	new file:   out/production/MediaManager/Metadata/SeriesList.class
-#	modified:   src/ExtractingData/GetSeriesInfo.java
-#	modified:   src/Metadata/Series.java
-#	new file:   src/Metadata/SeriesList.java
+#	modified:   out/production/MediaManager/extractingData/GetSeriesInfo.class
+#	modified:   out/production/MediaManager/metadata/Series.class
+#	new file:   out/production/MediaManager/metadata/SeriesList.class
+#	modified:   src/extractingData/GetSeriesInfo.java
+#	modified:   src/metadata/Series.java
+#	new file:   src/metadata/SeriesList.java
 #
 # Untracked files:
 #	.DS_Store
