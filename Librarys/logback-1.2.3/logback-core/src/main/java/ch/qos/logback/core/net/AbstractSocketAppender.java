@@ -388,7 +388,7 @@ public abstract class AbstractSocketAppender<E> extends AppenderBase<E> implemen
     }
 
     /**
-     * Sets the timeout that controls how long we'll wait for the remote
+     * Sets the timeout that actions how long we'll wait for the remote
      * peer to accept our connection attempt.
      * <p>
      * This property is configurable primarily to support instrumentation

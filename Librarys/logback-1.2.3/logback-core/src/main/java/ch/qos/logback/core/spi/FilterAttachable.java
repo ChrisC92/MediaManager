@@ -18,7 +18,7 @@ import java.util.List;
 import ch.qos.logback.core.filter.Filter;
 
 /**
- * menuControls for attaching filters to objects.
+ * menu for attaching filters to objects.
  * 
  * @author Ceki G&uuml;lc&uuml;
  */

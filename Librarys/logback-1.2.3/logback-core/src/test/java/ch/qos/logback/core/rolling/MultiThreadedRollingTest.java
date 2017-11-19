@@ -198,7 +198,7 @@ public class MultiThreadedRollingTest {
         out("");
         out("for t in $(seq 0 1 " + (NUM_THREADS - 1) + ")");
         out("do");
-        out("  echo \"Testing results of thread $t\"");
+        out("  echo \"UsingVLCJ results of thread $t\"");
         out("  grep \"$t \" aggregated | cut -d ' ' -f 2 > ${t}-sample");
         out("  for j in $(seq 1 1 ${end[$t]}); do echo $j; done > ${t}-witness");
         out("  diff -q -w ${t}-sample ${t}-witness;");

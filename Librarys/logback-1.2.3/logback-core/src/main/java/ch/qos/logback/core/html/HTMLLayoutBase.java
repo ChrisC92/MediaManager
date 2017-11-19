@@ -49,7 +49,7 @@ public abstract class HTMLLayoutBase<E> extends LayoutBase<E> {
     protected long counter = 0;
 
     /**
-     * Set the <b>ConversionPattern </b> option. This is the string which controls
+     * Set the <b>ConversionPattern </b> option. This is the string which actions
      * formatting and consists of a mix of literal content and conversion
      * specifiers.
      */

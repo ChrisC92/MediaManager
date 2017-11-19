@@ -18,7 +18,7 @@ import java.util.Iterator;
 import ch.qos.logback.core.Appender;
 
 /**
- * menuControls for attaching appenders to objects.
+ * menu for attaching appenders to objects.
  * 
  * @author Ceki G&uuml;lc&uuml;
  */

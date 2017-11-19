@@ -1,19 +1,16 @@
+//TODO: tutorial for resizing: http://capricasoftware.co.uk/#/projects/vlcj/tutorial/direct-rendering
+//TODO: add in actions: http://capricasoftware.co.uk/#/projects/vlcj/tutorial/basic-controls
 package videoPlayer;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.GraphicsEnvironment;
+import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.image.BufferedImage;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.SwingUtilities;
+import javax.swing.*;
 
 import uk.co.caprica.vlcj.component.DirectMediaPlayerComponent;
+import uk.co.caprica.vlcj.component.EmbeddedMediaPlayerComponent;
 import uk.co.caprica.vlcj.discovery.NativeDiscovery;
 import uk.co.caprica.vlcj.player.direct.BufferFormat;
 import uk.co.caprica.vlcj.player.direct.BufferFormatCallback;
@@ -22,6 +19,10 @@ import uk.co.caprica.vlcj.player.direct.RenderCallback;
 import uk.co.caprica.vlcj.player.direct.RenderCallbackAdapter;
 import uk.co.caprica.vlcj.player.direct.format.RV32BufferFormat;
 
+/**
+ *  This class uses VLC to open up the file given as a string file path
+ *  directly renders the video using swing
+ */
 public class VLCPlayerSwing {
 
     private static final int width = 600;
@@ -36,18 +37,18 @@ public class VLCPlayerSwing {
 
     private final DirectMediaPlayerComponent mediaPlayerComponent;
 
-    public static void main(final String[] args) {
+    public static void playFile(String filePath) {
         new NativeDiscovery().discover();
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new VLCPlayerSwing(args);
+                new VLCPlayerSwing(filePath);
             }
         });
     }
 
-    public VLCPlayerSwing(String[] args) {
-        frame = new JFrame("Direct Media Player");
+    public VLCPlayerSwing(String filePath) {
+        frame = new JFrame("Play Media");
         frame.setBounds(100, 100, width, height);
         frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         frame.addWindowListener(new WindowAdapter() {
@@ -75,8 +76,9 @@ public class VLCPlayerSwing {
                 return new TutorialRenderCallbackAdapter();
             }
         };
+
         frame.setVisible(true);
-        mediaPlayerComponent.getMediaPlayer().playMedia(args[0]);
+        mediaPlayerComponent.getMediaPlayer().playMedia(filePath);
     }
 
     private class VideoSurfacePanel extends JPanel {

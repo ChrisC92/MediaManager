@@ -224,7 +224,7 @@
 
 <!ENTITY % form.content "(%block; | %misc;)*">
 
-<!-- button uses %Flow; but excludes a, form and form controls -->
+<!-- button uses %Flow; but excludes a, form and form actions -->
 
 <!ENTITY % button.content
    "(#PCDATA | p | %heading; | div | %lists; | %blocktext; |
@@ -800,7 +800,7 @@
   >
 
 <!--
- Content is %Flow; excluding a, form and form controls
+ Content is %Flow; excluding a, form and form actions
 --> 
 <!ELEMENT button %button.content;>  <!-- push button -->
 <!ATTLIST button

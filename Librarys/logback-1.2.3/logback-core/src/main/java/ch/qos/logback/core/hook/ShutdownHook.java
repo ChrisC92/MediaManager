@@ -16,7 +16,7 @@ package ch.qos.logback.core.hook;
 import ch.qos.logback.core.spi.ContextAware;
 
 /**
- * menuControls describing a logback shutdown hook implementation
+ * menu describing a logback shutdown hook implementation
  * 
  * @author Mike Reinhold
  */

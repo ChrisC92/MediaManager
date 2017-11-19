@@ -2,7 +2,7 @@ package tests;
 
 import static org.junit.Assert.*;
 
-import extractingData.GetSeriesInfo;
+import extractingData.SeriesList;
 import metadata.Series;
 import org.junit.Test;
 import java.io.File;
@@ -24,7 +24,7 @@ public class TestDataInitialTests {
     @Test
     public void checkInitialSeasons() {
         File filePath = new File("series/");
-        GetSeriesInfo series = new GetSeriesInfo(filePath);
+        SeriesList series = new SeriesList(filePath);
         List<Series> listSeries = series.getSeriesList();
         String s01Name = listSeries.get(0).getSeriesName();
         String expS01Name = "The series of 1";
@@ -37,7 +37,7 @@ public class TestDataInitialTests {
     @Test
     public void checkInitialEpisodes() {
         File filePath = new File("series/");
-        GetSeriesInfo series = new GetSeriesInfo(filePath);
+        SeriesList series = new SeriesList(filePath);
         List<Series> listSeries = series.getSeriesList();
         String s01ep01Name = listSeries.get(0).getCurrentEpisode();
         String expEpName = "episode: 1";

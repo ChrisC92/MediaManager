@@ -890,7 +890,7 @@ public interface RollingPolicy extends LifeCycle {
        <td><span class="prop" container="tbrp">maxHistory</span></td>
        <td>int</td>
        <td>The optional <span class="prop">maxHistory</span> property
-       controls the maximum number of archive files to keep,
+       actions the maximum number of archive files to keep,
        asynchronously deleting older files. For example, if you
        specify monthly rollover, and set maxHistory to 6, then 6
        months worth of archives files will be kept with files older
@@ -904,7 +904,7 @@ public interface RollingPolicy extends LifeCycle {
        <td><span class="prop" container="tbrp">totalSizeCap</span></td>
        <td>int</td>
        <td><p>The optional <span class="prop">totalSizeCap</span>
-       property controls the total size of all archive files. Oldest
+       property actions the total size of all archive files. Oldest
        archives are deleted asynchronously when the total size cap is
        exceeded. The <span class="prop">totalSizeCap</span> property
        requires <span class="option">maxHistory</span> property to be
@@ -1138,7 +1138,7 @@ public interface RollingPolicy extends LifeCycle {
 	 roll over.
    </p>
 	
-   <p>The <span class="prop">maxHistory</span> property controls the
+   <p>The <span class="prop">maxHistory</span> property actions the
    maximum number of archive files to keep, deleting older files. For
    example, if you specify monthly rollover, and set <span
    class="prop">maxHistory</span> to 6, then 6 months worth of

@@ -19,7 +19,7 @@ import java.util.Collection;
 import java.util.Set;
 
 /**
- * menuControls for tracking various components by key. Components which have not
+ * menu for tracking various components by key. Components which have not
  * been accessed for more than a user-specified duration are deemed stale and
  * removed. Components can also be explicitly marked as having reached their
  * {@link #endOfLife(String)} in which case they will linger for a few seconds

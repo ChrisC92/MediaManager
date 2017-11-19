@@ -18,7 +18,7 @@ import java.io.File;
 import ch.qos.logback.core.spi.LifeCycle;
 
 /**
- * A <code>TriggeringPolicy</code> controls the conditions under which roll-over
+ * A <code>TriggeringPolicy</code> actions the conditions under which roll-over
  * occurs. Such conditions include time of day, file size, an 
  * external event, the log request or a combination thereof.
  *

@@ -255,7 +255,7 @@ public class ScaffoldingForRollingTests {
             assert ((entries.hasMoreElements()));
             ZipEntry firstZipEntry = entries.nextElement();
             assert ((!entries.hasMoreElements()));
-            System.out.println("Testing zip entry [" + firstZipEntry.getName() + "]");
+            System.out.println("UsingVLCJ zip entry [" + firstZipEntry.getName() + "]");
             assertTrue(firstZipEntry.getName().matches(pattern));
         } finally {
             if (zf != null)

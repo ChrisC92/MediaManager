@@ -82,12 +82,3 @@ public class CreateTestDocsBasic {
     }
 }
 
-
-// TODO: Multiple folders within series problem
-/**
- * Problem would be that sometimes the series folder will contain subfolders of series and sometimes will not
- * choices would be to have the code regonise and not both that they are seperated from folders
- * or to rearrange the files in such that all seaons are held in the one folder (moving files without asking user)
- */
-
-

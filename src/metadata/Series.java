@@ -7,7 +7,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Same as the series class however this class will keep all the episodes that is read through the GetSeriesInfo Class
+ * Same as the series class however this class will keep all the episodes that is read through the SeriesList Class
  * in an array list
  */
 public class Series {
@@ -80,6 +80,15 @@ public class Series {
             System.out.println("Current episode has been changed to " + epName);
         } else {
             System.out.println(epName + " is not a valid episode. Current episode has not been changed");
+        }
+    }
+
+    public void printEpisodes() {
+        int index = 1;
+        System.out.println("Current episode: " + currentEpisode);
+        for(String episode : episodes) {
+            System.out.println(index + ". " + episode);
+            index += 1;
         }
     }
 
