@@ -83,6 +83,10 @@ public class Series {
         }
     }
 
+    public void setCurrentEpisode(int index) {
+        currentEpisode = episodes.get(index-1);
+    }
+
     public void printEpisodes() {
         int index = 1;
         System.out.println("Current episode: " + currentEpisode);

@@ -1,6 +1,6 @@
 package tests;
 
-import extractingData.SeriesList;
+import metadata.SeriesList;
 import metadata.Series;
 import org.junit.Test;
 

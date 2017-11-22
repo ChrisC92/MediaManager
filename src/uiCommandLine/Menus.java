@@ -1,6 +1,6 @@
 package uiCommandLine;
 
-import extractingData.SeriesList;
+import metadata.SeriesList;
 import metadata.Series;
 
 import java.io.File;
