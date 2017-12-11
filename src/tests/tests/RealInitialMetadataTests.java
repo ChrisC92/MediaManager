@@ -27,7 +27,7 @@ public class RealInitialMetadataTests {
         File filePath = new File("/Users/ChrisCorner/Documents/Films_Series/Series");
         SeriesList seriesInfo = new SeriesList(filePath);
         List<Series> seriesList = seriesInfo.getSeriesList();
-        seriesInfo.printSeriesNames();
+        seriesInfo.printSeriesList();
         String expectedS01 = "Adventure Time - Season 7";
         String actualS01 = seriesList.get(0).getSeriesName();
         assertEquals(expectedS01, actualS01);

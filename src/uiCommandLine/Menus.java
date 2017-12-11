@@ -28,7 +28,7 @@ public class Menus {
         File filePath = new File(stringPath);
         if (filePath.exists()) {
             SeriesList seriesInfo = new SeriesList(filePath);
-            seriesInfo.printSeriesNames();
+            seriesInfo.printSeriesList();
             System.out.println("Has the data been extracted correctly? \n 'yes or no'");
             String userConfirm = "yes";
             //String userConfirm = kb.nextLine();
@@ -47,14 +47,14 @@ public class Menus {
         System.out.println("Media Manager");
         System.out.println("\nList of SeriesFileFormat: ");
         System.out.println("Enter the number of the season you want to watch, it will bring a list of episodes");
-        seriesList.printSeriesNames();
+        seriesList.printSeriesList();
         System.out.println("Please enter a number");
         int userInput = userInputNumber(kb);
         while (userInput <= 0 || userInput >= seriesList.seriesListSize()) {
             System.out.println("Number is outwith the valid range please re-enter");
             userInput = userInputNumber(kb);
         }
-        Series series = seriesList.getSeries(userInput);
+        Series series = seriesList.getSeries(userInput-1);
         episodeList(series, kb);
         episodeChoice(seriesList, kb);
     }

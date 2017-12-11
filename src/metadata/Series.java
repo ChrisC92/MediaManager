@@ -10,7 +10,7 @@ import java.util.List;
  * Same as the series class however this class will keep all the episodes that is read through the SeriesList Class
  * in an array list
  */
-public class Series {
+public class Series implements java.io.Serializable {
 
     private final String series;
     private String seriesFilePath;
@@ -86,6 +86,7 @@ public class Series {
     public void setCurrentEpisode(int index) {
         currentEpisode = episodes.get(index-1);
     }
+
 
     public void printEpisodes() {
         int index = 1;

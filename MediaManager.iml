@@ -11,5 +11,11 @@
     <orderEntry type="library" name="junit-4.12" level="project" />
     <orderEntry type="library" name="logback-1.2" level="project" />
     <orderEntry type="library" name="uk.co.caprica:vlcj:3.10.1" level="project" />
+    <orderEntry type="library" name="logback-1.2.3" level="project" />
+    <orderEntry type="library" name="Librarys" level="project" />
+    <orderEntry type="library" name="logback-examples-1.2.3" level="project" />
+    <orderEntry type="library" name="slf4j-api-1.7.25" level="project" />
+    <orderEntry type="library" name="vlcj-3.10.1" level="project" />
+    <orderEntry type="library" name="rolling" level="project" />
   </component>
 </module>

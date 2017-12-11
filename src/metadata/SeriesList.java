@@ -1,21 +1,20 @@
 package metadata;
 
-import extractingData.getSeriesInfo;
-import metadata.Series;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+import extractingData.extractData;
 
 import java.io.File;
 import java.util.*;
 
-/**
- * Scans the given folder and adds the details to series as Series objects and stores these in a list
- */
-public class SeriesList {
+public class SeriesList implements java.io.Serializable {
 
-    private List<Series> seriesList = new ArrayList<>();
+    private List<Series> seriesList;
 
     public SeriesList(File filePath) {
-        this.seriesList = getSeriesInfo.getSeriesInfo(filePath);
+        seriesList = new ArrayList<>();
+        this.seriesList = extractData.getSeriesInfo(filePath, seriesList);
+        //TODO: might be a wasteful method call, find a way to check if needed, remove or keep
+        // if the serialized item does not exist then this is needed
+        sortEpisodes();
     }
 
     public List<Series> getSeriesList() {
@@ -33,7 +32,7 @@ public class SeriesList {
         }
     }
 
-    public void printSeriesNames() {
+    public void printSeriesList() {
         int i = 1;
         for (Series series : seriesList) {
             System.out.println(i + ": " + series.getSeriesName());
@@ -46,7 +45,12 @@ public class SeriesList {
     }
 
     public Series getSeries(int userInput) {
-        return seriesList.get(userInput-1);
+        return seriesList.get(userInput);
+    }
+
+    public void addSeries(Series toAdd) {
+        seriesList.add(toAdd);
+        sortEpisodes();
     }
 }
 
