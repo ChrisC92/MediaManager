@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * The following tests are used to check that classes take the correct and expected data from the files
  */
-public class TestDataInitialTests {
+public class TestDataInitialExtract {
 
     /** When the app initially scans the folder and creates a list of different programs
      *  it should have each folder as a series object with first episode as the instance variable
@@ -26,10 +26,10 @@ public class TestDataInitialTests {
         File filePath = new File("series/");
         SeriesList series = new SeriesList(filePath);
         List<Series> listSeries = series.getSeriesList();
-        String s01Name = listSeries.get(0).getSeriesName();
+        String s01Name = listSeries.get(0).getName();
         String expS01Name = "The series of 1";
         assertEquals(expS01Name, s01Name);
-        String s02Name = listSeries.get(1).getSeriesName();
+        String s02Name = listSeries.get(1).getName();
         String expS02Name = "The series of 10";
         assertEquals(expS02Name, s02Name);
     }
@@ -45,6 +45,4 @@ public class TestDataInitialTests {
         String s02e01Name = listSeries.get(1).getCurrentEpisode();
         assertEquals(expEpName, s02e01Name);
     }
-
-    //TODO: find way to save details when program closes for use at another time
 }

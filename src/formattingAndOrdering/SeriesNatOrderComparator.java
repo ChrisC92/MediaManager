@@ -68,8 +68,8 @@ public class SeriesNatOrderComparator implements Comparator<Series> {
 
     public int compare(Series o1, Series o2)
     {
-        String a = o1.getSeriesName();
-        String b = o2.getSeriesName();
+        String a = o1.getName();
+        String b = o2.getName();
 
         int ia = 0, ib = 0;
         int nza = 0, nzb = 0;

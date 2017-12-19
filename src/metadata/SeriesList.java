@@ -1,6 +1,7 @@
 package metadata;
 
-import extractingData.extractData;
+import storageAndExtraction.extractData;
+import formattingAndOrdering.SeriesNatOrderComparator;
 
 import java.io.File;
 import java.util.*;
@@ -14,7 +15,11 @@ public class SeriesList implements java.io.Serializable {
         this.seriesList = extractData.getSeriesInfo(filePath, seriesList);
         //TODO: might be a wasteful method call, find a way to check if needed, remove or keep
         // if the serialized item does not exist then this is needed
-        sortEpisodes();
+        sortSeries();
+    }
+
+    public SeriesList(SeriesList seriesList) {
+        this.seriesList = seriesList.getSeriesList();
     }
 
     public List<Series> getSeriesList() {
@@ -22,20 +27,18 @@ public class SeriesList implements java.io.Serializable {
     }
 
 
-    public int seriesListSize() {
+    public int size() {
         return seriesList.size();
     }
 
-    private void sortEpisodes() {
-        for (Series series : seriesList) {
-            series.naturalOrdering();
-        }
+    public void sortSeries() {
+        Collections.sort(seriesList, new SeriesNatOrderComparator());
     }
 
     public void printSeriesList() {
         int i = 1;
         for (Series series : seriesList) {
-            System.out.println(i + ": " + series.getSeriesName());
+            System.out.println(i + ": " + series.getName());
             i += 1;
         }
     }
@@ -50,7 +53,68 @@ public class SeriesList implements java.io.Serializable {
 
     public void addSeries(Series toAdd) {
         seriesList.add(toAdd);
-        sortEpisodes();
+        sortSeries();
+    }
+
+    public void removeSeries(int index) {
+        seriesList.remove(index);
+    }
+
+    /**
+     * Extract the data from the given filePath - seriesOnFile
+     * IF  (file exists)
+     * load the data from the file - savedList
+     * compare both,adding any extras from the seriesOnFile to the savedList
+     * IF ('currentEp' is stored in the savedList)
+     * this overrides the seriesOnFile 'currentEp'
+     * should have two objects, one with the full seriesList and one with the ones saved on file only
+     */
+
+    public static SeriesList combineSeries(SeriesList seriesSaved, SeriesList extractedList) {
+        SeriesList extractedCopy = new SeriesList(extractedList);
+        if (!(seriesSaved.isEmpty())) {
+            extractedCopy.getSeriesList().removeAll(seriesSaved.getSeriesList());
+            extractedCopy.getSeriesList().addAll(seriesSaved.getSeriesList());
+            extractedCopy.sortSeries();
+        }
+        return extractedCopy;
+    }
+
+
+    public boolean containsSeries(String seriesName) {
+        for (Series series : seriesList) {
+            if (series.getName().equals(seriesName)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean isEmpty() {
+        if (seriesList.size() == 0) {
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        if (other == this) {
+            return true;
+        }
+        if (!(other instanceof SeriesList)) {
+            return false;
+        }
+        SeriesList compare = (SeriesList) other;
+        if (this.size() != compare.size()) {
+            return false;
+        }
+        for (Series series : seriesList) {
+            if (!(compare.containsSeries(series.getName()))) {
+                return false;
+            }
+        }
+        return true;
     }
 }
 

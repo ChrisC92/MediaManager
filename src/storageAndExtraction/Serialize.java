@@ -1,4 +1,4 @@
-package serializeDeserialize;
+package storageAndExtraction;
 
 import metadata.SeriesList;
 
@@ -10,10 +10,9 @@ import java.io.ObjectOutputStream;
 public class Serialize {
 
 
-
-    public static void serializeList(SeriesList seriesList, String fileName ) {
+    public static void serializeList(SeriesList seriesList, String fileName) {
         File checkFile = new File(fileName);
-        if(checkFile.exists()) {
+        if (checkFile.exists()) {
             checkFile.delete();
         }
         try {
@@ -23,11 +22,10 @@ public class Serialize {
             out.close();
             file.close();
             System.out.println("series list saved as " + fileName);
-        }
-
-        catch(IOException ex) {
+        } catch (IOException ex) {
             System.out.println("IO Exception has been caught");
             ex.printStackTrace();
         }
     }
 }
+

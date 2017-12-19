@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * This goes through the files in my own series folder and goes through the following tests
  */
-public class RealInitialMetadataTests {
+public class RealInitialFileExtract {
     //TODO: Find a better way of dealing with the case which happens with a different folder depth
          // with the IT Crowd files
     @Test
@@ -29,15 +29,15 @@ public class RealInitialMetadataTests {
         List<Series> seriesList = seriesInfo.getSeriesList();
         seriesInfo.printSeriesList();
         String expectedS01 = "Adventure Time - Season 7";
-        String actualS01 = seriesList.get(0).getSeriesName();
+        String actualS01 = seriesList.get(0).getName();
         assertEquals(expectedS01, actualS01);
 
         String expectedS03 = "Adventure Time S08.2 (360p re-webrip)";
-        String actualS03 = seriesList.get(1).getSeriesName();
+        String actualS03 = seriesList.get(1).getName();
         assertEquals(expectedS03, actualS03);
 
         String expectedS02 = "Adventure Time - Season 8";
-        String actualS02 = seriesList.get(2).getSeriesName();
+        String actualS02 = seriesList.get(2).getName();
         assertEquals( expectedS02, actualS02);
 
     }

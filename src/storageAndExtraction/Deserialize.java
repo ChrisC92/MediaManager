@@ -1,4 +1,4 @@
-package serializeDeserialize;
+package storageAndExtraction;
 
 import metadata.SeriesList;
 

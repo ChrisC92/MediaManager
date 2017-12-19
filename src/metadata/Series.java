@@ -5,6 +5,7 @@ import formattingAndOrdering.NaturalOrderComparator;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Same as the series class however this class will keep all the episodes that is read through the SeriesList Class
@@ -13,23 +14,24 @@ import java.util.List;
 public class Series implements java.io.Serializable {
 
     private final String series;
-    private String seriesFilePath;
     private List<String> episodes;
     private String currentEpisode;
 
-    public Series(String series,String filePath) {
+    public Series(String series) {
         this.series = series;
         this.episodes = new ArrayList<>();
-        this.seriesFilePath = filePath;
     }
 
     public void addEpisode(String epName) {
-            episodes.add(epName);
+        if (episodes.isEmpty()) {
+            currentEpisode = epName;
+        }
+        episodes.add(epName);
     }
 
     public void initialCurrentEpAssign(String epName) {
-            currentEpisode = epName;
-        }
+        currentEpisode = epName;
+    }
 
     private boolean containsEp(String epName) {
         for (String episode : episodes) {
@@ -40,11 +42,11 @@ public class Series implements java.io.Serializable {
         return false;
     }
 
-    public void naturalOrdering() {
+    public void sortEpisodes() {
         Collections.sort(episodes, new NaturalOrderComparator());
     }
 
-    public String getSeriesName() {
+    public String getName() {
         return series;
     }
 
@@ -58,10 +60,6 @@ public class Series implements java.io.Serializable {
             return currentEpisode;
         }
         return episodes.get(index);
-    }
-
-    public String getSeriesFilePath() {
-        return seriesFilePath;
     }
 
     /**
@@ -84,17 +82,37 @@ public class Series implements java.io.Serializable {
     }
 
     public void setCurrentEpisode(int index) {
-        currentEpisode = episodes.get(index-1);
+        currentEpisode = episodes.get(index);
     }
 
 
     public void printEpisodes() {
         int index = 1;
         System.out.println("Current episode: " + currentEpisode);
-        for(String episode : episodes) {
+        for (String episode : episodes) {
             System.out.println(index + ". " + episode);
             index += 1;
         }
+    }
+
+    public boolean currentEpEquals(Series compare) {
+        if (this.currentEpisode.equals(compare.currentEpisode)) {
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public String toString() {
+        return series;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Series)) return false;
+        Series series1 = (Series) o;
+        return Objects.equals(series, series1.series);
     }
 
 }

@@ -5,10 +5,10 @@
 # Your branch is up-to-date with 'origin/master'.
 #
 # Changes to be committed:
-#	modified:   out/production/MediaManager/extractingData/GetSeriesInfo.class
+#	modified:   out/production/MediaManager/storageAndExtraction/GetSeriesInfo.class
 #	modified:   out/production/MediaManager/metadata/Series.class
 #	new file:   out/production/MediaManager/metadata/SeriesList.class
-#	modified:   src/extractingData/GetSeriesInfo.java
+#	modified:   src/storageAndExtraction/GetSeriesInfo.java
 #	modified:   src/metadata/Series.java
 #	new file:   src/metadata/SeriesList.java
 #

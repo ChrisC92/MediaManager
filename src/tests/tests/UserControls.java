@@ -5,5 +5,5 @@ package tests;
  *  - able to select
  *
  */
-public class UserControlsTest {
+public class UserControls {
 }

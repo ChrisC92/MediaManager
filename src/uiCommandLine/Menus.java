@@ -50,7 +50,7 @@ public class Menus {
         seriesList.printSeriesList();
         System.out.println("Please enter a number");
         int userInput = userInputNumber(kb);
-        while (userInput <= 0 || userInput >= seriesList.seriesListSize()) {
+        while (userInput <= 0 || userInput >= seriesList.size()) {
             System.out.println("Number is outwith the valid range please re-enter");
             userInput = userInputNumber(kb);
         }

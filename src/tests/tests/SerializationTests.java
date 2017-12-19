@@ -1,16 +1,13 @@
 package tests;
 
-import extractingData.extractData;
 import metadata.Series;
 import metadata.SeriesList;
 import org.junit.Test;
-import serializeDeserialize.Deserialize;
-import serializeDeserialize.Serialize;
+import storageAndExtraction.Deserialize;
+import storageAndExtraction.Serialize;
 
 import static org.junit.Assert.*;
 import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  *  Tests for both Serializing and Deserializing the SeriesList Object
@@ -40,14 +37,14 @@ public class SerializationTests {
         String fileName = "savedData/storedSeriesList.ser";
         Serialize.serializeList(seriesList, fileName);
         SeriesList deserialize = Deserialize.Deserialize(fileName);
-        String list1Series1 = seriesList.getSeries(0).getSeriesName();
-        String list2Series1 = deserialize.getSeries(0).getSeriesName();
+        String list1Series1 = seriesList.getSeries(0).getName();
+        String list2Series1 = deserialize.getSeries(0).getName();
         assertEquals(list1Series1, list2Series1);
         String list1S01E01 = seriesList.getSeries(0).getCurrentEpisode();
         String list2S01E01 = deserialize.getSeries(0).getCurrentEpisode();
         assertEquals(list1S01E01, list2S01E01);
-        String list1Series2 = seriesList.getSeries(1).getSeriesName();
-        String list2Series2 = deserialize.getSeries(1).getSeriesName();
+        String list1Series2 = seriesList.getSeries(1).getName();
+        String list2Series2 = deserialize.getSeries(1).getName();
         assertEquals(list1Series2, list2Series2);
     }
 
@@ -58,8 +55,10 @@ public class SerializationTests {
         String fileName = "savedData/storedSeriesList.ser";
         Serialize.serializeList(seriesList, fileName);
         SeriesList deserialize = Deserialize.Deserialize(fileName);
-        Series addExtraStartTest = new Series("*AAAA", "pilot");
-        Series addExtraEndTest = new Series("ZaddExtra test at end", "pilot");
+        Series addExtraStartTest = new Series("*AAAA");
+        addExtraStartTest.addEpisode("pilot");
+        Series addExtraEndTest = new Series("ZaddExtra test at end");
+        addExtraEndTest.addEpisode("pilot");
         deserialize.addSeries(addExtraEndTest);
         deserialize.addSeries(addExtraStartTest);
         deserialize.printSeriesList();

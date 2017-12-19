@@ -1,4 +1,4 @@
-package extractingData;
+package storageAndExtraction;
 
 import metadata.Series;
 
@@ -17,6 +17,7 @@ public class extractData {
      * to store new SeriesFileFormat into the seriesList variable and if the series is already contained then add
      * the episode into that object
      */
+
     public static List<Series> getSeriesInfo(File filePath, List<Series> seriesList) throws NullPointerException {
         for (File fileEntry : filePath.listFiles()) {
             if (fileEntry.isDirectory()) {
@@ -34,9 +35,7 @@ public class extractData {
                 if (isSeriesIncluded(seriesName, seriesList)) {
                     addEpisode(seriesName, episodeName, seriesList);
                 } else {
-                    //TODO: REVIEW
-                    String path = fileEntry.getParent();
-                    Series firstSeries = new Series(seriesName, path);
+                    Series firstSeries = new Series(seriesName);
                     firstSeries.addEpisode(episodeName);
                     firstSeries.initialCurrentEpAssign(episodeName);
                     seriesList.add(firstSeries);
@@ -44,6 +43,7 @@ public class extractData {
 
             }
         }
+        sortAllEpisodes(seriesList);
         return seriesList;
     }
 
@@ -52,7 +52,7 @@ public class extractData {
             return false;
         }
         for (Series series : seriesList) {
-            if (series.getSeriesName().equals(seriesName)) {
+            if (series.getName().equals(seriesName)) {
                 return true;
             }
         }
@@ -64,9 +64,15 @@ public class extractData {
      */
     private static void addEpisode(String seriesName, String episodeName, List<Series> seriesList) {
         for (Series series : seriesList) {
-            if (series.getSeriesName().equals(seriesName)) {
+            if (series.getName().equals(seriesName)) {
                 series.addEpisode(episodeName);
             }
+        }
+    }
+
+    private static void sortAllEpisodes(List<Series> seriesList) {
+        for(Series series : seriesList) {
+            series.sortEpisodes();
         }
     }
 }
