@@ -2,6 +2,7 @@ package uiCommandLine;
 
 import metadata.SeriesList;
 
+import java.io.File;
 import java.util.Scanner;
 
 /**
@@ -11,12 +12,11 @@ import java.util.Scanner;
 
 public class InputHandler {
 
-    private boolean firstOpen;
+    public boolean firstOpen;
     private SeriesList seriesList;
 
     public InputHandler() {
-        //TODO: get the value for this boolean from file of where information will be stored
-        firstOpen = true;
+        firstOpen = initialOpenCheck();
     }
 
     public void getSeriesList(Scanner kb) {
@@ -31,9 +31,14 @@ public class InputHandler {
         Menus.mainMenuUI(seriesList, kb);
     }
 
+    private boolean initialOpenCheck() {
+        File seriesFile = new File("savedData/storedSeriesList.ser");
+        return seriesFile.exists();
+    }
+
+
     public static void main(String[] args) {
-        Scanner kb = new Scanner(System.in);
-        InputHandler userInput = new InputHandler();
-        userInput.getSeriesList(kb);
+        InputHandler ih = new InputHandler();
+
     }
 }

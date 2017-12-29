@@ -9,7 +9,7 @@ import java.util.List;
  *  This class takes scans a given folder from the file path and creates a Series object for each new Series and
  *  adding all epsiodes and defaulting the initial episode as the current and address these to an arrayList
  */
-public class extractData {
+public class ExtractData {
 
 
     /**

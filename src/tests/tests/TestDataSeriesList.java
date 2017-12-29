@@ -50,8 +50,6 @@ public class TestDataSeriesList {
         assertTrue(combinedList.containsSeries(seriesCheck4));
 
         assertTrue(extractedSeries.equals(combinedList));
-
-        //TODO: assertEquals the currentEpisodes
     }
 
 

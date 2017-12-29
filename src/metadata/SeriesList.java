@@ -1,6 +1,6 @@
 package metadata;
 
-import storageAndExtraction.extractData;
+import storageAndExtraction.ExtractData;
 import formattingAndOrdering.SeriesNatOrderComparator;
 
 import java.io.File;
@@ -12,7 +12,7 @@ public class SeriesList implements java.io.Serializable {
 
     public SeriesList(File filePath) {
         seriesList = new ArrayList<>();
-        this.seriesList = extractData.getSeriesInfo(filePath, seriesList);
+        this.seriesList = ExtractData.getSeriesInfo(filePath, seriesList);
         //TODO: might be a wasteful method call, find a way to check if needed, remove or keep
         // if the serialized item does not exist then this is needed
         sortSeries();
