@@ -1,6 +1,7 @@
 package storageAndExtraction;
 
 import metadata.Series;
+import metadata.SeriesList;
 
 import java.io.File;
 import java.util.List;
@@ -18,10 +19,10 @@ public class ExtractData {
      * the episode into that object
      */
 
-    public static List<Series> getSeriesInfo(File filePath, List<Series> seriesList) throws NullPointerException {
+    public static SeriesList extractSeriesOnFile(File filePath, SeriesList seriesList) throws NullPointerException {
         for (File fileEntry : filePath.listFiles()) {
             if (fileEntry.isDirectory()) {
-                getSeriesInfo(fileEntry, seriesList);
+                extractSeriesOnFile(fileEntry, seriesList);
             } else {
                 String seriesName = fileEntry.getParentFile().getName();
                 String episodeName = fileEntry.getName();
@@ -32,18 +33,18 @@ public class ExtractData {
                  * if it does not contain the series then add the series, first ep and make first ep current ep
                  * if it does contain the series add the episode to the list within the series object
                  */
-                if (isSeriesIncluded(seriesName, seriesList)) {
-                    addEpisode(seriesName, episodeName, seriesList);
+                if (isSeriesIncluded(seriesName, seriesList.getSeriesList())) {
+                    addEpisode(seriesName, episodeName, seriesList.getSeriesList());
                 } else {
                     Series firstSeries = new Series(seriesName);
                     firstSeries.addEpisode(episodeName);
                     firstSeries.initialCurrentEpAssign(episodeName);
-                    seriesList.add(firstSeries);
+                    seriesList.getSeriesList().add(firstSeries);
                 }
 
             }
         }
-        sortAllEpisodes(seriesList);
+        sortAllEpisodes(seriesList.getSeriesList());
         return seriesList;
     }
 

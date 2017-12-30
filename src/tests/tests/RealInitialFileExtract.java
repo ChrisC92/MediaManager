@@ -3,6 +3,7 @@ package tests;
 import metadata.SeriesList;
 import metadata.Series;
 import org.junit.Test;
+import storageAndExtraction.ExtractData;
 
 import static org.junit.Assert.*;
 
@@ -25,7 +26,8 @@ public class RealInitialFileExtract {
     @Test
     public void checkSeriesNames() {
         File filePath = new File("/Users/ChrisCorner/Documents/Films_Series/Series");
-        SeriesList seriesInfo = new SeriesList(filePath);
+        SeriesList seriesInfo = new SeriesList();
+        seriesInfo = ExtractData.extractSeriesOnFile(filePath, seriesInfo);
         List<Series> seriesList = seriesInfo.getSeriesList();
         seriesInfo.printSeriesList();
         String expectedS01 = "Adventure Time - Season 7";
@@ -45,7 +47,8 @@ public class RealInitialFileExtract {
     @Test
     public void checkEpisodes() {
         File filePath = new File("/Users/ChrisCorner/Documents/Films_Series/Series");
-        SeriesList seriesInfo = new SeriesList(filePath);
+        SeriesList seriesInfo = new SeriesList();
+        seriesInfo = ExtractData.extractSeriesOnFile(filePath, seriesInfo);
         List<Series> seriesList = seriesInfo.getSeriesList();
 
         String expectedS01E01 = "S07E01-Bonnie & Neddy.mp4";

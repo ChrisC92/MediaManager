@@ -5,6 +5,8 @@ import static org.junit.Assert.*;
 import metadata.SeriesList;
 import metadata.Series;
 import org.junit.Test;
+import storageAndExtraction.ExtractData;
+
 import java.io.File;
 import java.util.List;
 
@@ -24,7 +26,8 @@ public class TestDataInitialExtract {
     @Test
     public void checkInitialSeasons() {
         File filePath = new File("series/");
-        SeriesList series = new SeriesList(filePath);
+        SeriesList series = new SeriesList();
+        series = ExtractData.extractSeriesOnFile(filePath, series);
         List<Series> listSeries = series.getSeriesList();
         String s01Name = listSeries.get(0).getName();
         String expS01Name = "The series of 1";
@@ -37,7 +40,8 @@ public class TestDataInitialExtract {
     @Test
     public void checkInitialEpisodes() {
         File filePath = new File("series/");
-        SeriesList series = new SeriesList(filePath);
+        SeriesList series = new SeriesList();
+        series = ExtractData.extractSeriesOnFile(filePath, series);
         List<Series> listSeries = series.getSeriesList();
         String s01ep01Name = listSeries.get(0).getCurrentEpisode();
         String expEpName = "episode: 1";

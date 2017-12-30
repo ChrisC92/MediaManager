@@ -10,12 +10,8 @@ public class SeriesList implements java.io.Serializable {
 
     private List<Series> seriesList;
 
-    public SeriesList(File filePath) {
+    public SeriesList() {
         seriesList = new ArrayList<>();
-        this.seriesList = ExtractData.getSeriesInfo(filePath, seriesList);
-        //TODO: might be a wasteful method call, find a way to check if needed, remove or keep
-        // if the serialized item does not exist then this is needed
-        sortSeries();
     }
 
     public SeriesList(SeriesList seriesList) {
@@ -61,15 +57,8 @@ public class SeriesList implements java.io.Serializable {
     }
 
     /**
-     * Extract the data from the given filePath - seriesOnFile
-     * IF  (file exists)
-     * load the data from the file - savedList
-     * compare both,adding any extras from the seriesOnFile to the savedList
-     * IF ('currentEp' is stored in the savedList)
-     * this overrides the seriesOnFile 'currentEp'
-     * should have two objects, one with the full seriesList and one with the ones saved on file only
+     *  Combines and returns on SeriesList when given the list saved on file and the file extracted
      */
-
     public static SeriesList combineSeries(SeriesList seriesSaved, SeriesList extractedList) {
         SeriesList extractedCopy = new SeriesList(extractedList);
         if (!(seriesSaved.isEmpty())) {

@@ -8,16 +8,15 @@
 <?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.MainApp">
+<AnchorPane prefHeight="440.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.view.MainLayoutController">
    <children>
       <SplitPane dividerPositions="0.15" prefHeight="300.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <Button mnemonicParsing="false" text="Set Ep" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
-                  <ToggleButton layoutY="40.0" mnemonicParsing="false" prefWidth="80.0" text="On File" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
-                  <ToggleButton layoutY="75.0" mnemonicParsing="false" prefWidth="80.0" text="All" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                  <Button fx:id="setCurrentEpisode" mnemonicParsing="false" text="Set Ep" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                  <ToggleButton fx:id="onFileButton" layoutY="55.0" mnemonicParsing="false" prefWidth="80.0" text="On File" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                  <ToggleButton fx:id="AllButton" layoutY="90.0" mnemonicParsing="false" prefWidth="80.0" text="All" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
@@ -26,13 +25,13 @@
                     <items>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="160.0">
                            <children>
-                              <ListView prefHeight="262.0" prefWidth="502.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                              <Slider layoutX="480.0" layoutY="37.0" orientation="VERTICAL" prefHeight="262.0" prefWidth="16.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="480.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <ListView fx:id="" prefHeight="262.0" prefWidth="502.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <Slider fx:id="slider" layoutY="400.0" orientation="VERTICAL" prefHeight="262.0" prefWidth="16.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="580.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                            </children>
                         </AnchorPane>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="86.0" prefWidth="414.0">
                            <children>
-                              <Label text="Label" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                              <Label text="Label" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="10.0" />
                            </children>
                         </AnchorPane>
                     </items>

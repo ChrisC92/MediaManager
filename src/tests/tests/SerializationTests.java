@@ -4,6 +4,7 @@ import metadata.Series;
 import metadata.SeriesList;
 import org.junit.Test;
 import storageAndExtraction.Deserialize;
+import storageAndExtraction.ExtractData;
 import storageAndExtraction.Serialize;
 
 import static org.junit.Assert.*;
@@ -23,7 +24,8 @@ public class SerializationTests {
     @Test
     public void serializeTest() {
         File path = new File("/Users/ChrisCorner/Documents/Films_Series/Series");
-        SeriesList seriesList = new SeriesList(path);
+        SeriesList seriesList = new SeriesList();
+        seriesList = ExtractData.extractSeriesOnFile(path, seriesList);
         String fileName = "savedData/storedSeriesList.ser";
         Serialize.serializeList(seriesList, fileName);
         File seriesFile = new File("savedData/storedSeriesList.ser");
@@ -33,7 +35,8 @@ public class SerializationTests {
     @Test
     public void deserializeTest() {
         File path = new File("/Users/ChrisCorner/Documents/Films_Series/Series");
-        SeriesList seriesList = new SeriesList(path);
+        SeriesList seriesList = new SeriesList();
+        seriesList = ExtractData.extractSeriesOnFile(path, seriesList);
         String fileName = "savedData/storedSeriesList.ser";
         Serialize.serializeList(seriesList, fileName);
         SeriesList deserialize = Deserialize.Deserialize(fileName);
@@ -51,7 +54,8 @@ public class SerializationTests {
     @Test
     public void addExtraSeries() {
         File path = new File("/Users/ChrisCorner/Documents/Films_Series/Series");
-        SeriesList seriesList = new SeriesList(path);
+        SeriesList seriesList = new SeriesList();
+        seriesList = ExtractData.extractSeriesOnFile(path, seriesList);
         String fileName = "savedData/storedSeriesList.ser";
         Serialize.serializeList(seriesList, fileName);
         SeriesList deserialize = Deserialize.Deserialize(fileName);

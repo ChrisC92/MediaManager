@@ -2,6 +2,7 @@ package uiCommandLine;
 
 import metadata.SeriesList;
 import metadata.Series;
+import storageAndExtraction.ExtractData;
 
 import java.io.File;
 import java.util.Scanner;
@@ -27,7 +28,8 @@ public class Menus {
         System.out.println("the data correctly - ");
         File filePath = new File(stringPath);
         if (filePath.exists()) {
-            SeriesList seriesInfo = new SeriesList(filePath);
+            SeriesList seriesInfo = new SeriesList();
+            seriesInfo = ExtractData.extractSeriesOnFile(filePath, seriesInfo);
             seriesInfo.printSeriesList();
             System.out.println("Has the data been extracted correctly? \n 'yes or no'");
             String userConfirm = "yes";
@@ -91,7 +93,7 @@ public class Menus {
     public static void main(String[] args) {
         Scanner kb = new Scanner(System.in);
         File file = new File("/Users/ChrisCorner/Documents/Films_Series/Series");
-        SeriesList seriesList = new SeriesList(file);
+        SeriesList seriesList = new SeriesList();
         episodeChoice(seriesList, kb);
     }
 
