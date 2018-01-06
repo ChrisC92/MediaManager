@@ -29,7 +29,6 @@ public class RealInitialFileExtract {
         SeriesList seriesInfo = new SeriesList();
         seriesInfo = ExtractData.extractSeriesOnFile(filePath, seriesInfo);
         List<Series> seriesList = seriesInfo.getSeriesList();
-        seriesInfo.printSeriesList();
         String expectedS01 = "Adventure Time - Season 7";
         String actualS01 = seriesList.get(0).getName();
         assertEquals(expectedS01, actualS01);
@@ -41,7 +40,6 @@ public class RealInitialFileExtract {
         String expectedS02 = "Adventure Time - Season 8";
         String actualS02 = seriesList.get(2).getName();
         assertEquals( expectedS02, actualS02);
-
     }
 
     @Test

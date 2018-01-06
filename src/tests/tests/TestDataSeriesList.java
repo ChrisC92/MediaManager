@@ -19,8 +19,8 @@ public class TestDataSeriesList {
         seriesSaved = ExtractData.extractSeriesOnFile(filePath, seriesSaved);
         seriesSaved.sortSeries();
         SeriesList seriesSavedCOPY = new SeriesList();
-        seriesSavedCOPY.sortSeries();
         seriesSavedCOPY = ExtractData.extractSeriesOnFile(filePath, seriesSavedCOPY);
+        seriesSavedCOPY.sortSeries();
         SeriesList biggerList = biggerListSimple();
         SeriesList smallerList = smallerListSimple();
         SeriesList sameSizeList = sameSizeListSimple();

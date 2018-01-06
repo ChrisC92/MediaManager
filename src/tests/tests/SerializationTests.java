@@ -65,7 +65,6 @@ public class SerializationTests {
         addExtraEndTest.addEpisode("pilot");
         deserialize.addSeries(addExtraEndTest);
         deserialize.addSeries(addExtraStartTest);
-        deserialize.printSeriesList();
 
 
     }

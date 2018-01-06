@@ -1,21 +1,24 @@
 package metadata;
 
-import storageAndExtraction.ExtractData;
 import formattingAndOrdering.SeriesNatOrderComparator;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
-import java.io.File;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.*;
 
 public class SeriesList implements java.io.Serializable {
 
-    private List<Series> seriesList;
+    private transient ObservableList<Series> seriesList;
 
     public SeriesList() {
-        seriesList = new ArrayList<>();
+        seriesList = FXCollections.observableArrayList();
     }
 
     public SeriesList(SeriesList seriesList) {
-        this.seriesList = seriesList.getSeriesList();
+        this.seriesList = FXCollections.observableArrayList(seriesList.getSeriesList());
     }
 
     public List<Series> getSeriesList() {
@@ -86,6 +89,26 @@ public class SeriesList implements java.io.Serializable {
         return false;
     }
 
+    /**
+     * Performs custom serialization of this instance.
+     * Automatically is invoked by Java when this instance is serialized
+     */
+    private void writeObject(ObjectOutputStream out) throws IOException {
+        out.defaultWriteObject();
+
+        out.writeObject(arrayListSeries());
+    }
+
+    /**
+     * Performs custom deserialization of this instance
+     * Automatically is invoked by Java during deserialization
+     */
+    private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
+        in.defaultReadObject();
+        ArrayList<Series> extracted = (ArrayList<Series>) in.readObject();
+        seriesList = FXCollections.observableArrayList(extracted);
+    }
+
     @Override
     public boolean equals(Object other) {
         if (other == this) {
@@ -104,6 +127,16 @@ public class SeriesList implements java.io.Serializable {
             }
         }
         return true;
+    }
+
+
+    private List<Series> arrayListSeries() {
+        List<Series> toReturn = new ArrayList<>();
+
+        for(Series series : seriesList) {
+            toReturn.add(series);
+        }
+        return toReturn;
     }
 }
 

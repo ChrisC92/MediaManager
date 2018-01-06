@@ -21,7 +21,6 @@ public class Serialize {
             out.writeObject(seriesList);
             out.close();
             file.close();
-            System.out.println("series list saved as " + fileName);
         } catch (IOException ex) {
             System.out.println("IO Exception has been caught");
             ex.printStackTrace();

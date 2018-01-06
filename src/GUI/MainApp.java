@@ -7,11 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import metadata.SeriesList;
-import storageAndExtraction.Deserialize;
-import storageAndExtraction.ExtractData;
 
-import java.io.File;
 import java.io.IOException;
 
 public class MainApp extends Application {
@@ -19,17 +15,12 @@ public class MainApp extends Application {
     private Stage primaryStage;
     private BorderPane rootLayout;
 
-    private SeriesList seriesOnFile;
-    private SeriesList seriesExtracted;
-
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("SeriesTracker");
-        File file = new File("/Users/ChrisCorner/Documents/Films_Series/Series");
-        seriesExtracted = ExtractData.extractSeriesOnFile(file, seriesExtracted);
-        //seriesOnFile = Deserialize.Deserialize("savedData/storedSeriesList.ser");
-//        setUserAgentStylesheet(STYLESHEET_MODENA);
+
+        setUserAgentStylesheet(STYLESHEET_MODENA);
 
         initRootLayout();
         showPersonOverView();

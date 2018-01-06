@@ -1,6 +1,8 @@
 package GUI.view;
 
 import GUI.MainApp;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import metadata.Series;
@@ -11,11 +13,7 @@ import java.io.File;
 
 public class MainLayoutController {
 
-    @FXML
-    private SeriesList listOnFile;
 
-    @FXML
-    private SeriesList allFiles;
 
     @FXML
     private Label currentEpisode;
@@ -43,9 +41,15 @@ public class MainLayoutController {
 
     @FXML
     private void initialize() {
+        populateSeriesListed();
+    }
+
+    private void populateSeriesListed() {
         File filePath = new File("/Users/ChrisCorner/Documents/Films_Series/Series");
-        //SeriesList extract = new SeriesList(filePath);
-        //seriesListed =
+        SeriesList extract = new SeriesList();
+        extract = ExtractData.extractSeriesOnFile(filePath, extract);
+        ObservableList<Series> oSeriesList = FXCollections.observableArrayList(extract.getSeriesList());
+        seriesListed.setItems(oSeriesList);
     }
 
     public void setMainApp(MainApp mainApp) {
