@@ -65,8 +65,15 @@ public class SerializationTests {
         addExtraEndTest.addEpisode("pilot");
         deserialize.addSeries(addExtraEndTest);
         deserialize.addSeries(addExtraStartTest);
+    }
 
-
+    @Test
+    public void deserializeEmptyFile() {
+        String fileName = "savedData/storedSeriesList.ser";
+        File file = new File(fileName);
+        file.delete();
+        SeriesList seriesOnFile = Deserialize.Deserialize(fileName);
+        assertTrue(seriesOnFile.isEmpty());
     }
 
     @Test

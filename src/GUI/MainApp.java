@@ -1,8 +1,10 @@
 package GUI;
 
 import GUI.view.MainLayoutController;
+import GUI.view.RootLayoutController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -14,6 +16,8 @@ public class MainApp extends Application {
 
     private Stage primaryStage;
     private BorderPane rootLayout;
+    private RootLayoutController rootController;
+    private MainLayoutController mainController;
 
     @Override
     public void start(Stage primaryStage) {
@@ -23,7 +27,8 @@ public class MainApp extends Application {
         setUserAgentStylesheet(STYLESHEET_MODENA);
 
         initRootLayout();
-        showPersonOverView();
+        initMainLayout();
+        linkToRootController();
     }
 
     /**
@@ -35,6 +40,9 @@ public class MainApp extends Application {
             loader.setLocation(MainApp.class.getResource("view/RootLayout.fxml"));
             rootLayout = loader.load();
 
+            RootLayoutController rootController = loader.getController();
+            rootController.setMainApp(this);
+            this.rootController = rootController;
             Scene scene = new Scene(rootLayout);
             primaryStage.setScene(scene);
             primaryStage.show();
@@ -46,19 +54,30 @@ public class MainApp extends Application {
     /**
      * Shows the main layout inside of the root layout
      */
-    private void showPersonOverView() {
+    private void initMainLayout() {
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainApp.class.getResource("view/MainLayout.fxml"));
             AnchorPane mainLayout = loader.load();
-
             rootLayout.setCenter(mainLayout);
+            MainLayoutController mainController = loader.getController();
+            this.mainController = mainController;
+            mainController.setMainApp(this);
+            RootLayoutController.setMainController(mainController);
 
-            MainLayoutController controller = loader.getController();
-            controller.setMainApp(this);
 
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    public void linkToRootController() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("view/RootLayout.fxml"));
+            Parent root = (Parent) fxmlLoader.load();
+            ((RootLayoutController) fxmlLoader.getController()).setStage(primaryStage);
+        } catch (IOException io) {
+            io.printStackTrace();
         }
     }
 

@@ -11,6 +11,8 @@ import java.util.*;
 
 public class SeriesList implements java.io.Serializable {
 
+    // TODO: make an abstract class for making lists
+
     private transient ObservableList<Series> seriesList;
 
     public SeriesList() {
@@ -21,7 +23,7 @@ public class SeriesList implements java.io.Serializable {
         this.seriesList = FXCollections.observableArrayList(seriesList.getSeriesList());
     }
 
-    public List<Series> getSeriesList() {
+    public ObservableList<Series> getSeriesList() {
         return seriesList;
     }
 
@@ -139,13 +141,3 @@ public class SeriesList implements java.io.Serializable {
         return toReturn;
     }
 }
-
-/**
- * TODO: This will normally take the actual initial folder as a series which isn't needed unless
- * there are stray episodes in the folder, one way to fix this would be a method to
- * find this folder and rename it possibly but if its empty delete it
- * but if there are episoedes rename it to 'Unsorted episodes
- */
-
-//TODO: A problem to fix is when this is initially done and then the folders change, so being able to add
-// new series while still retaining data of current episode for the rest

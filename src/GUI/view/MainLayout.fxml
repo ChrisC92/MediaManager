@@ -13,9 +13,11 @@
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <Button fx:id="setCurrentEpisode" mnemonicParsing="false" text="Set Ep" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                  <Button fx:id="setCurrentEpisode" layoutY="200.0" mnemonicParsing="false" text="Set Ep" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
                   <ToggleButton fx:id="onFileButton" layoutY="55.0" mnemonicParsing="false" prefWidth="80.0" text="On File" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
                   <ToggleButton fx:id="AllButton" layoutY="90.0" mnemonicParsing="false" prefWidth="80.0" text="All" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                  <Button fx:id="goBackList" layoutY="165.0" mnemonicParsing="false" text="&lt;&lt;" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                  <Button fx:id="delete" layoutY="275.0" mnemonicParsing="false" text="Delete" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
@@ -24,7 +26,8 @@
                     <items>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="160.0">
                            <children>
-                              <ListView fx:id="seriesListed" prefHeight="262.0" prefWidth="502.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <ListView fx:id="onFileDisplay" prefHeight="262.0" prefWidth="502.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <ListView fx:id="savedFileDisplay" prefHeight="388.0" prefWidth="604.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                            </children>
                         </AnchorPane>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="86.0" prefWidth="414.0">
