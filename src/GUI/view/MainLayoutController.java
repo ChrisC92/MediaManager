@@ -3,11 +3,7 @@ package GUI.view;
 import GUI.MainApp;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import metadata.Series;
-import metadata.SeriesList;
-import storageAndExtraction.Deserialize;
-import storageAndExtraction.ExtractData;
-import storageAndExtraction.Serialize;
+import metadata.*;
 
 import java.io.File;
 
@@ -46,9 +42,9 @@ public class MainLayoutController {
 
     private MainApp mainApp;
 
-    private SeriesList storedSeries;
+    private AbstractSeriesList seriesSaved;
 
-    private SeriesList seriesOnFile;
+    private AbstractSeriesList seriesOnFile;
 
     public MainLayoutController() {
     }
@@ -61,12 +57,12 @@ public class MainLayoutController {
 
     private void populateLists() {
         //TODO: refactor to allow use of user selecting file paths for series
-        storedSeries = Deserialize.Deserialize("savedData/storedSeriesList.ser");
+        seriesSaved = new SeriesSaved("savedData/storedSeriesList.ser");
         File filePath = new File("/Users/ChrisCorner/Documents/Films_Series/Series");
-        seriesOnFile = ExtractData.extractSeriesOnFile(filePath, seriesOnFile);
-        storedSeries = SeriesList.combineSeries(storedSeries, seriesOnFile);
+        seriesOnFile = new SeriesOnFile(filePath);
+        seriesSaved = AbstractSeriesList.combineSeries(seriesSaved, seriesOnFile);
 
-        savedFileDisplay.setItems(storedSeries.getSeriesList());
+        savedFileDisplay.setItems(seriesSaved.getSeriesList());
         onFileDisplay.setItems(seriesOnFile.getSeriesList());
         savedFileDisplay.disabledProperty();
     }
@@ -77,11 +73,10 @@ public class MainLayoutController {
 
     public void saveData() {
         String fileName = "savedData/storedSeriesList.ser";
-        Serialize.serializeList(storedSeries,fileName);
+        AbstractSeriesList.serializeList(seriesSaved, fileName);
     }
 
     public void setSeriesOnFile(File filePath) {
-        seriesOnFile = new SeriesList();
-        seriesOnFile = ExtractData.extractSeriesOnFile(filePath, seriesOnFile);
+        seriesOnFile = new SeriesOnFile(filePath);
     }
 }

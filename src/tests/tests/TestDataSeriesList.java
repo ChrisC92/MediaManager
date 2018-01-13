@@ -1,9 +1,9 @@
 package tests;
 
+import metadata.AbstractSeriesList;
 import metadata.Series;
-import metadata.SeriesList;
+import metadata.SeriesOnFile;
 import org.junit.Test;
-import storageAndExtraction.ExtractData;
 
 import java.io.File;
 
@@ -15,15 +15,13 @@ public class TestDataSeriesList {
     @Test
     public void testEqualsMethod() {
         File filePath = new File("series/");
-        SeriesList seriesSaved = new SeriesList();
-        seriesSaved = ExtractData.extractSeriesOnFile(filePath, seriesSaved);
+        AbstractSeriesList seriesSaved = new SeriesOnFile(filePath);
         seriesSaved.sortSeries();
-        SeriesList seriesSavedCOPY = new SeriesList();
-        seriesSavedCOPY = ExtractData.extractSeriesOnFile(filePath, seriesSavedCOPY);
+        AbstractSeriesList seriesSavedCOPY = new SeriesOnFile(seriesSaved);
         seriesSavedCOPY.sortSeries();
-        SeriesList biggerList = biggerListSimple();
-        SeriesList smallerList = smallerListSimple();
-        SeriesList sameSizeList = sameSizeListSimple();
+        AbstractSeriesList biggerList = biggerListSimple();
+        AbstractSeriesList smallerList = smallerListSimple();
+        AbstractSeriesList sameSizeList = sameSizeListSimple();
 
         assertTrue(seriesSaved.equals(seriesSavedCOPY));
         assertTrue(seriesSaved.equals(seriesSaved));
@@ -37,12 +35,11 @@ public class TestDataSeriesList {
     @Test
     public void combineBiggerFileSimple() {
         File filePath = new File("series/");
-        SeriesList seriesSaved = new SeriesList();
-        seriesSaved = ExtractData.extractSeriesOnFile(filePath, seriesSaved);
+        AbstractSeriesList seriesSaved = new SeriesOnFile(filePath);
         seriesSaved.sortSeries();
-        SeriesList extractedSeries = biggerListSimple();
+        AbstractSeriesList extractedSeries = biggerListSimple();
         // combinedList will replace seriesSaved but for now it won't
-        SeriesList combinedList = SeriesList.combineSeries(seriesSaved, extractedSeries);
+        AbstractSeriesList combinedList = AbstractSeriesList.combineSeries(seriesSaved, extractedSeries);
 
         // comparing extractedSeries with seriesSaved
         assertEquals(15, combinedList.size());
@@ -63,11 +60,10 @@ public class TestDataSeriesList {
     @Test
     public void combineSmallerFileSimple() {
         File filePath = new File("series/");
-        SeriesList seriesSaved = new SeriesList();
-        seriesSaved = ExtractData.extractSeriesOnFile(filePath, seriesSaved);
+        AbstractSeriesList seriesSaved = new SeriesOnFile(filePath);
         seriesSaved.sortSeries();
-        SeriesList extractedSeries = smallerListSimple();
-        SeriesList combinedList = SeriesList.combineSeries(seriesSaved, extractedSeries);
+        AbstractSeriesList extractedSeries = smallerListSimple();
+        AbstractSeriesList combinedList = AbstractSeriesList.combineSeries(seriesSaved, extractedSeries);
         // comparing extractedSeries with seriesSaved
         assertTrue(seriesSaved.size() == combinedList.size());
 
@@ -77,12 +73,11 @@ public class TestDataSeriesList {
     @Test
     public void combineSameSizeFile() {
         File filePath = new File("series/");
-        SeriesList seriesSaved = new SeriesList();
-        seriesSaved = ExtractData.extractSeriesOnFile(filePath, seriesSaved);
+        AbstractSeriesList seriesSaved = new SeriesOnFile(filePath);
         seriesSaved.sortSeries();
-        SeriesList extractedSeries = sameSizeListSimple();
+        AbstractSeriesList extractedSeries = sameSizeListSimple();
         //SeriesList combinedList = SeriesList.combineSeries(extractedSeries, seriesSaved);
-        SeriesList combinedList = SeriesList.combineSeries(seriesSaved, extractedSeries);
+        AbstractSeriesList combinedList = AbstractSeriesList.combineSeries(seriesSaved, extractedSeries);
 
         assertTrue(combinedList.size()==14);
 
@@ -100,11 +95,10 @@ public class TestDataSeriesList {
     @Test
     public void combineWithDifferentCurrentEpisode() {
         File filePath = new File("series/");
-        SeriesList seriesSaved = changeCurrentEpisode();
-        SeriesList extractedSeries = new SeriesList();
-        extractedSeries = ExtractData.extractSeriesOnFile(filePath, extractedSeries);
+        AbstractSeriesList seriesSaved = changeCurrentEpisode();
+        AbstractSeriesList extractedSeries = new SeriesOnFile(filePath);
         extractedSeries.sortSeries();
-        SeriesList combinedList = SeriesList.combineSeries(seriesSaved, extractedSeries);
+        AbstractSeriesList combinedList = AbstractSeriesList.combineSeries(seriesSaved, extractedSeries);
 
         String episodeCheck1 = "episode: 3";
         String combineCheck1 = combinedList.getSeries(0).getCurrentEpisode();
@@ -120,9 +114,9 @@ public class TestDataSeriesList {
     @Test
     public void combineComplex() {
         File filePath = new File("series/");
-        SeriesList seriesSaved = changeCurrentEpisode();
-        SeriesList extractedSeries = sameSizeListSimple();
-        SeriesList combinedList = SeriesList.combineSeries(seriesSaved, extractedSeries);
+        AbstractSeriesList seriesSaved = changeCurrentEpisode();
+        AbstractSeriesList extractedSeries = sameSizeListSimple();
+        AbstractSeriesList combinedList = AbstractSeriesList.combineSeries(seriesSaved, extractedSeries);
 
         String seriesCheck1A = "The series of 1";
         String seriesCheck1B = combinedList.getSeries(0).getName();
@@ -145,10 +139,9 @@ public class TestDataSeriesList {
         assertEquals(epCheck3A, epCheck3B);
     }
 
-    private static SeriesList biggerListSimple() {
+    private static AbstractSeriesList biggerListSimple() {
         File filePath = new File("series/");
-        SeriesList seriesList = new SeriesList();
-        seriesList = ExtractData.extractSeriesOnFile(filePath, seriesList);
+        AbstractSeriesList seriesList = new SeriesOnFile(filePath);
         seriesList.sortSeries();
         Series toAdd1 = new Series("The series of 101");
         Series toAdd2 = new Series("The series of 13");
@@ -170,20 +163,18 @@ public class TestDataSeriesList {
         return seriesList;
     }
 
-    private static SeriesList smallerListSimple() {
+    private static AbstractSeriesList smallerListSimple() {
         File filePath = new File("series/");
-        SeriesList seriesList = new SeriesList();
-        seriesList = ExtractData.extractSeriesOnFile(filePath, seriesList);
+        AbstractSeriesList seriesList = new SeriesOnFile(filePath);
         seriesList.sortSeries();
         seriesList.removeSeries(0);
         seriesList.removeSeries(3);
         return seriesList;
     }
 
-    private static SeriesList sameSizeListSimple() {
+    private static AbstractSeriesList sameSizeListSimple() {
         File filePath = new File("series/");
-        SeriesList seriesList = new SeriesList();
-        seriesList = ExtractData.extractSeriesOnFile(filePath, seriesList);
+        AbstractSeriesList seriesList = new SeriesOnFile(filePath);
 
         Series toAdd1 = new Series("The series of 101");
         Series toAdd2 = new Series("The series of 13");
@@ -198,10 +189,9 @@ public class TestDataSeriesList {
         return seriesList;
     }
 
-    private static SeriesList changeCurrentEpisode() {
+    private static AbstractSeriesList changeCurrentEpisode() {
         File filePath = new File("series/");
-        SeriesList seriesList = new SeriesList();
-        seriesList = ExtractData.extractSeriesOnFile(filePath, seriesList);
+        AbstractSeriesList seriesList = new SeriesOnFile(filePath);
         seriesList.sortSeries();
         seriesList.getSeries(0).setCurrentEpisode(2);
         seriesList.getSeries(3).setCurrentEpisode(4);

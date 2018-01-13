@@ -39,7 +39,6 @@ public class RootLayoutController implements Initializable {
         Optional<ButtonType> result = alert.showAndWait();
 
         if(result.isPresent() && result.get() == saveButton) {
-            String fileName = "savedData/storedSeriesList.ser";
             mainController.saveData();
         }
 

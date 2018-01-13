@@ -1,14 +1,15 @@
 package tests;
 
+import metadata.AbstractSeriesList;
 import metadata.Series;
-import metadata.SeriesList;
+import metadata.SeriesOnFile;
+import metadata.SeriesSaved;
 import org.junit.Test;
-import storageAndExtraction.Deserialize;
-import storageAndExtraction.ExtractData;
-import storageAndExtraction.Serialize;
 
-import static org.junit.Assert.*;
 import java.io.File;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  *  Tests for both Serializing and Deserializing the SeriesList Object
@@ -24,10 +25,9 @@ public class SerializationTests {
     @Test
     public void serializeTest() {
         File path = new File("/Users/ChrisCorner/Documents/Films_Series/Series");
-        SeriesList seriesList = new SeriesList();
-        seriesList = ExtractData.extractSeriesOnFile(path, seriesList);
+        AbstractSeriesList seriesList = new SeriesOnFile(path);
         String fileName = "savedData/storedSeriesList.ser";
-        Serialize.serializeList(seriesList, fileName);
+        seriesList.serializeList(seriesList, fileName);
         File seriesFile = new File("savedData/storedSeriesList.ser");
         assertEquals(seriesFile.exists(), true);
     }
@@ -35,11 +35,10 @@ public class SerializationTests {
     @Test
     public void deserializeTest() {
         File path = new File("/Users/ChrisCorner/Documents/Films_Series/Series");
-        SeriesList seriesList = new SeriesList();
-        seriesList = ExtractData.extractSeriesOnFile(path, seriesList);
+        AbstractSeriesList seriesList = new SeriesOnFile(path);
         String fileName = "savedData/storedSeriesList.ser";
-        Serialize.serializeList(seriesList, fileName);
-        SeriesList deserialize = Deserialize.Deserialize(fileName);
+        seriesList.serializeList(seriesList, fileName);
+        AbstractSeriesList deserialize = new SeriesSaved(fileName);
         String list1Series1 = seriesList.getSeries(0).getName();
         String list2Series1 = deserialize.getSeries(0).getName();
         assertEquals(list1Series1, list2Series1);
@@ -54,11 +53,10 @@ public class SerializationTests {
     @Test
     public void addExtraSeries() {
         File path = new File("/Users/ChrisCorner/Documents/Films_Series/Series");
-        SeriesList seriesList = new SeriesList();
-        seriesList = ExtractData.extractSeriesOnFile(path, seriesList);
+        AbstractSeriesList seriesList = new SeriesOnFile(path);
         String fileName = "savedData/storedSeriesList.ser";
-        Serialize.serializeList(seriesList, fileName);
-        SeriesList deserialize = Deserialize.Deserialize(fileName);
+        AbstractSeriesList.serializeList(seriesList, fileName);
+        AbstractSeriesList deserialize = new SeriesSaved(fileName);
         Series addExtraStartTest = new Series("*AAAA");
         addExtraStartTest.addEpisode("pilot");
         Series addExtraEndTest = new Series("ZaddExtra test at end");
@@ -72,12 +70,7 @@ public class SerializationTests {
         String fileName = "savedData/storedSeriesList.ser";
         File file = new File(fileName);
         file.delete();
-        SeriesList seriesOnFile = Deserialize.Deserialize(fileName);
+        AbstractSeriesList seriesOnFile = new SeriesSaved(fileName);
         assertTrue(seriesOnFile.isEmpty());
-    }
-
-    @Test
-    public void removeSeries() {
-
     }
 }

@@ -1,9 +1,9 @@
 package tests;
 
-import metadata.SeriesList;
+import metadata.AbstractSeriesList;
 import metadata.Series;
+import metadata.SeriesOnFile;
 import org.junit.Test;
-import storageAndExtraction.ExtractData;
 
 import static org.junit.Assert.*;
 
@@ -26,8 +26,7 @@ public class RealInitialFileExtract {
     @Test
     public void checkSeriesNames() {
         File filePath = new File("/Users/ChrisCorner/Documents/Films_Series/Series");
-        SeriesList seriesInfo = new SeriesList();
-        seriesInfo = ExtractData.extractSeriesOnFile(filePath, seriesInfo);
+        AbstractSeriesList seriesInfo = new SeriesOnFile(filePath);
         List<Series> seriesList = seriesInfo.getSeriesList();
         String expectedS01 = "Adventure Time - Season 7";
         String actualS01 = seriesList.get(0).getName();
@@ -45,8 +44,7 @@ public class RealInitialFileExtract {
     @Test
     public void checkEpisodes() {
         File filePath = new File("/Users/ChrisCorner/Documents/Films_Series/Series");
-        SeriesList seriesInfo = new SeriesList();
-        seriesInfo = ExtractData.extractSeriesOnFile(filePath, seriesInfo);
+        AbstractSeriesList seriesInfo = new SeriesOnFile(filePath);
         List<Series> seriesList = seriesInfo.getSeriesList();
 
         String expectedS01E01 = "S07E01-Bonnie & Neddy.mp4";

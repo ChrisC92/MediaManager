@@ -4,29 +4,38 @@ import formattingAndOrdering.SeriesNatOrderComparator;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.util.*;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
-public class SeriesList implements java.io.Serializable {
+/**
+ * Abstract class for the SeriesList, with all base components the subclasses alter the ways in which the data is retrieved
+ * to populate the List
+ */
+public abstract class AbstractSeriesList {
 
-    // TODO: make an abstract class for making lists
+    private transient ObservableList<Series> seriesList = FXCollections.observableArrayList();
 
-    private transient ObservableList<Series> seriesList;
+    public AbstractSeriesList() {
 
-    public SeriesList() {
-        seriesList = FXCollections.observableArrayList();
     }
 
-    public SeriesList(SeriesList seriesList) {
-        this.seriesList = FXCollections.observableArrayList(seriesList.getSeriesList());
+    public AbstractSeriesList(ObservableList<Series> seriesList) {
+        this.seriesList = seriesList;
+    }
+
+    public AbstractSeriesList(File filePath) {
+        this.seriesList = SeriesOnFile.extractSeriesOnFile(filePath, seriesList);
+    }
+
+    public AbstractSeriesList(String fileName) {
+        this.seriesList = SeriesSaved.deserialize(fileName).getSeriesList();
     }
 
     public ObservableList<Series> getSeriesList() {
         return seriesList;
     }
-
 
     public int size() {
         return seriesList.size();
@@ -62,10 +71,10 @@ public class SeriesList implements java.io.Serializable {
     }
 
     /**
-     *  Combines and returns on SeriesList when given the list saved on file and the file extracted
+     * Combines and returns on SeriesList when given the list saved on file and the file extracted
      */
-    public static SeriesList combineSeries(SeriesList seriesSaved, SeriesList extractedList) {
-        SeriesList extractedCopy = new SeriesList(extractedList);
+    public static AbstractSeriesList combineSeries(AbstractSeriesList seriesSaved, AbstractSeriesList extractedList) {
+        AbstractSeriesList extractedCopy = new SeriesOnFile(extractedList);
         if (!(seriesSaved.isEmpty())) {
             extractedCopy.getSeriesList().removeAll(seriesSaved.getSeriesList());
             extractedCopy.getSeriesList().addAll(seriesSaved.getSeriesList());
@@ -91,35 +100,15 @@ public class SeriesList implements java.io.Serializable {
         return false;
     }
 
-    /**
-     * Performs custom serialization of this instance.
-     * Automatically is invoked by Java when this instance is serialized
-     */
-    private void writeObject(ObjectOutputStream out) throws IOException {
-        out.defaultWriteObject();
-
-        out.writeObject(arrayListSeries());
-    }
-
-    /**
-     * Performs custom deserialization of this instance
-     * Automatically is invoked by Java during deserialization
-     */
-    private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
-        in.defaultReadObject();
-        ArrayList<Series> extracted = (ArrayList<Series>) in.readObject();
-        seriesList = FXCollections.observableArrayList(extracted);
-    }
-
     @Override
     public boolean equals(Object other) {
         if (other == this) {
             return true;
         }
-        if (!(other instanceof SeriesList)) {
+        if (!(other instanceof AbstractSeriesList)) {
             return false;
         }
-        SeriesList compare = (SeriesList) other;
+        AbstractSeriesList compare = (AbstractSeriesList) other;
         if (this.size() != compare.size()) {
             return false;
         }
@@ -131,13 +120,34 @@ public class SeriesList implements java.io.Serializable {
         return true;
     }
 
-
     private List<Series> arrayListSeries() {
         List<Series> toReturn = new ArrayList<>();
 
-        for(Series series : seriesList) {
+        for (Series series : seriesList) {
             toReturn.add(series);
         }
         return toReturn;
     }
+
+    public void setSeriesList(ObservableList<Series> seriesList) {
+        this.seriesList = seriesList;
+    }
+
+    public static void serializeList(AbstractSeriesList seriesList, String fileName) {
+        File checkFile = new File(fileName);
+        if (checkFile.exists()) {
+            checkFile.delete();
+        }
+        try {
+            FileOutputStream file = new FileOutputStream(fileName);
+            ObjectOutputStream out = new ObjectOutputStream(file);
+            out.writeObject(seriesList);
+            out.close();
+            file.close();
+        } catch (IOException ex) {
+            System.out.println("IO Exception has been caught");
+            ex.printStackTrace();
+        }
+    }
+
 }
