@@ -55,6 +55,10 @@ public class Series implements java.io.Serializable {
         Collections.sort(episodes, new NaturalOrderComparator());
     }
 
+    public ObservableList<StringProperty> getEpisodes() {
+        return episodes;
+    }
+
     public String getName() {
         return series.get();
     }

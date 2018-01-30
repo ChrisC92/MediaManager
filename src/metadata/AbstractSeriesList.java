@@ -8,7 +8,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
+//TODO: unsure whether this is the best formatting for code
 /**
  * Abstract class for the SeriesList, with all base components the subclasses alter the ways in which the data is retrieved
  * to populate the List

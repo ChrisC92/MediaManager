@@ -1,6 +1,7 @@
 package GUI.view;
 
 import GUI.MainApp;
+import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import metadata.*;
@@ -15,7 +16,7 @@ public class MainLayoutController {
 
 
     @FXML
-    private Label currentEpisode;
+    private TextField currentEpisode;
 
     @FXML
     private Button setCurrentEpisode;
@@ -25,7 +26,7 @@ public class MainLayoutController {
 
     @FXML
     private Button delete;
-    //TODO: complex delete could keep what is deleted in another file and prevents it from being re-added when the program extracts data
+    //TODO: complex delete could keep what is deleted in another file and prevents it from being re-added when the program                   extracts data
 
     @FXML
     private ToggleButton onFileButton;
@@ -33,29 +34,53 @@ public class MainLayoutController {
     @FXML
     private ToggleButton AllButton;
 
-    @FXML
-    private ListView<Series> onFileDisplay;
+    private AbstractSeriesList seriesOnFile;
 
     @FXML
     private ListView<Series> savedFileDisplay;
-
+    private AbstractSeriesList seriesSaved;
+    
+    @FXML
+    private ListView<StringProperty> episodeList;
 
     private MainApp mainApp;
-
-    private AbstractSeriesList seriesSaved;
-
-    private AbstractSeriesList seriesOnFile;
 
     public MainLayoutController() {
     }
 
     @FXML
     private void initialize() {
-        populateLists();
+        populateSeriesSaved();
+        
+        savedFileDisplay.setOnMouseClicked((evt) -> mouseClickedList() );
+
+    } 
+
+    private void mouseClickedList() {
+        savedFileDisplay.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) -> {
+            currentEpisode.clear();
+            //episodeList.setItems(newValue.getEpisodes());
+            currentEpisode.appendText(newValue.getCurrentEpisode());
+        }));
+
     }
 
 
-    private void populateLists() {
+    private void populateEpisodeList(AbstractSeriesList seriesSelected ) {
+
+    }
+    //TODO: unsure if it is correct to make method to be used in lambda expression
+    private void savedDisplayListener() {
+    }
+
+
+    private void changeLabel(Series seriesSelected) {
+        currentEpisode.appendText(seriesSelected.getName());
+    }
+
+
+
+    private void populateSeriesSaved() {
         //TODO: refactor to allow use of user selecting file paths for series
         seriesSaved = new SeriesSaved("savedData/storedSeriesList.ser");
         File filePath = new File("/Users/ChrisCorner/Documents/Films_Series/Series");
@@ -63,7 +88,6 @@ public class MainLayoutController {
         seriesSaved = AbstractSeriesList.combineSeries(seriesSaved, seriesOnFile);
 
         savedFileDisplay.setItems(seriesSaved.getSeriesList());
-        onFileDisplay.setItems(seriesOnFile.getSeriesList());
         savedFileDisplay.disabledProperty();
     }
 
@@ -78,5 +102,9 @@ public class MainLayoutController {
 
     public void setSeriesOnFile(File filePath) {
         seriesOnFile = new SeriesOnFile(filePath);
+    }
+
+    private void selectFromSeriesOnFile() {
+
     }
 }
