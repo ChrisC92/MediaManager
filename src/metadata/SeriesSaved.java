@@ -11,6 +11,9 @@ import java.io.ObjectInputStream;
 
 public class SeriesSaved extends AbstractSeriesList {
 
+    public SeriesSaved() {
+    }
+
     public SeriesSaved(String fileName) {
         super(fileName);
     }

@@ -1,12 +1,15 @@
 package GUI.view;
 
 import GUI.MainApp;
-import javafx.beans.property.StringProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.util.Callback;
 import metadata.*;
 
 import java.io.File;
+import java.security.SecureRandom;
 
 /**
  *  Main layout
@@ -26,7 +29,7 @@ public class MainLayoutController {
 
     @FXML
     private Button delete;
-    //TODO: complex delete could keep what is deleted in another file and prevents it from being re-added when the program                   extracts data
+    //TODO: complex delete could keep what is deleted in another file and prevents it from being re-added when the program extracts data
 
     @FXML
     private ToggleButton onFileButton;
@@ -41,7 +44,7 @@ public class MainLayoutController {
     private AbstractSeriesList seriesSaved;
     
     @FXML
-    private ListView<StringProperty> episodeList;
+    private ListView<SimpleStringProperty> episodeList;
 
     private MainApp mainApp;
 
@@ -54,13 +57,34 @@ public class MainLayoutController {
         
         savedFileDisplay.setOnMouseClicked((evt) -> mouseClickedList() );
 
-    } 
+    }
 
+    /**
+     *  Takes the users click, retreives the episode list for the given series (newValue)
+     */
     private void mouseClickedList() {
         savedFileDisplay.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) -> {
             currentEpisode.clear();
-            //episodeList.setItems(newValue.getEpisodes());
+            episodeList.setItems(newValue.getEpisodes());
+            /** Set cell factory to render the episode names */
+            episodeList.setCellFactory(new Callback<ListView<SimpleStringProperty>, ListCell<SimpleStringProperty>>() {
+                @Override
+                public ListCell<SimpleStringProperty> call(ListView<SimpleStringProperty> param) {
+                    return new ListCell<SimpleStringProperty>() {
+                        @Override
+                        public void updateItem(SimpleStringProperty episode, boolean empty) {
+                            super.updateItem(episode, empty);
+                            if(episode == null) {
+                                setText(null);
+                            } else {
+                                setText(episode.getValue());
+                            }
+                        }
+                    };
+                }
+            });
             currentEpisode.appendText(newValue.getCurrentEpisode());
+
         }));
 
     }
@@ -88,7 +112,23 @@ public class MainLayoutController {
         seriesSaved = AbstractSeriesList.combineSeries(seriesSaved, seriesOnFile);
 
         savedFileDisplay.setItems(seriesSaved.getSeriesList());
-        savedFileDisplay.disabledProperty();
+        /** Set cell factory allows for rendering each series name correctly */
+        savedFileDisplay.setCellFactory(new Callback<ListView<Series>, ListCell<Series>>() {
+            @Override
+            public ListCell<Series> call(ListView<Series> param) {
+                return new ListCell<Series>() {
+                    @Override
+                    public void updateItem(Series series, boolean empty) {
+                        super.updateItem(series, empty);
+                        if(series == null) {
+                            setText(null);
+                        } else {
+                            setText(series.getName());
+                        }
+                    }
+                };
+            }
+        });
     }
 
     public void setMainApp(MainApp mainApp) {

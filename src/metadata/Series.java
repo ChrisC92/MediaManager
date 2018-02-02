@@ -22,9 +22,9 @@ import java.util.Objects;
  */
 public class Series implements java.io.Serializable {
 
-    private transient StringProperty series;
-    private transient ObservableList<StringProperty> episodes;
-    private transient StringProperty currentEpisode;
+    private transient SimpleStringProperty series;
+    private transient ObservableList<SimpleStringProperty> episodes;
+    private transient SimpleStringProperty currentEpisode;
 
     public Series(String series) {
         this.series = new SimpleStringProperty(series);
@@ -43,7 +43,7 @@ public class Series implements java.io.Serializable {
     }
 
     private boolean containsEp(String epName) {
-        for (StringProperty episode : episodes) {
+        for (SimpleStringProperty episode : episodes) {
             if (episode.get().equals(epName)) {
                 return true;
             }
@@ -55,7 +55,7 @@ public class Series implements java.io.Serializable {
         Collections.sort(episodes, new NaturalOrderComparator());
     }
 
-    public ObservableList<StringProperty> getEpisodes() {
+    public ObservableList<SimpleStringProperty> getEpisodes() {
         return episodes;
     }
 
@@ -80,7 +80,7 @@ public class Series implements java.io.Serializable {
      */
     public void setCurrentEpisode(String epName) {
         boolean containsEp = false;
-        for (StringProperty episode : episodes) {
+        for (SimpleStringProperty episode : episodes) {
             if (episode.get().equals(epName)) {
                 currentEpisode = episode;
                 containsEp = true;
@@ -115,10 +115,12 @@ public class Series implements java.io.Serializable {
         return false;
     }
 
+    /**
     @Override
     public String toString() {
         return series.get();
     }
+     TODO: might need to delete */
 
     @Override
     public boolean equals(Object o) {
@@ -164,8 +166,8 @@ public class Series implements java.io.Serializable {
         currentEpisode = new SimpleStringProperty((String) in.readObject());
     }
 
-    private ObservableList<StringProperty> episodesAsSimpleStrings(List<String> episodeStrings) {
-        ObservableList<StringProperty> episodesReturn = FXCollections.observableArrayList();
+    private ObservableList<SimpleStringProperty> episodesAsSimpleStrings(List<String> episodeStrings) {
+        ObservableList<SimpleStringProperty> episodesReturn = FXCollections.observableArrayList();
         for(String episode : episodeStrings) {
             episodesReturn.add(new SimpleStringProperty(episode));
         }
