@@ -10,7 +10,8 @@ import metadata.*;
 import java.io.File;
 
 /**
- * Main layout
+ * Controller class that is linked with the MainLayout.fxml - handles all main interactions with the application apart from the menu bar
+ * which is handled by the rootLayout class and .fxml
  */
 public class MainLayoutController {
 
@@ -25,20 +26,25 @@ public class MainLayoutController {
     private Button delete;
     //TODO: complex delete could keep what is deleted in another file and prevents it from being re-added when the program extracts data
 
+    final ToggleGroup buttonGroup = new ToggleGroup();
     @FXML
     private ToggleButton onFileButton;
-
     @FXML
     private ToggleButton allButton;
 
+    @FXML
+    private ListView<Series> onFileDisplay;
     private AbstractSeriesList seriesOnFile;
 
     @FXML
-    private ListView<Series> savedFileDisplay;
+    private ListView<Series> savedDisplay;
     private AbstractSeriesList seriesSaved;
 
     @FXML
     private ListView<SimpleStringProperty> episodeList;
+
+    private Series currentSeriesSelected;
+    private SimpleStringProperty currentEpisodeSelected;
 
     private MainApp mainApp;
 
@@ -47,18 +53,49 @@ public class MainLayoutController {
 
     @FXML
     private void initialize() {
-        populateSeriesSaved();
+        populateSeriesLists();
+        savedSeriesInteraction();
+        episodeListInteraction();
+        setCurrentEpInteraction();
+        toggleButtonInteraction();
+    }
 
-        mouseSavedSeries();
+    private void toggleButtonInteraction() {
+        onFileButton.setToggleGroup(buttonGroup);
+        allButton.setToggleGroup(buttonGroup);
+    }
 
+    /**
+     * Handles pressing of the setCurrentEpisode Button
+     */
+    private void setCurrentEpInteraction() {
+        setCurrentEpisode.setOnAction((event) -> {
+            if (currentEpisodeSelected != null) {
+                currentSeriesSelected.setCurrentEpisode(currentEpisodeSelected.get());
+                currentEpisode.clear();
+                currentEpisode.appendText(currentEpisodeSelected.get());
+                currentEpisodeSelected = new SimpleStringProperty();
+            }
+        });
+    }
+
+    /**
+     * Handles interactions with the episodeLists and also the setCurrentEpisode button
+     * Sets the newValue as the current episode if the setCurrentEpisode button is selected
+     */
+    private void episodeListInteraction() {
+        episodeList.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) -> {
+                currentEpisodeSelected = newValue;
+        }));
     }
 
     /**
      * Handles any mouse click on the list of saved series and displays the list of episodes on the
      * bottom
      */
-    private void mouseSavedSeries() {
-        savedFileDisplay.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) -> {
+    private void savedSeriesInteraction() {
+        savedDisplay.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) -> {
+            currentSeriesSelected = newValue;
             currentEpisode.clear();
 
             episodeList.setItems(newValue.getEpisodes());
@@ -84,16 +121,16 @@ public class MainLayoutController {
 
     }
 
-    private void populateSeriesSaved() {
+    private void populateSeriesLists() {
         //TODO: refactor to allow use of user selecting file paths for series
         seriesSaved = new SeriesSaved("savedData/storedSeriesList.ser");
         File filePath = new File("/Users/ChrisCorner/Documents/Films_Series/Series");
         seriesOnFile = new SeriesOnFile(filePath);
         seriesSaved = AbstractSeriesList.combineSeries(seriesSaved, seriesOnFile);
 
-        savedFileDisplay.setItems(seriesSaved.getSeriesList());
+        savedDisplay.setItems(seriesSaved.getSeriesList());
         /** Set cell factory allows for rendering each series name correctly */
-        savedFileDisplay.setCellFactory(new Callback<ListView<Series>, ListCell<Series>>() {
+        savedDisplay.setCellFactory(new Callback<ListView<Series>, ListCell<Series>>() {
             @Override
             public ListCell<Series> call(ListView<Series> param) {
                 return new ListCell<Series>() {
@@ -109,7 +146,11 @@ public class MainLayoutController {
                 };
             }
         });
+
+
     }
+
+
 
     public void setMainApp(MainApp mainApp) {
         this.mainApp = mainApp;
