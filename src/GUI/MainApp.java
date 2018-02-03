@@ -45,6 +45,7 @@ public class MainApp extends Application {
             this.rootController = rootController;
             Scene scene = new Scene(rootLayout);
             primaryStage.setScene(scene);
+            primaryStage.setOnHidden(e -> rootController.doExit());
             primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();

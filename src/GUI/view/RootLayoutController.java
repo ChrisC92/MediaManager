@@ -29,7 +29,7 @@ public class RootLayoutController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
     }
-    //TODO: add a cancel button
+
     public void doExit() {
         ButtonType saveButton = new ButtonType("Save", ButtonBar.ButtonData.OK_DONE);
         ButtonType noSaveButton = new ButtonType("Don't Save", ButtonBar.ButtonData.CANCEL_CLOSE);

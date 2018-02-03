@@ -17,7 +17,6 @@
                   <Button fx:id="setCurrentEpisode" layoutY="185.0" mnemonicParsing="false" text="Set Ep" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
                   <ToggleButton fx:id="onFileButton" layoutY="55.0" mnemonicParsing="false" prefWidth="80.0" text="On File" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
                   <ToggleButton fx:id="allButton" layoutY="90.0" mnemonicParsing="false" prefWidth="80.0" text="All" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
-                  <Button fx:id="delete" layoutY="275.0" mnemonicParsing="false" text="Delete" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
@@ -36,7 +35,7 @@
                         </AnchorPane>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="86.0" prefWidth="414.0">
                            <children>
-                              <TextField fx:id="currentEpisode" prefHeight="40.0" prefWidth="604.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <TextField fx:id="bottomTextField" prefHeight="40.0" prefWidth="604.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                            </children>
                         </AnchorPane>
                     </items>

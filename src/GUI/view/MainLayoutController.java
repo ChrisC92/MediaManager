@@ -17,14 +17,12 @@ public class MainLayoutController {
 
 
     @FXML
-    private TextField currentEpisode;
+    private TextField bottomTextField;
 
     @FXML
     private Button setCurrentEpisode;
 
-    @FXML
-    private Button delete;
-    //TODO: complex delete could keep what is deleted in another file and prevents it from being re-added when the program extracts data
+    //TODO: delete button
 
     @FXML
     private ToggleButton onFileButton;
@@ -57,10 +55,6 @@ public class MainLayoutController {
 
         //TODO: refactor to allow use of user selecting file paths for series
         allSeries = new SeriesSaved("savedData/storedSeriesList.ser");
-        File filePath = new File("/Users/ChrisCorner/Documents/Films_Series/Series");
-        onFileSeries = new SeriesOnFile(filePath);
-        allSeries = AbstractSeriesList.combineSeries(allSeries, onFileSeries);
-
         populateSeriesLists(allSeries);
         displayedSeriesInteraction();
         episodeListInteraction();
@@ -69,15 +63,19 @@ public class MainLayoutController {
     }
 
     private void toggleButtonInteraction() {
-        buttonGroup.getSelectedToggle().selectedProperty().addListener(((observable,
-                oldValue, newValue) -> {
+        if (onFileSeries != null) {
+            buttonGroup.getSelectedToggle().selectedProperty().addListener(((observable,
+                                                                             oldValue, newValue) -> {
 
-            if(allButton.isSelected()) {
-                populateSeriesLists(allSeries);
-            } else if(onFileButton.isSelected()) {
-                populateSeriesLists(onFileSeries);
-            }
-        }));
+                if (allButton.isSelected()) {
+                    populateSeriesLists(allSeries);
+                } else if (onFileButton.isSelected()) {
+                    populateSeriesLists(onFileSeries);
+                }
+            }));
+        } else {
+            bottomTextField.appendText("no filepath given for onFile, please select from the file menu");
+        }
     }
 
     /**
@@ -87,8 +85,8 @@ public class MainLayoutController {
         setCurrentEpisode.setOnAction((event) -> {
             if (currentEpisodeSelected != null) {
                 currentSeriesSelected.setCurrentEpisode(currentEpisodeSelected.get());
-                currentEpisode.clear();
-                currentEpisode.appendText(currentEpisodeSelected.get());
+                bottomTextField.clear();
+                bottomTextField.appendText(currentEpisodeSelected.get());
                 currentEpisodeSelected = new SimpleStringProperty();
             }
         });
@@ -111,7 +109,7 @@ public class MainLayoutController {
     private void displayedSeriesInteraction() {
         seriesDisplayed.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) -> {
             currentSeriesSelected = newValue;
-            currentEpisode.clear();
+            bottomTextField.clear();
 
             episodeList.setItems(newValue.getEpisodes());
             /** Set cell factory to render the episode names */
@@ -131,7 +129,7 @@ public class MainLayoutController {
                     };
                 }
             });
-            currentEpisode.appendText(newValue.getCurrentEpisode());
+            bottomTextField.appendText(newValue.getCurrentEpisode());
         }));
 
     }
@@ -171,9 +169,8 @@ public class MainLayoutController {
 
     public void setOnFileSeries(File filePath) {
         onFileSeries = new SeriesOnFile(filePath);
-    }
-
-    private void selectFromSeriesOnFile() {
+        //allSeries = AbstractSeriesList.combineSeries(allSeries, onFileSeries);
+        bottomTextField.appendText("Series from file populated");
 
     }
 }
