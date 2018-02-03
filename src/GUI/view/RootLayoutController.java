@@ -49,7 +49,7 @@ public class RootLayoutController implements Initializable {
         DirectoryChooser dirChoice = new DirectoryChooser();
         dirChoice.setTitle("Please Set The FilePath");
         File seriesPath = dirChoice.showDialog(stage);
-        mainController.setSeriesOnFile(seriesPath);
+        mainController.setOnFileSeries(seriesPath);
     }
 
     public void setMainApp(MainApp mainApp) {

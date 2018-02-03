@@ -26,19 +26,17 @@ public class MainLayoutController {
     private Button delete;
     //TODO: complex delete could keep what is deleted in another file and prevents it from being re-added when the program extracts data
 
-    final ToggleGroup buttonGroup = new ToggleGroup();
     @FXML
     private ToggleButton onFileButton;
     @FXML
     private ToggleButton allButton;
+    final ToggleGroup buttonGroup = new ToggleGroup();
 
     @FXML
-    private ListView<Series> onFileDisplay;
-    private AbstractSeriesList seriesOnFile;
+    private ListView<Series> seriesDisplayed;
 
-    @FXML
-    private ListView<Series> savedDisplay;
-    private AbstractSeriesList seriesSaved;
+    private AbstractSeriesList allSeries;
+    private AbstractSeriesList onFileSeries;
 
     @FXML
     private ListView<SimpleStringProperty> episodeList;
@@ -53,16 +51,33 @@ public class MainLayoutController {
 
     @FXML
     private void initialize() {
-        populateSeriesLists();
-        savedSeriesInteraction();
+        onFileButton.setToggleGroup(buttonGroup);
+        allButton.setToggleGroup(buttonGroup);
+        allButton.setSelected(true);
+
+        //TODO: refactor to allow use of user selecting file paths for series
+        allSeries = new SeriesSaved("savedData/storedSeriesList.ser");
+        File filePath = new File("/Users/ChrisCorner/Documents/Films_Series/Series");
+        onFileSeries = new SeriesOnFile(filePath);
+        allSeries = AbstractSeriesList.combineSeries(allSeries, onFileSeries);
+
+        populateSeriesLists(allSeries);
+        displayedSeriesInteraction();
         episodeListInteraction();
         setCurrentEpInteraction();
         toggleButtonInteraction();
     }
 
     private void toggleButtonInteraction() {
-        onFileButton.setToggleGroup(buttonGroup);
-        allButton.setToggleGroup(buttonGroup);
+        buttonGroup.getSelectedToggle().selectedProperty().addListener(((observable,
+                oldValue, newValue) -> {
+
+            if(allButton.isSelected()) {
+                populateSeriesLists(allSeries);
+            } else if(onFileButton.isSelected()) {
+                populateSeriesLists(onFileSeries);
+            }
+        }));
     }
 
     /**
@@ -93,8 +108,8 @@ public class MainLayoutController {
      * Handles any mouse click on the list of saved series and displays the list of episodes on the
      * bottom
      */
-    private void savedSeriesInteraction() {
-        savedDisplay.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) -> {
+    private void displayedSeriesInteraction() {
+        seriesDisplayed.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) -> {
             currentSeriesSelected = newValue;
             currentEpisode.clear();
 
@@ -121,16 +136,11 @@ public class MainLayoutController {
 
     }
 
-    private void populateSeriesLists() {
-        //TODO: refactor to allow use of user selecting file paths for series
-        seriesSaved = new SeriesSaved("savedData/storedSeriesList.ser");
-        File filePath = new File("/Users/ChrisCorner/Documents/Films_Series/Series");
-        seriesOnFile = new SeriesOnFile(filePath);
-        seriesSaved = AbstractSeriesList.combineSeries(seriesSaved, seriesOnFile);
+    private void populateSeriesLists(AbstractSeriesList seriesList) {
 
-        savedDisplay.setItems(seriesSaved.getSeriesList());
+        seriesDisplayed.setItems(seriesList.getSeriesList());
         /** Set cell factory allows for rendering each series name correctly */
-        savedDisplay.setCellFactory(new Callback<ListView<Series>, ListCell<Series>>() {
+        seriesDisplayed.setCellFactory(new Callback<ListView<Series>, ListCell<Series>>() {
             @Override
             public ListCell<Series> call(ListView<Series> param) {
                 return new ListCell<Series>() {
@@ -146,8 +156,6 @@ public class MainLayoutController {
                 };
             }
         });
-
-
     }
 
 
@@ -158,11 +166,11 @@ public class MainLayoutController {
 
     public void saveData() {
         String fileName = "savedData/storedSeriesList.ser";
-        AbstractSeriesList.serializeList(seriesSaved, fileName);
+        AbstractSeriesList.serializeList(allSeries, fileName);
     }
 
-    public void setSeriesOnFile(File filePath) {
-        seriesOnFile = new SeriesOnFile(filePath);
+    public void setOnFileSeries(File filePath) {
+        onFileSeries = new SeriesOnFile(filePath);
     }
 
     private void selectFromSeriesOnFile() {
