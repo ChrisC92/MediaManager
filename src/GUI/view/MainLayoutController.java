@@ -2,18 +2,15 @@ package GUI.view;
 
 import GUI.MainApp;
 import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.util.Callback;
 import metadata.*;
 
 import java.io.File;
-import java.security.SecureRandom;
 
 /**
- *  Main layout
- *
+ * Main layout
  */
 public class MainLayoutController {
 
@@ -25,9 +22,6 @@ public class MainLayoutController {
     private Button setCurrentEpisode;
 
     @FXML
-    private Button goBackList;
-
-    @FXML
     private Button delete;
     //TODO: complex delete could keep what is deleted in another file and prevents it from being re-added when the program extracts data
 
@@ -35,14 +29,14 @@ public class MainLayoutController {
     private ToggleButton onFileButton;
 
     @FXML
-    private ToggleButton AllButton;
+    private ToggleButton allButton;
 
     private AbstractSeriesList seriesOnFile;
 
     @FXML
     private ListView<Series> savedFileDisplay;
     private AbstractSeriesList seriesSaved;
-    
+
     @FXML
     private ListView<SimpleStringProperty> episodeList;
 
@@ -54,17 +48,19 @@ public class MainLayoutController {
     @FXML
     private void initialize() {
         populateSeriesSaved();
-        
-        savedFileDisplay.setOnMouseClicked((evt) -> mouseClickedList() );
+
+        mouseSavedSeries();
 
     }
 
     /**
-     *  Takes the users click, retreives the episode list for the given series (newValue)
+     * Handles any mouse click on the list of saved series and displays the list of episodes on the
+     * bottom
      */
-    private void mouseClickedList() {
+    private void mouseSavedSeries() {
         savedFileDisplay.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) -> {
             currentEpisode.clear();
+
             episodeList.setItems(newValue.getEpisodes());
             /** Set cell factory to render the episode names */
             episodeList.setCellFactory(new Callback<ListView<SimpleStringProperty>, ListCell<SimpleStringProperty>>() {
@@ -74,7 +70,7 @@ public class MainLayoutController {
                         @Override
                         public void updateItem(SimpleStringProperty episode, boolean empty) {
                             super.updateItem(episode, empty);
-                            if(episode == null) {
+                            if (episode == null) {
                                 setText(null);
                             } else {
                                 setText(episode.getValue());
@@ -84,25 +80,9 @@ public class MainLayoutController {
                 }
             });
             currentEpisode.appendText(newValue.getCurrentEpisode());
-
         }));
 
     }
-
-
-    private void populateEpisodeList(AbstractSeriesList seriesSelected ) {
-
-    }
-    //TODO: unsure if it is correct to make method to be used in lambda expression
-    private void savedDisplayListener() {
-    }
-
-
-    private void changeLabel(Series seriesSelected) {
-        currentEpisode.appendText(seriesSelected.getName());
-    }
-
-
 
     private void populateSeriesSaved() {
         //TODO: refactor to allow use of user selecting file paths for series
@@ -120,7 +100,7 @@ public class MainLayoutController {
                     @Override
                     public void updateItem(Series series, boolean empty) {
                         super.updateItem(series, empty);
-                        if(series == null) {
+                        if (series == null) {
                             setText(null);
                         } else {
                             setText(series.getName());
