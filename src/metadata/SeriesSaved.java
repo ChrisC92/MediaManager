@@ -10,22 +10,19 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 
 public class SeriesSaved extends AbstractSeriesList {
-
-    public SeriesSaved() {
-    }
-
+    
     public SeriesSaved(String fileName) {
-        super(fileName);
+        super(SeriesSaved.deserialize(fileName).getSeriesList());
     }
 
-    public static SeriesOnFile deserialize(String fileName) {
-        SeriesOnFile seriesList = new SeriesOnFile();
+    public static AbstractSeriesList deserialize(String fileName) {
+        AbstractSeriesList seriesList = new SeriesOnFile();
         File file = new File("savedData/storedSeriesList.ser");
         if (file.exists()) {
             try {
                 FileInputStream fileIn = new FileInputStream(fileName);
                 ObjectInputStream in = new ObjectInputStream(fileIn);
-                seriesList = (SeriesOnFile) in.readObject();
+                seriesList = (AbstractSeriesList) in.readObject();
                 in.close();
                 fileIn.close();
             } catch (IOException i) {
@@ -36,6 +33,11 @@ public class SeriesSaved extends AbstractSeriesList {
                 c.printStackTrace();
             }
         }
+        return seriesList;
+    }
+
+    private static ObservableList<Series> createSeriesList() {
+        ObservableList<Series> seriesList = FXCollections.observableArrayList();
         return seriesList;
     }
 }

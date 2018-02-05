@@ -10,10 +10,11 @@ import java.util.List;
 public class SeriesOnFile extends AbstractSeriesList implements Serializable {
 
     public SeriesOnFile() {
+        super(createSeriesList());
     }
 
     public SeriesOnFile(File filePath) {
-        super(filePath);
+        super(SeriesOnFile.extractSeriesOnFile(filePath, createSeriesList()));
     }
 
     public SeriesOnFile(AbstractSeriesList toCopy ) {
@@ -112,5 +113,10 @@ public class SeriesOnFile extends AbstractSeriesList implements Serializable {
             toReturn.add(series);
         }
         return toReturn;
+    }
+
+    private static ObservableList<Series> createSeriesList() {
+        ObservableList<Series> seriesList = FXCollections.observableArrayList();
+        return seriesList;
     }
 }

@@ -16,10 +16,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
-/**
- * Same as the series class however this class will keep all the episodes that is read through the SeriesList Class
- * in an array list
- */
 public class Series implements java.io.Serializable {
 
     private transient SimpleStringProperty series;

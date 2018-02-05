@@ -15,22 +15,14 @@ import java.util.List;
  */
 public abstract class AbstractSeriesList {
 
-    private transient ObservableList<Series> seriesList = FXCollections.observableArrayList();
+    private transient ObservableList<Series> seriesList;
 
-    public AbstractSeriesList() {
-
+    protected AbstractSeriesList() {
+        seriesList = FXCollections.observableArrayList();
     }
 
-    public AbstractSeriesList(ObservableList<Series> seriesList) {
+    protected AbstractSeriesList(ObservableList<Series> seriesList) {
         this.seriesList = seriesList;
-    }
-
-    public AbstractSeriesList(File filePath) {
-        this.seriesList = SeriesOnFile.extractSeriesOnFile(filePath, seriesList);
-    }
-
-    public AbstractSeriesList(String fileName) {
-        this.seriesList = SeriesSaved.deserialize(fileName).getSeriesList();
     }
 
     public ObservableList<Series> getSeriesList() {
