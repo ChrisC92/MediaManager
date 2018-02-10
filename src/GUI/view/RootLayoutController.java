@@ -16,8 +16,8 @@ import java.util.ResourceBundle;
 
 
 /**
- *  Root layout of the GUI. Provides the basic layout which contains the menu bar and space
- *  where other JavaFX elements can be placed
+ * Root layout of the GUI. Provides the basic layout which contains the menu bar and space
+ * where other JavaFX elements can be placed
  */
 
 public class RootLayoutController implements Initializable {
@@ -38,10 +38,9 @@ public class RootLayoutController implements Initializable {
         alert.setTitle("Save");
         Optional<ButtonType> result = alert.showAndWait();
 
-        if(result.isPresent() && result.get() == saveButton) {
+        if (result.isPresent() && result.get() == saveButton) {
             mainController.saveData();
         }
-
         Platform.exit();
     }
 

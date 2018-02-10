@@ -1,13 +1,17 @@
 package GUI.view;
 
 import GUI.MainApp;
+import javafx.application.Platform;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.stage.DirectoryChooser;
+import javafx.stage.Stage;
 import javafx.util.Callback;
 import metadata.*;
 
 import java.io.File;
+import java.util.Optional;
 
 /**
  * Controller class that is linked with the MainLayout.fxml - handles all main interactions with the application apart from the menu bar
@@ -43,6 +47,7 @@ public class MainLayoutController {
     private SimpleStringProperty currentEpisodeSelected;
 
     private MainApp mainApp;
+    private Stage primaryStage;
 
     public MainLayoutController() {
     }
@@ -53,30 +58,51 @@ public class MainLayoutController {
         allButton.setToggleGroup(buttonGroup);
         allButton.setSelected(true);
 
-        //TODO: refactor to allow use of user selecting file paths for series
         allSeries = new SeriesSaved("savedData/storedSeriesList.ser");
         populateSeriesLists(allSeries);
         displayedSeriesInteraction();
         episodeListInteraction();
         setCurrentEpInteraction();
         toggleButtonInteraction();
+        initialFileSelect();
+    }
+
+    private void initialFileSelect() {
+        if (onFileSeries == null) {
+            ButtonType openButton = new ButtonType("Open", ButtonBar.ButtonData.OK_DONE);
+            ButtonType closeButton = new ButtonType("Close", ButtonBar.ButtonData.CANCEL_CLOSE);
+            String contentText = "Please select your series folder";
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION, contentText, openButton, closeButton);
+            alert.setTitle("SeriesTracker");
+            Optional<ButtonType> result = alert.showAndWait();
+
+            if(result.isPresent()&& result.get() == openButton) {
+                DirectoryChooser dirChoice = new DirectoryChooser();
+                dirChoice.setTitle("FilePath Select");
+                File seriesPath = dirChoice.showDialog(primaryStage);
+                onFileSeries = new SeriesOnFile(seriesPath);
+            } else {
+                Platform.exit();
+            }
+        }
     }
 
     private void toggleButtonInteraction() {
-        if (onFileSeries != null) {
-            buttonGroup.getSelectedToggle().selectedProperty().addListener(((observable,
-                                                                             oldValue, newValue) -> {
-
+        buttonGroup.getSelectedToggle().selectedProperty().addListener(((observable,
+                                                                         oldValue, newValue) -> {
+            if (!onFileSeries.isEmpty() || !allSeries.isEmpty())
                 if (allButton.isSelected()) {
+                    System.out.println("allButton selected");
+                    System.out.println("allButton - " + allButton.isSelected());
                     populateSeriesLists(allSeries);
                 } else if (onFileButton.isSelected()) {
+                    System.out.println("onFile button selected");
+                    System.out.println("onFile button - " + onFileButton.isSelected());
                     populateSeriesLists(onFileSeries);
                 }
-            }));
-        } else {
-            bottomTextField.appendText("no filepath given for onFile, please select from the file menu");
-        }
+        }));
     }
+
 
     /**
      * Handles pressing of the setCurrentEpisode Button
@@ -98,7 +124,7 @@ public class MainLayoutController {
      */
     private void episodeListInteraction() {
         episodeList.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) -> {
-                currentEpisodeSelected = newValue;
+            currentEpisodeSelected = newValue;
         }));
     }
 
@@ -157,7 +183,6 @@ public class MainLayoutController {
     }
 
 
-
     public void setMainApp(MainApp mainApp) {
         this.mainApp = mainApp;
     }
@@ -170,7 +195,13 @@ public class MainLayoutController {
     public void setOnFileSeries(File filePath) {
         onFileSeries = new SeriesOnFile(filePath);
         //allSeries = AbstractSeriesList.combineSeries(allSeries, onFileSeries);
+        populateSeriesLists(onFileSeries);
+        bottomTextField.clear();
         bottomTextField.appendText("Series from file populated");
 
+    }
+
+    public void setStage(Stage primaryStage) {
+        this.primaryStage = primaryStage;
     }
 }

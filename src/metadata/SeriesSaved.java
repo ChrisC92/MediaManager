@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 
 public class SeriesSaved extends AbstractSeriesList {
-    
+
     public SeriesSaved(String fileName) {
         super(SeriesSaved.deserialize(fileName).getSeriesList());
     }

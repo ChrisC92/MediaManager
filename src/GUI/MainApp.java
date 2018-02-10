@@ -63,6 +63,7 @@ public class MainApp extends Application {
             rootLayout.setCenter(mainLayout);
             MainLayoutController mainController = loader.getController();
             this.mainController = mainController;
+            mainController.setStage(primaryStage);
             mainController.setMainApp(this);
             RootLayoutController.setMainController(mainController);
 
