@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 import javafx.util.Callback;
 import metadata.*;
 
-import java.io.File;
+import java.io.*;
 import java.util.Optional;
 
 /**
@@ -38,37 +38,44 @@ public class MainLayoutController {
     private ListView<Series> seriesDisplayed;
 
     private AbstractSeriesList allSeries;
-    private AbstractSeriesList onFileSeries;
+    private AbstractSeriesList seriesOnFile;
 
     @FXML
     private ListView<SimpleStringProperty> episodeList;
 
     private Series currentSeriesSelected;
     private SimpleStringProperty currentEpisodeSelected;
+    private File seriesFilePath;
 
     private MainApp mainApp;
-    private Stage primaryStage;
+    private Stage stage;
 
     public MainLayoutController() {
     }
 
+    /**
+     * Populates the two seriesLists used - the series currently on file and the allSeries which
+     * includes series that have been deleted - sets to allSeries and
+     * displays list and initializes any user input
+     */
     @FXML
     private void initialize() {
         onFileButton.setToggleGroup(buttonGroup);
         allButton.setToggleGroup(buttonGroup);
         allButton.setSelected(true);
 
-        allSeries = new SeriesSaved("savedData/storedSeriesList.ser");
+        allSeries = new SeriesSaved("savedData/allSeriesList.ser");
+        deserializeFilePath();
+        initialFileSelect();
         populateSeriesLists(allSeries);
         displayedSeriesInteraction();
         episodeListInteraction();
         setCurrentEpInteraction();
         toggleButtonInteraction();
-        initialFileSelect();
     }
 
     private void initialFileSelect() {
-        if (onFileSeries == null) {
+        if (allSeries.isEmpty()) {
             ButtonType openButton = new ButtonType("Open", ButtonBar.ButtonData.OK_DONE);
             ButtonType closeButton = new ButtonType("Close", ButtonBar.ButtonData.CANCEL_CLOSE);
             String contentText = "Please select your series folder";
@@ -76,29 +83,30 @@ public class MainLayoutController {
             alert.setTitle("SeriesTracker");
             Optional<ButtonType> result = alert.showAndWait();
 
-            if(result.isPresent()&& result.get() == openButton) {
+            if (result.isPresent() && result.get() == openButton) {
                 DirectoryChooser dirChoice = new DirectoryChooser();
-                dirChoice.setTitle("FilePath Select");
-                File seriesPath = dirChoice.showDialog(primaryStage);
-                onFileSeries = new SeriesOnFile(seriesPath);
+                dirChoice.setTitle("File Path Select");
+                File seriesPath = dirChoice.showDialog(stage);
+                seriesFilePath = seriesPath;
+                setSeriesOnFile(seriesPath);
             } else {
                 Platform.exit();
             }
+        } else {
+            seriesFilePath = deserializeFilePath();
+            seriesOnFile = new SeriesOnFile(seriesFilePath, allSeries);
         }
     }
 
     private void toggleButtonInteraction() {
+        //TODO: either handle when null or prevent being null
         buttonGroup.getSelectedToggle().selectedProperty().addListener(((observable,
                                                                          oldValue, newValue) -> {
-            if (!onFileSeries.isEmpty() || !allSeries.isEmpty())
+            if (!seriesOnFile.isEmpty() || !allSeries.isEmpty())
                 if (allButton.isSelected()) {
-                    System.out.println("allButton selected");
-                    System.out.println("allButton - " + allButton.isSelected());
                     populateSeriesLists(allSeries);
                 } else if (onFileButton.isSelected()) {
-                    System.out.println("onFile button selected");
-                    System.out.println("onFile button - " + onFileButton.isSelected());
-                    populateSeriesLists(onFileSeries);
+                    populateSeriesLists(seriesOnFile);
                 }
         }));
     }
@@ -109,11 +117,14 @@ public class MainLayoutController {
      */
     private void setCurrentEpInteraction() {
         setCurrentEpisode.setOnAction((event) -> {
-            if (currentEpisodeSelected != null) {
+            if (currentEpisodeSelected != null && onFileButton.isSelected()) {
                 currentSeriesSelected.setCurrentEpisode(currentEpisodeSelected.get());
                 bottomTextField.clear();
                 bottomTextField.appendText(currentEpisodeSelected.get());
                 currentEpisodeSelected = new SimpleStringProperty();
+            } else if (allButton.isSelected()) {
+                bottomTextField.clear();
+                bottomTextField.appendText("Setting Current episode must work from the onFile list");
             }
         });
     }
@@ -134,34 +145,34 @@ public class MainLayoutController {
      */
     private void displayedSeriesInteraction() {
         seriesDisplayed.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) -> {
-            currentSeriesSelected = newValue;
-            bottomTextField.clear();
+            if (newValue != null) {
+                currentSeriesSelected = newValue;
+                bottomTextField.clear();
 
-            episodeList.setItems(newValue.getEpisodes());
-            /** Set cell factory to render the episode names */
-            episodeList.setCellFactory(new Callback<ListView<SimpleStringProperty>, ListCell<SimpleStringProperty>>() {
-                @Override
-                public ListCell<SimpleStringProperty> call(ListView<SimpleStringProperty> param) {
-                    return new ListCell<SimpleStringProperty>() {
-                        @Override
-                        public void updateItem(SimpleStringProperty episode, boolean empty) {
-                            super.updateItem(episode, empty);
-                            if (episode == null) {
-                                setText(null);
-                            } else {
-                                setText(episode.getValue());
+                episodeList.setItems(newValue.getEpisodes());
+                /** Set cell factory to render the episode names */
+                episodeList.setCellFactory(new Callback<ListView<SimpleStringProperty>, ListCell<SimpleStringProperty>>() {
+                    @Override
+                    public ListCell<SimpleStringProperty> call(ListView<SimpleStringProperty> param) {
+                        return new ListCell<SimpleStringProperty>() {
+                            @Override
+                            public void updateItem(SimpleStringProperty episode, boolean empty) {
+                                super.updateItem(episode, empty);
+                                if (episode == null) {
+                                    setText(null);
+                                } else {
+                                    setText(episode.getValue());
+                                }
                             }
-                        }
-                    };
-                }
-            });
-            bottomTextField.appendText(newValue.getCurrentEpisode());
+                        };
+                    }
+                });
+                bottomTextField.appendText(newValue.getCurrentEpisode());
+            }
         }));
-
     }
 
     private void populateSeriesLists(AbstractSeriesList seriesList) {
-
         seriesDisplayed.setItems(seriesList.getSeriesList());
         /** Set cell factory allows for rendering each series name correctly */
         seriesDisplayed.setCellFactory(new Callback<ListView<Series>, ListCell<Series>>() {
@@ -182,26 +193,77 @@ public class MainLayoutController {
         });
     }
 
+    /**
+     * Deletes the file saved and then populates with the seriesOnFile
+     */
+    public void deleteSavedFiles() {
+        allSeries = new SeriesSaved("");
+        populateSeriesLists(seriesOnFile);
+        bottomTextField.clear();
+        bottomTextField.appendText("File has been deleted");
+    }
+
 
     public void setMainApp(MainApp mainApp) {
         this.mainApp = mainApp;
     }
 
+    /**
+     * Saves the AllSeries list and also the filePath last used by the user to populate onFileList
+     */
     public void saveData() {
-        String fileName = "savedData/storedSeriesList.ser";
-        AbstractSeriesList.serializeList(allSeries, fileName);
+        String allListSave = "savedData/allSeriesList.ser";
+        AbstractSeriesList.combineSeries(allSeries, seriesOnFile);
+        AbstractSeriesList.serializeList(allSeries, allListSave);
+        serializeFilePath(seriesFilePath);
     }
 
-    public void setOnFileSeries(File filePath) {
-        onFileSeries = new SeriesOnFile(filePath);
-        //allSeries = AbstractSeriesList.combineSeries(allSeries, onFileSeries);
-        populateSeriesLists(onFileSeries);
+    public void setSeriesOnFile(File filePath) {
+        seriesOnFile = new SeriesOnFile(filePath);
+        allSeries = AbstractSeriesList.combineSeries(allSeries, seriesOnFile);
+        populateSeriesLists(seriesOnFile);
+        onFileButton.setSelected(true);
         bottomTextField.clear();
         bottomTextField.appendText("Series from file populated");
+    }
 
+    private void serializeFilePath(File seriesFilePath) {
+        String filePath = "savedData/seriesFilePath.ser";
+        try {
+            FileOutputStream file = new FileOutputStream(filePath);
+            ObjectOutputStream out = new ObjectOutputStream(file);
+            out.writeObject(seriesFilePath);
+            out.reset();
+            out.writeObject(seriesFilePath);
+            out.close();
+            file.close();
+        } catch (IOException ex) {
+            System.out.println("IO Exception has been caught");
+            ex.printStackTrace();
+        }
+    }
+
+    private File deserializeFilePath() {
+        File toReturn = new File("");
+        String filePath = "savedData/seriesFilePath.ser";
+        File file = new File(filePath);
+        if(file.exists()) {
+            try {
+                FileInputStream fileIn = new FileInputStream(filePath);
+                ObjectInputStream in = new ObjectInputStream(fileIn);
+                toReturn = (File) in.readObject();
+                in.close();
+            } catch(IOException i) {
+                i.printStackTrace();
+            } catch(ClassNotFoundException c) {
+                c.printStackTrace();
+            }
+        }
+        return toReturn;
     }
 
     public void setStage(Stage primaryStage) {
-        this.primaryStage = primaryStage;
+        this.stage = primaryStage;
     }
+
 }

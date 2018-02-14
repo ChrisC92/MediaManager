@@ -82,12 +82,6 @@ public class Series implements java.io.Serializable {
                 containsEp = true;
             }
         }
-
-        if (containsEp) {
-            System.out.println("Current episode has been changed to " + epName);
-        } else {
-            System.out.println(epName + " is not a valid episode. Current episode has not been changed");
-        }
     }
 
     public void setCurrentEpisode(int index) {

@@ -48,7 +48,22 @@ public class RootLayoutController implements Initializable {
         DirectoryChooser dirChoice = new DirectoryChooser();
         dirChoice.setTitle("Please Set The FilePath");
         File seriesPath = dirChoice.showDialog(stage);
-        mainController.setOnFileSeries(seriesPath);
+        mainController.setSeriesOnFile(seriesPath);
+    }
+
+    public void doClearSaved() {
+        ButtonType confirmClear = new ButtonType("Clear", ButtonBar.ButtonData.OK_DONE);
+        ButtonType cancel = new ButtonType("Cancel", ButtonBar.ButtonData.CANCEL_CLOSE);
+        String confirmText = "Are you sure you want to delete the saved file?";
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, confirmText, confirmClear, cancel);
+        alert.setTitle("Clear File");
+        Optional<ButtonType> result = alert.showAndWait();
+
+        if(result.isPresent() && result.get() == confirmClear) {
+            File fileAll = new File("savedData/allSeriesList.ser");
+            fileAll.delete();
+            mainController.deleteSavedFiles();
+        }
     }
 
     public void setMainApp(MainApp mainApp) {

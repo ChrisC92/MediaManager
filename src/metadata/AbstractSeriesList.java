@@ -8,12 +8,12 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-//TODO: unsure whether this is the best formatting for code
+
 /**
  * Abstract class for the SeriesList, with all base components the subclasses alter the ways in which the data is retrieved
  * to populate the List
  */
-public abstract class AbstractSeriesList {
+public abstract class AbstractSeriesList implements Serializable {
 
     private transient ObservableList<Series> seriesList;
 
@@ -65,16 +65,16 @@ public abstract class AbstractSeriesList {
     /**
      * Combines and returns on SeriesList when given the list saved on file and the file extracted
      */
-    public static AbstractSeriesList combineSeries(AbstractSeriesList seriesSaved, AbstractSeriesList extractedList) {
-        AbstractSeriesList extractedCopy = new SeriesOnFile(extractedList);
+    public static AbstractSeriesList combineSeries(AbstractSeriesList seriesSaved, AbstractSeriesList onFile) {
+        AbstractSeriesList allListCopy = new SeriesOnFile(onFile);
         if (!(seriesSaved.isEmpty())) {
-            extractedCopy.getSeriesList().removeAll(seriesSaved.getSeriesList());
-            extractedCopy.getSeriesList().addAll(seriesSaved.getSeriesList());
-            extractedCopy.sortSeries();
+            allListCopy.getSeriesList().removeAll(seriesSaved.getSeriesList());
+            allListCopy.getSeriesList().addAll(seriesSaved.getSeriesList());
+            allListCopy.sortSeries();
+            Collections.sort(allListCopy.getSeriesList(), new SeriesNatOrderComparator());
         }
-        return extractedCopy;
+        return allListCopy;
     }
-
 
     public boolean containsSeries(String seriesName) {
         for (Series series : seriesList) {
@@ -126,13 +126,11 @@ public abstract class AbstractSeriesList {
     }
 
     public static void serializeList(AbstractSeriesList seriesList, String fileName) {
-        File checkFile = new File(fileName);
-        if (checkFile.exists()) {
-            checkFile.delete();
-        }
         try {
             FileOutputStream file = new FileOutputStream(fileName);
             ObjectOutputStream out = new ObjectOutputStream(file);
+            out.writeObject(seriesList);
+            out.reset();
             out.writeObject(seriesList);
             out.close();
             file.close();

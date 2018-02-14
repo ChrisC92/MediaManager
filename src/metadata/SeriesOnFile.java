@@ -1,5 +1,11 @@
+/**
+ * TODO: have the user choose the series folder each time the app is opened
+ */
+
+
 package metadata;
 
+import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -9,16 +15,22 @@ import java.util.List;
 
 public class SeriesOnFile extends AbstractSeriesList implements Serializable {
 
+
+
     public SeriesOnFile() {
         super(createSeriesList());
     }
 
     public SeriesOnFile(File filePath) {
-        super(SeriesOnFile.extractSeriesOnFile(filePath, createSeriesList()));
+        super(extractSeriesOnFile(filePath, createSeriesList()));
     }
 
-    public SeriesOnFile(AbstractSeriesList toCopy ) {
+    public SeriesOnFile(AbstractSeriesList toCopy) {
         super(FXCollections.observableArrayList(toCopy.getSeriesList()));
+    }
+
+    public SeriesOnFile(File filePath, AbstractSeriesList allSeries) {
+        super(extractAndCombine(filePath, allSeries));
     }
 
     /**
@@ -26,7 +38,7 @@ public class SeriesOnFile extends AbstractSeriesList implements Serializable {
      * to store new SeriesFileFormat into the seriesList variable and if the series is already contained then add
      * the episode into that object
      */
-    public static ObservableList<Series> extractSeriesOnFile(File filePath, ObservableList<Series> seriesList)
+    private static ObservableList<Series> extractSeriesOnFile(File filePath, ObservableList<Series> seriesList)
             throws NullPointerException {
 
         for (File fileEntry : filePath.listFiles()) {
@@ -115,6 +127,25 @@ public class SeriesOnFile extends AbstractSeriesList implements Serializable {
         return toReturn;
     }
 
+    /**
+     *  Extracts from the filePath that was previously given and then compares with the list thats saved
+     *  on file. If the series is saved on file this is then added to the list to be returned
+     *  this will allow for the correct updated series to be loaded
+     *
+     */
+    private static ObservableList<Series> extractAndCombine(File filePath, AbstractSeriesList allSeries) {
+        ObservableList<Series> toReturn = FXCollections.observableArrayList();
+        ObservableList<Series> extracted = FXCollections.observableArrayList();
+        extracted = extractSeriesOnFile(filePath, extracted);
+
+        for(Series series : allSeries.getSeriesList()) {
+            if(extracted.contains(series)) {
+                toReturn.add(series);
+            }
+        }
+
+        return toReturn;
+    }
     private static ObservableList<Series> createSeriesList() {
         ObservableList<Series> seriesList = FXCollections.observableArrayList();
         return seriesList;
