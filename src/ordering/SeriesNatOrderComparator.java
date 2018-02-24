@@ -18,15 +18,18 @@
  3. This notice may not be removed or altered from any source distribution.
  */
 
-package formattingAndOrdering;
+/*
+ Modified version of the NaturalOrderComparator Class in the ordering directory
+ Modified for use with arranging series objects by the seriesName.
+ */
+package ordering;
 
-import java.util.Arrays;
-import java.util.Collections;
+import metadata.Series;
+
 import java.util.Comparator;
-import java.util.List;
 
-public class NaturalOrderComparator implements Comparator
-{
+public class SeriesNatOrderComparator implements Comparator<Series> {
+
     int compareRight(String a, String b)
     {
         int bias = 0, ia = 0, ib = 0;
@@ -63,10 +66,10 @@ public class NaturalOrderComparator implements Comparator
         }
     }
 
-    public int compare(Object o1, Object o2)
+    public int compare(Series o1, Series o2)
     {
-        String a = o1.toString();
-        String b = o2.toString();
+        String a = o1.getName();
+        String b = o2.getName();
 
         int ia = 0, ib = 0;
         int nza = 0, nzb = 0;
@@ -130,4 +133,5 @@ public class NaturalOrderComparator implements Comparator
     static char charAt(String s, int i) {
         return i >= s.length() ? 0 : s.charAt(i);
     }
+
 }

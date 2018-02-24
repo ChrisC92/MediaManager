@@ -1,8 +1,7 @@
 package metadata;
 
-import formattingAndOrdering.NaturalOrderComparator;
-import javafx.beans.property.ListProperty;
-import javafx.beans.property.SimpleListProperty;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import ordering.NaturalOrderComparator;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
@@ -17,9 +16,11 @@ import java.util.List;
 import java.util.Objects;
 
 public class Series implements java.io.Serializable {
-
+    @JsonProperty("Series")
     private transient SimpleStringProperty series;
+    @JsonProperty("EpisodesList")
     private transient ObservableList<SimpleStringProperty> episodes;
+    @JsonProperty("CurrentEpisode")
     private transient SimpleStringProperty currentEpisode;
 
     public Series(String series) {

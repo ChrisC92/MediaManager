@@ -5,7 +5,7 @@ import javafx.collections.ObservableList;
 
 import java.io.*;
 
-public class SeriesSaved extends AbstractSeriesList implements Serializable {
+public class SeriesSaved extends AbstractSeriesList  {
 
     public SeriesSaved(String fileName) {
         super(SeriesSaved.deserializeList(fileName).getSeriesList());

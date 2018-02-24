@@ -232,7 +232,7 @@ public class MainLayoutController {
         try {
             FileOutputStream file = new FileOutputStream(filePath);
             ObjectOutputStream out = new ObjectOutputStream(file);
-            out.writeObject(seriesFilePath);
+
             out.reset();
             out.writeObject(seriesFilePath);
             out.close();

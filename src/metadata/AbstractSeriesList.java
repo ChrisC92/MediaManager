@@ -1,6 +1,7 @@
 package metadata;
 
-import formattingAndOrdering.SeriesNatOrderComparator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import ordering.SeriesNatOrderComparator;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -9,12 +10,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+
 /**
  * Abstract class for the SeriesList, with all base components the subclasses alter the ways in which the data is retrieved
  * to populate the List
  */
 public abstract class AbstractSeriesList implements Serializable {
-
+    @JsonProperty("SeriesList")
     private transient ObservableList<Series> seriesList;
 
     protected AbstractSeriesList() {
@@ -129,7 +131,7 @@ public abstract class AbstractSeriesList implements Serializable {
         try {
             FileOutputStream file = new FileOutputStream(fileName);
             ObjectOutputStream out = new ObjectOutputStream(file);
-            out.writeObject(seriesList);
+
             out.reset();
             out.writeObject(seriesList);
             out.close();
@@ -139,5 +141,6 @@ public abstract class AbstractSeriesList implements Serializable {
             ex.printStackTrace();
         }
     }
+
 
 }
