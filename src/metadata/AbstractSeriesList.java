@@ -1,5 +1,7 @@
 package metadata;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import ordering.SeriesNatOrderComparator;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -11,18 +13,18 @@ import java.util.List;
  * to populate the List
  */
 
-public abstract class AbstractSeriesList implements Serializable {
+public abstract class AbstractSeriesList  {
     private ObservableList<Series> seriesList;
 
     protected AbstractSeriesList() {
-        seriesList = new ArrayList<>();
+        seriesList = FXCollections.observableArrayList();
     }
 
-    protected AbstractSeriesList(ArrayList<Series> seriesList) {
+    protected AbstractSeriesList(ObservableList<Series> seriesList) {
         this.seriesList = seriesList;
     }
 
-    public ArrayList<Series> getSeriesList() {
+    public ObservableList<Series> getSeriesList() {
         return seriesList;
     }
 
@@ -116,10 +118,6 @@ public abstract class AbstractSeriesList implements Serializable {
             toReturn.add(series);
         }
         return toReturn;
-    }
-
-    public void setSeriesList(ArrayList<Series> seriesList) {
-        this.seriesList = seriesList;
     }
 
 }

@@ -36,7 +36,7 @@ public class SeriesOnFile extends AbstractSeriesList {
      * to store new SeriesFileFormat into the seriesList variable and if the series is already contained then add
      * the episode into that object
      */
-    private static ArrayList<Series> extractSeriesOnFile(File filePath, ArrayList<Series> seriesList)
+    private static ObservableList<Series> extractSeriesOnFile(File filePath, ObservableList<Series> seriesList)
             throws NullPointerException {
 
         for (File fileEntry : filePath.listFiles()) {
@@ -111,9 +111,9 @@ public class SeriesOnFile extends AbstractSeriesList {
      *  this will allow for the correct updated series to be loaded
      *
      */
-    private static ArrayList<Series> extractAndCombine(File filePath, AbstractSeriesList allSeries) {
-        ArrayList<Series> toReturn = new ArrayList<>();
-        ArrayList<Series> extracted = new ArrayList<>();
+    private static ObservableList<Series> extractAndCombine(File filePath, AbstractSeriesList allSeries) {
+        ObservableList<Series> toReturn = FXCollections.observableArrayList();
+        ObservableList<Series> extracted = FXCollections.observableArrayList();
         extracted = extractSeriesOnFile(filePath, extracted);
 
         for(Series series : allSeries.getSeriesList()) {
@@ -124,8 +124,8 @@ public class SeriesOnFile extends AbstractSeriesList {
 
         return toReturn;
     }
-    private static ArrayList<Series> createSeriesList() {
-        ArrayList<Series> seriesList = new ArrayList<>();
+    private static ObservableList<Series> createSeriesList() {
+        ObservableList<Series> seriesList = FXCollections.observableArrayList();
         return seriesList;
     }
 

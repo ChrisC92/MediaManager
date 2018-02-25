@@ -3,17 +3,12 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
-<<<<<<< HEAD
-      <excludeFolder url="file://$MODULE_DIR$/src/GUI" />
-      <excludeFolder url="file://$MODULE_DIR$/src/JSON" />
-=======
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
->>>>>>> tryXML
-      <excludeFolder url="file://$MODULE_DIR$/tests/createTestFiles" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="lib" level="project" />
     <orderEntry type="library" name="Librarys" level="project" />
     <orderEntry type="library" name="xstream-jmh-1.4.10" level="project" />
   </component>

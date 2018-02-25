@@ -214,7 +214,7 @@ public class MainLayoutController {
     public void saveData() {
         String allListSave = "savedData/allSeriesList.ser";
         AbstractSeriesList.combineSeries(allSeries, seriesOnFile);
-        AbstractSeriesList.serializeList(allSeries, allListSave);
+//        AbstractSeriesList.serializeList(allSeries, allListSave);
         serializeFilePath(seriesFilePath);
     }
 

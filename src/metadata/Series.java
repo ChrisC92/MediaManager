@@ -21,7 +21,7 @@ public class Series implements java.io.Serializable {
 
     public Series(String series) {
         this.series = new SimpleStringProperty(series);
-        this.episodes = new ArrayList<>();
+        this.episodes = FXCollections.observableArrayList();
     }
 
     public void addEpisode(String epName) {
@@ -35,20 +35,11 @@ public class Series implements java.io.Serializable {
         currentEpisode = new SimpleStringProperty(epName);
     }
 
-    private boolean containsEp(String epName) {
-        for (SimpleStringProperty episode : episodes) {
-            if (episode.get().equals(epName)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
     public void sortEpisodes() {
         Collections.sort(episodes, new NaturalOrderComparator());
     }
 
-    public ArrayList<SimpleStringProperty> getEpisodes() {
+    public ObservableList<SimpleStringProperty> getEpisodes() {
         return episodes;
     }
 
@@ -69,6 +60,19 @@ public class Series implements java.io.Serializable {
     }
 
 
+    /**
+     * This method can be used for when the user wants to choose an episode
+     */
+    public void setCurrentEpisode(String epName) {
+        boolean containsEp = false;
+        for (SimpleStringProperty episode : episodes) {
+            if (episode.get().equals(epName)) {
+                currentEpisode = episode;
+                containsEp = true;
+            }
+        }
+    }
+
     public void setCurrentEpisode(int index) {
         currentEpisode = episodes.get(index);
     }
@@ -81,13 +85,6 @@ public class Series implements java.io.Serializable {
             System.out.println(index + ". " + episode);
             index += 1;
         }
-    }
-
-    public boolean currentEpEquals(Series compare) {
-        if (this.currentEpisode.equals(compare.currentEpisode)) {
-            return true;
-        }
-        return false;
     }
 
     @Override
