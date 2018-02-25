@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SeriesTracker.iml" filepath="$PROJECT_DIR$/SeriesTracker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/SeriesTracker1.iml" filepath="$PROJECT_DIR$/src/SeriesTracker1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Librarys/logback-1.2.3/logback-classic/src/test/input/input.iml" filepath="$PROJECT_DIR$/Librarys/logback-1.2.3/logback-classic/src/test/input/input.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Librarys/logback-1.2.3/logback-classic/src/test/input/joran/joran.iml" filepath="$PROJECT_DIR$/Librarys/logback-1.2.3/logback-classic/src/test/input/joran/joran.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Librarys/logback-1.2.3/logback-classic/src/main/main.iml" filepath="$PROJECT_DIR$/Librarys/logback-1.2.3/logback-classic/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Librarys/logback-1.2.3/logback-access/src/main/main1.iml" filepath="$PROJECT_DIR$/Librarys/logback-1.2.3/logback-access/src/main/main1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Librarys/logback-1.2.3/logback-examples/src/main/main2.iml" filepath="$PROJECT_DIR$/Librarys/logback-1.2.3/logback-examples/src/main/main2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Librarys/logback-1.2.3/logback-core/src/main/main3.iml" filepath="$PROJECT_DIR$/Librarys/logback-1.2.3/logback-core/src/main/main3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Librarys/logback-1.2.3/logback-access/src/test/test.iml" filepath="$PROJECT_DIR$/Librarys/logback-1.2.3/logback-access/src/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Librarys/logback-1.2.3/logback-classic/src/test/test1.iml" filepath="$PROJECT_DIR$/Librarys/logback-1.2.3/logback-classic/src/test/test1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Librarys/logback-1.2.3/logback-core/src/test/test2.iml" filepath="$PROJECT_DIR$/Librarys/logback-1.2.3/logback-core/src/test/test2.iml" />
+    </modules>
+  </component>
+</project>

@@ -26,4 +26,3 @@ public class XStreamTest {
 
         SeriesOnFile backToPojo = (SeriesOnFile) xstream.fromXML(xml);
     }
-}

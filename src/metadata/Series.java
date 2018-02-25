@@ -1,6 +1,5 @@
 package metadata;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import ordering.NaturalOrderComparator;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
@@ -15,14 +14,10 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
-public class Series {
-
+public class Series implements java.io.Serializable {
     private SimpleStringProperty series;
-    private ArrayList<SimpleStringProperty> episodes;
+    private ObservableList<SimpleStringProperty> episodes;
     private SimpleStringProperty currentEpisode;
-
-    public Series() {
-    }
 
     public Series(String series) {
         this.series = new SimpleStringProperty(series);

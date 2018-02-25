@@ -10,9 +10,9 @@ import java.util.List;
  * Abstract class for the SeriesList, with all base components the subclasses alter the ways in which the data is retrieved
  * to populate the List
  */
-public abstract class AbstractSeriesList {
 
-    private ArrayList<Series> seriesList;
+public abstract class AbstractSeriesList implements Serializable {
+    private ObservableList<Series> seriesList;
 
     protected AbstractSeriesList() {
         seriesList = new ArrayList<>();
