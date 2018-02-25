@@ -22,6 +22,7 @@ public class SeriesOnFile extends AbstractSeriesList {
 
 
     public SeriesOnFile() {
+        //TODO: refactor to not use a method
         super(createSeriesList());
     }
 
@@ -30,7 +31,7 @@ public class SeriesOnFile extends AbstractSeriesList {
     }
 
     public SeriesOnFile(AbstractSeriesList toCopy) {
-        super(FXCollections.observableArrayList(toCopy.getSeriesList()));
+        super(toCopy.getSeriesList());
     }
 
     public SeriesOnFile(File filePath, AbstractSeriesList allSeries) {
@@ -42,7 +43,7 @@ public class SeriesOnFile extends AbstractSeriesList {
      * to store new SeriesFileFormat into the seriesList variable and if the series is already contained then add
      * the episode into that object
      */
-    private static ObservableList<Series> extractSeriesOnFile(File filePath, ObservableList<Series> seriesList)
+    private static ArrayList<Series> extractSeriesOnFile(File filePath, ArrayList<Series> seriesList)
             throws NullPointerException {
 
         for (File fileEntry : filePath.listFiles()) {
@@ -102,26 +103,6 @@ public class SeriesOnFile extends AbstractSeriesList {
         }
     }
 
-    /**
-     * Performs custom serialization of this instance.
-     * Automatically is invoked by Java when this instance is serialized
-     */
-    private void writeObject(ObjectOutputStream out) throws IOException {
-        out.defaultWriteObject();
-
-        out.writeObject(arrayListSeries());
-    }
-
-    /**
-     * Performs custom deserialization of this instance
-     * Automatically is invoked by Java during deserialization
-     */
-    private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
-        in.defaultReadObject();
-        ArrayList<Series> extracted = (ArrayList<Series>) in.readObject();
-        super.setSeriesList(FXCollections.observableArrayList(extracted));
-    }
-
     private List<Series> arrayListSeries() {
         List<Series> toReturn = new ArrayList<>();
 
@@ -137,9 +118,9 @@ public class SeriesOnFile extends AbstractSeriesList {
      *  this will allow for the correct updated series to be loaded
      *
      */
-    private static ObservableList<Series> extractAndCombine(File filePath, AbstractSeriesList allSeries) {
-        ObservableList<Series> toReturn = FXCollections.observableArrayList();
-        ObservableList<Series> extracted = FXCollections.observableArrayList();
+    private static ArrayList<Series> extractAndCombine(File filePath, AbstractSeriesList allSeries) {
+        ArrayList<Series> toReturn = new ArrayList<>();
+        ArrayList<Series> extracted = new ArrayList<>();
         extracted = extractSeriesOnFile(filePath, extracted);
 
         for(Series series : allSeries.getSeriesList()) {
@@ -150,8 +131,8 @@ public class SeriesOnFile extends AbstractSeriesList {
 
         return toReturn;
     }
-    private static ObservableList<Series> createSeriesList() {
-        ObservableList<Series> seriesList = FXCollections.observableArrayList();
+    private static ArrayList<Series> createSeriesList() {
+        ArrayList<Series> seriesList = new ArrayList<>();
         return seriesList;
     }
 

@@ -15,17 +15,20 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
-public class Series implements java.io.Serializable {
+public class Series {
     @JsonProperty("Series")
     private transient SimpleStringProperty series;
     @JsonProperty("EpisodesList")
-    private transient ObservableList<SimpleStringProperty> episodes;
+    private transient ArrayList<SimpleStringProperty> episodes;
     @JsonProperty("CurrentEpisode")
     private transient SimpleStringProperty currentEpisode;
 
+    public Series() {
+    }
+
     public Series(String series) {
         this.series = new SimpleStringProperty(series);
-        this.episodes = FXCollections.observableArrayList();
+        this.episodes = new ArrayList<>();
     }
 
     public void addEpisode(String epName) {
@@ -52,7 +55,7 @@ public class Series implements java.io.Serializable {
         Collections.sort(episodes, new NaturalOrderComparator());
     }
 
-    public ObservableList<SimpleStringProperty> getEpisodes() {
+    public ArrayList<SimpleStringProperty> getEpisodes() {
         return episodes;
     }
 
@@ -72,18 +75,6 @@ public class Series implements java.io.Serializable {
         return episodes.get(index).get();
     }
 
-    /**
-     * This method can be used for when the user wants to choose an episode
-     */
-    public void setCurrentEpisode(String epName) {
-        boolean containsEp = false;
-        for (SimpleStringProperty episode : episodes) {
-            if (episode.get().equals(epName)) {
-                currentEpisode = episode;
-                containsEp = true;
-            }
-        }
-    }
 
     public void setCurrentEpisode(int index) {
         currentEpisode = episodes.get(index);
@@ -106,13 +97,6 @@ public class Series implements java.io.Serializable {
         return false;
     }
 
-    /**
-    @Override
-    public String toString() {
-        return series.get();
-    }
-     TODO: might need to delete */
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -120,49 +104,4 @@ public class Series implements java.io.Serializable {
         Series series1 = (Series) o;
         return Objects.equals(series.get(), series1.series.get());
     }
-
-    /**
-     * Performs custom serialization of this instance.
-     * Automatically is invoked by Java when this instance is serialized
-     */
-    private void writeObject(ObjectOutputStream out) throws IOException {
-        out.defaultWriteObject();
-
-        out.writeObject(series.get());
-        List<String> toSerialize = episodesAsStrings();
-        out.writeObject(toSerialize);
-        out.writeObject(currentEpisode.get());
-    }
-
-
-    private List<String> episodesAsStrings() {
-        List<String> toReturn = new ArrayList<>();
-
-        for (StringProperty episode : episodes) {
-            toReturn.add(episode.get());
-        }
-        return toReturn;
-    }
-
-    /**
-     * Performs custom deserialization of this instance
-     * Automatically is invoked by Java during deserialization
-     */
-    private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
-        in.defaultReadObject();
-
-        series = new SimpleStringProperty((String) in.readObject());
-        List<String> episodeStrings =  (List<String>)in.readObject();
-        episodes = episodesAsSimpleStrings(episodeStrings);
-        currentEpisode = new SimpleStringProperty((String) in.readObject());
-    }
-
-    private ObservableList<SimpleStringProperty> episodesAsSimpleStrings(List<String> episodeStrings) {
-        ObservableList<SimpleStringProperty> episodesReturn = FXCollections.observableArrayList();
-        for(String episode : episodeStrings) {
-            episodesReturn.add(new SimpleStringProperty(episode));
-        }
-        return episodesReturn;
-    }
-
 }

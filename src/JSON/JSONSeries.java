@@ -3,6 +3,7 @@ package JSON;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.databind.DeserializationConfig;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import jdk.internal.org.objectweb.asm.tree.analysis.Value;
 import metadata.AbstractSeriesList;
 import metadata.SeriesOnFile;
@@ -28,6 +29,7 @@ public class JSONSeries {
 
         mapper.configure(SerializationFeature.INDENT_OUTPUT, true);
         mapper.configure(SerializationFeature.ORDER_MAP_ENTRIES_BY_KEYS, true);
+        mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         mapper.setSerializationInclusion(Include.NON_EMPTY);
         String string = mapper.writeValueAsString(seriesList);
 

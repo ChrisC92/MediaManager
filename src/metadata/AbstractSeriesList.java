@@ -15,19 +15,19 @@ import java.util.List;
  * Abstract class for the SeriesList, with all base components the subclasses alter the ways in which the data is retrieved
  * to populate the List
  */
-public abstract class AbstractSeriesList implements Serializable {
+public abstract class AbstractSeriesList {
     @JsonProperty("SeriesList")
-    private transient ObservableList<Series> seriesList;
+    private transient ArrayList<Series> seriesList;
 
     protected AbstractSeriesList() {
-        seriesList = FXCollections.observableArrayList();
+        seriesList = new ArrayList<>();
     }
 
-    protected AbstractSeriesList(ObservableList<Series> seriesList) {
+    protected AbstractSeriesList(ArrayList<Series> seriesList) {
         this.seriesList = seriesList;
     }
 
-    public ObservableList<Series> getSeriesList() {
+    public ArrayList<Series> getSeriesList() {
         return seriesList;
     }
 
@@ -123,24 +123,8 @@ public abstract class AbstractSeriesList implements Serializable {
         return toReturn;
     }
 
-    public void setSeriesList(ObservableList<Series> seriesList) {
+    public void setSeriesList(ArrayList<Series> seriesList) {
         this.seriesList = seriesList;
     }
-
-    public static void serializeList(AbstractSeriesList seriesList, String fileName) {
-        try {
-            FileOutputStream file = new FileOutputStream(fileName);
-            ObjectOutputStream out = new ObjectOutputStream(file);
-
-            out.reset();
-            out.writeObject(seriesList);
-            out.close();
-            file.close();
-        } catch (IOException ex) {
-            System.out.println("IO Exception has been caught");
-            ex.printStackTrace();
-        }
-    }
-
 
 }
