@@ -16,12 +16,10 @@ import java.util.List;
 import java.util.Objects;
 
 public class Series {
-    @JsonProperty("Series")
-    private transient SimpleStringProperty series;
-    @JsonProperty("EpisodesList")
-    private transient ArrayList<SimpleStringProperty> episodes;
-    @JsonProperty("CurrentEpisode")
-    private transient SimpleStringProperty currentEpisode;
+
+    private SimpleStringProperty series;
+    private ArrayList<SimpleStringProperty> episodes;
+    private SimpleStringProperty currentEpisode;
 
     public Series() {
     }

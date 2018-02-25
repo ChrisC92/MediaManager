@@ -1,11 +1,6 @@
 package metadata;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import ordering.SeriesNatOrderComparator;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-
-import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -16,8 +11,8 @@ import java.util.List;
  * to populate the List
  */
 public abstract class AbstractSeriesList {
-    @JsonProperty("SeriesList")
-    private transient ArrayList<Series> seriesList;
+
+    private ArrayList<Series> seriesList;
 
     protected AbstractSeriesList() {
         seriesList = new ArrayList<>();
