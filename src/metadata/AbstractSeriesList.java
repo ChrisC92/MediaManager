@@ -13,7 +13,7 @@ import java.util.List;
  * to populate the List
  */
 
-public abstract class AbstractSeriesList  {
+public abstract class AbstractSeriesList {
     private ObservableList<Series> seriesList;
 
     protected AbstractSeriesList() {
@@ -63,16 +63,23 @@ public abstract class AbstractSeriesList  {
 
     /**
      * Combines and returns on SeriesList when given the list saved on file and the file extracted
+     * Iterates through the lists and if the current episode has been altered changes this
+     * and also adds any new series that are on file
      */
     public static AbstractSeriesList combineSeries(AbstractSeriesList seriesSaved, AbstractSeriesList onFile) {
-        AbstractSeriesList allListCopy = new SeriesOnFile(onFile);
-        if (!(seriesSaved.isEmpty())) {
-            allListCopy.getSeriesList().removeAll(seriesSaved.getSeriesList());
-            allListCopy.getSeriesList().addAll(seriesSaved.getSeriesList());
-            allListCopy.sortSeries();
-            Collections.sort(allListCopy.getSeriesList(), new SeriesNatOrderComparator());
+        for(Series fileSeries : onFile.seriesList) {
+            for(Series savedSeries : seriesSaved.seriesList) {
+                if(fileSeries.getName().equals(savedSeries.getName())) {
+                    if(!fileSeries.getCurrentEpisode().equals(savedSeries.getCurrentEpisode())) {
+                        savedSeries.setCurrentEpisode(fileSeries.getCurrentEpisode());
+                    }
+                }
+            }
+            if(!seriesSaved.seriesList.contains(fileSeries)) {
+                seriesSaved.addSeries(fileSeries);
+            }
         }
-        return allListCopy;
+        return seriesSaved;
     }
 
     public boolean containsSeries(String seriesName) {
@@ -111,7 +118,7 @@ public abstract class AbstractSeriesList  {
         return true;
     }
 
-    private List<Series> arrayListSeries() {
+    public List<Series> arrayListSeries() {
         List<Series> toReturn = new ArrayList<>();
 
         for (Series series : seriesList) {

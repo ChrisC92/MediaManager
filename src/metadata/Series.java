@@ -87,6 +87,14 @@ public class Series implements java.io.Serializable {
         }
     }
 
+    public List<SimpleStringProperty> episodesToList() {
+        List<SimpleStringProperty> toReturn = new ArrayList<>();
+        for(SimpleStringProperty episode : episodes) {
+            toReturn.add(episode);
+        }
+        return toReturn;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

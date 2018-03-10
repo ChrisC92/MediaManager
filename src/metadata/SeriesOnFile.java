@@ -8,8 +8,7 @@ package metadata;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-import java.io.*;
-import java.util.ArrayList;
+import java.io.File;
 import java.util.List;
 
 public class SeriesOnFile extends AbstractSeriesList {
@@ -17,6 +16,10 @@ public class SeriesOnFile extends AbstractSeriesList {
     public SeriesOnFile() {
         //TODO: refactor to not use a method
         super(createSeriesList());
+    }
+
+    public SeriesOnFile(ObservableList<Series> seriesList) {
+        super(seriesList);
     }
 
     public SeriesOnFile(File filePath) {
@@ -94,15 +97,6 @@ public class SeriesOnFile extends AbstractSeriesList {
         for (Series series : seriesList) {
             series.sortEpisodes();
         }
-    }
-
-    private List<Series> arrayListSeries() {
-        List<Series> toReturn = new ArrayList<>();
-
-        for (Series series : super.getSeriesList()) {
-            toReturn.add(series);
-        }
-        return toReturn;
     }
 
     /**

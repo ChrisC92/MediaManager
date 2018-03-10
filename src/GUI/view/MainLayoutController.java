@@ -1,6 +1,7 @@
 package GUI.view;
 
 import GUI.MainApp;
+import com.thoughtworks.xstream.XStream;
 import javafx.application.Platform;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
@@ -9,6 +10,9 @@ import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import metadata.*;
+import xStream.LoadFromFile;
+import xStream.SaveToFile;
+import xStream.XStreamTest;
 
 import java.io.*;
 import java.util.Optional;
@@ -63,9 +67,8 @@ public class MainLayoutController {
         onFileButton.setToggleGroup(buttonGroup);
         allButton.setToggleGroup(buttonGroup);
         allButton.setSelected(true);
+        allSeries = new SeriesSaved();
 
-        allSeries = new SeriesSaved("savedData/allSeriesList.ser");
-        deserializeFilePath();
         initialFileSelect();
         populateSeriesLists(allSeries);
         displayedSeriesInteraction();
@@ -93,7 +96,7 @@ public class MainLayoutController {
                 Platform.exit();
             }
         } else {
-            seriesFilePath = deserializeFilePath();
+            seriesFilePath = new File(LoadFromFile.loadSeriesFilePath());
             seriesOnFile = new SeriesOnFile(seriesFilePath, allSeries);
         }
     }
@@ -118,6 +121,7 @@ public class MainLayoutController {
     private void setCurrentEpInteraction() {
         setCurrentEpisode.setOnAction((event) -> {
             if (currentEpisodeSelected != null && onFileButton.isSelected()) {
+                currentSeriesSelected.setCurrentEpisode(currentEpisodeSelected.get());
                 currentSeriesSelected.setCurrentEpisode(currentEpisodeSelected.get());
                 bottomTextField.clear();
                 bottomTextField.appendText(currentEpisodeSelected.get());
@@ -197,7 +201,7 @@ public class MainLayoutController {
      * Deletes the file saved and then populates with the seriesOnFile
      */
     public void deleteSavedFiles() {
-        allSeries = new SeriesSaved("");
+        allSeries = new SeriesSaved();
         populateSeriesLists(seriesOnFile);
         bottomTextField.clear();
         bottomTextField.appendText("File has been deleted");
@@ -212,11 +216,11 @@ public class MainLayoutController {
      * Saves the AllSeries list and also the filePath last used by the user to populate onFileList
      */
     public void saveData() {
-        String allListSave = "savedData/allSeriesList.ser";
-        AbstractSeriesList.combineSeries(allSeries, seriesOnFile);
-//        AbstractSeriesList.serializeList(allSeries, allListSave);
-        serializeFilePath(seriesFilePath);
+        allSeries = AbstractSeriesList.combineSeries(allSeries, seriesOnFile);
+        SaveToFile.saveSeriesToFile(allSeries);
+        SaveToFile.saveFilePathToFile(seriesFilePath.getPath());
     }
+
 
     public void setSeriesOnFile(File filePath) {
         seriesOnFile = new SeriesOnFile(filePath);
@@ -225,41 +229,6 @@ public class MainLayoutController {
         onFileButton.setSelected(true);
         bottomTextField.clear();
         bottomTextField.appendText("Series from file populated");
-    }
-
-    private void serializeFilePath(File seriesFilePath) {
-        String filePath = "savedData/seriesFilePath.ser";
-        try {
-            FileOutputStream file = new FileOutputStream(filePath);
-            ObjectOutputStream out = new ObjectOutputStream(file);
-
-            out.reset();
-            out.writeObject(seriesFilePath);
-            out.close();
-            file.close();
-        } catch (IOException ex) {
-            System.out.println("IO Exception has been caught");
-            ex.printStackTrace();
-        }
-    }
-
-    private File deserializeFilePath() {
-        File toReturn = new File("");
-        String filePath = "savedData/seriesFilePath.ser";
-        File file = new File(filePath);
-        if(file.exists()) {
-            try {
-                FileInputStream fileIn = new FileInputStream(filePath);
-                ObjectInputStream in = new ObjectInputStream(fileIn);
-                toReturn = (File) in.readObject();
-                in.close();
-            } catch(IOException i) {
-                i.printStackTrace();
-            } catch(ClassNotFoundException c) {
-                c.printStackTrace();
-            }
-        }
-        return toReturn;
     }
 
     public void setStage(Stage primaryStage) {
