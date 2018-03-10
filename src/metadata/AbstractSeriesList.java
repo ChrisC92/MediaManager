@@ -127,4 +127,10 @@ public abstract class AbstractSeriesList {
         return toReturn;
     }
 
+    public void setEpisodesToObservable() {
+        for(Series series : seriesList) {
+            series.listToObservable();
+        }
+    }
+
 }

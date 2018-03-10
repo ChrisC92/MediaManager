@@ -1,0 +1,2870 @@
+<list>
+  <metadata.Series>
+    <series>
+      <value>Adventure.Time.Season.6.Episodes.1-43.(Complete.Season)</value>
+      <valid>true</valid>
+      <name></name>
+    </series>
+    <episodesText>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E01E02.Wake.Up-Escape.From.The.Citadel.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E03.James.II.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E04.The.Tower.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E05.Sad.Face.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E06.Breezy.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E07.Food.Chain.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E08.Furniture.and.Meat.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E09.The.Prince.Who.Wanted.Everything.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E10.Something.Big.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E11.Little.Brother.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E12.Ocarina.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E13.Thanks.for.the.Crabapples.Guiseppe.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E14.Princess.Day.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E15.Nemesis.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E16.Josh.and.Margaret.Investigations.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E17.Ghost.Fly.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E18.Everythings.Jake.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E19.Is.That.You.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E20.Jake.the.Brick.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E21.Dentist.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E22.The.Cooler.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E23.Pajama.Wars.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E24.Evergreen.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E25.Astral.Plane.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E26.Gold.Stars.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E27.The.Visitor.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E28.The.Mountain.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E29.Dark.Purple.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E30.The.Diary.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E31.Walnuts.and.Rain.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E32.Friends.Forever.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E33.Jermaine.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E34.Chips.&amp;.Ice.Cream.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E35.Graybles.1000+.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E36.Hoots.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E37.Water.Park.Prank.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E38.You.Forgot.Your.Floaties.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E39.Be.Sweet.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E40.Orgalorg.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E41.On.The.Lam.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E42.Hot.Diggity.Doom.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure.Time.S06E43.The.Comet.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+    </episodesText>
+    <currentEpisode>
+      <value>Adventure.Time.S06E01E02.Wake.Up-Escape.From.The.Citadel.mp4</value>
+      <valid>true</valid>
+      <name></name>
+    </currentEpisode>
+  </metadata.Series>
+  <metadata.Series>
+    <series>
+      <value>Adventure Time - Season 7</value>
+      <valid>true</valid>
+      <name></name>
+    </series>
+    <episodesText>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E01-Bonnie &amp; Neddy.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E02-Varmints.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E03-Cherry Cream Soda.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E04-Mama Said.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E05-Football.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E06-Marceline The Vampire Queen (1).mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E07-Everything Stays (2).mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E08-Vamps About (3).mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E09-Empress Eyes (4).mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E10-May I Come In_ (5).mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E11-Take Her Back (6).mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E12-Checkmate (7).mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E13-The Dark Cloud (8).mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E14-S07E15 The More You Moe (1) (2).mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E16-Summer Showers.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E17-Angel Face.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E18-President Porpoise is Missing!.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E19-Blank Eyed Girl.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E20-Bad Jubies.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E21-King&apos;s Ransom.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E22-Scamps.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E23-Crossover*.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E24-The Hall of Egress.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E25-Flute Spell.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E26-The Thin Yellow Line.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E27-Broke His Crown.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E28-Don&apos;t Look.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E29-Beyond The Grotto.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E30-Lady Rainicorn of the Crystal Dimension.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E31-I am a Sword.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E32-Bun Bun.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E33-Normal Man.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E34-Elemental.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E35-Five Short Tables.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E36-The Music Hole.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E37-Daddy-Daughter Card Wars.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S07E38-S07E39 Pre Boot - Re Boot.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+    </episodesText>
+    <currentEpisode>
+      <value>S07E01-Bonnie &amp; Neddy.mp4</value>
+      <valid>true</valid>
+      <name></name>
+    </currentEpisode>
+  </metadata.Series>
+  <metadata.Series>
+    <series>
+      <value>Adventure Time - Season 8</value>
+      <valid>true</valid>
+      <name></name>
+    </series>
+    <episodesText>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure Time with Finn and Jake - S08E01 - Two Swords (720p.WEB-DL.AAC2.0.H.264) (NTb).mp4-c.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure Time with Finn and Jake - S08E02 - Do No Harm (720p.WEB-DL.AAC2.0.H.264) (NTb).mp4-c.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure Time with Finn and Jake - S08E03 - Wheels (720p.WEB-DL.AAC2.0.H.264) (NTb).mp4-c.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure Time with Finn and Jake - S08E04 - High Strangeness (720p.WEB-DL.AAC2.0.H.264) (NTb).mp4-c.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure Time with Finn and Jake - S08E05 - Horse and Ball (720p.WEB-DL.AAC2.0.H.264) (NTb).mp4-c.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure Time with Finn and Jake - S08E06 - Jelly Beans Have Power (720p.WEB-DL.AAC2.0.H.264) (NTb).mp4-c.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure Time with Finn and Jake - S08E07 - Islands Pt.1 - The Invitation (720p.WEB-DL.AAC2.0.H.264) (NTb).mp4-c.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure Time with Finn and Jake - S08E08 - Islands Pt.2 - Whipple the Happy Dragon (720p.WEB-DL.AAC2.0.H.264) (NTb).mp4-c.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure Time with Finn and Jake - S08E09 - Islands Pt.3 - Mysterious Island (720p.WEB-DL.AAC2.0.H.264) (NTb).mp4-c.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure Time with Finn and Jake - S08E10 - Islands Pt.4 - Imaginary Resources (720p.WEB-DL.AAC2.0.H.264) (NTb).mp4-c.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure Time with Finn and Jake - S08E11 - Islands Pt.5 - Hide and Seek (720p.WEB-DL.AAC2.0.H.264) (NTb).mp4-c.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure Time with Finn and Jake - S08E12 - Islands Pt.6 - Min &amp; Marty (720p.WEB-DL.AAC2.0.H.264) (NTb).mp4-c.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure Time with Finn and Jake - S08E13 - Islands Pt.7 - Helpers (720p.WEB-DL.AAC2.0.H.264) (NTb).mp4-c.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure Time with Finn and Jake - S08E14 - Islands Pt.8 - The Light Cloud (720p.WEB-DL.AAC2.0.H.264) (NTb).mp4-c.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+    </episodesText>
+    <currentEpisode>
+      <value>Adventure Time with Finn and Jake - S08E01 - Two Swords (720p.WEB-DL.AAC2.0.H.264) (NTb).mp4-c.mp4</value>
+      <valid>true</valid>
+      <name></name>
+    </currentEpisode>
+  </metadata.Series>
+  <metadata.Series>
+    <series>
+      <value>Adventure Time S08.2 (360p re-webrip)</value>
+      <valid>true</valid>
+      <name></name>
+    </series>
+    <episodesText>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure Time S08E15 Orb.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure Time S08E16 Elements Pt 1 Skyhooks.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure Time S08E17 Elements Pt 2 Bespoken For.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure Time S08E18 Elements Pt 3 Winter Light.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure Time S08E19 Elements Pt 4 Cloudy.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure Time S08E20 Elements Pt 5 Slime Central.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure Time S08E21 Elements Pt 6 Happy Warrior.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure Time S08E22 Elements Pt 7 Hero Heart.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Adventure Time S08E23 Elements Pt 8 Skyhooks II.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+    </episodesText>
+    <currentEpisode>
+      <value>Adventure Time S08E15 Orb.mp4</value>
+      <valid>true</valid>
+      <name></name>
+    </currentEpisode>
+  </metadata.Series>
+  <metadata.Series>
+    <series>
+      <value>Adventure Time Season 1 2 3 4 5 (720p) - TinyMP4</value>
+      <valid>true</valid>
+      <name></name>
+    </series>
+    <episodesText>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>00.01 - Adventure Time Pilot.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>00.02 - Intro.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>00.03 - Intro (Fionna and Cake).mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>00.04 - Intro (A Glitch is a Glitch).mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>00.05 - Credits.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>00.06 - Credits (Princess Potluck &amp; James Baxter).mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>00.07 - Credits (Shh &amp; The Suitor).mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>01.01 - Slumber Party Panic.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>01.02 - Trouble in Lumpy Space.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>01.03 - Prisoners of Love.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>01.04 - Tree Trunks.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>01.05 - The Enchiridion.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>01.06 - The Jiggler.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>01.07 - Ricardio the Heart Guy.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>01.08 - Business Time.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>01.09 - My Two Favorite People.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>01.10 - Memories of Boom Boom Mountain.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>01.11 - Wizard.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>01.12 - Evicted.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>01.13 - City of Thieves.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>01.14 - The Witch&apos;s Garden.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>01.15 - What is Life.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>01.16 - Ocean of Fear.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>01.17 - When Wedding Bells Thaw.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>01.18 - Dungeon.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>01.19 - The Duke.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>01.20 - Freak City.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>01.21 - Donny.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>01.22 - Henchman.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>01.23 - Rainy Day Daydream.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>01.24 - What Have You Done.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>01.25 - His Hero.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>01.26 - Gut Grinder.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>02.01 - It Came from the Nightosphere.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>02.02 - The Eyes.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>02.03 - Loyalty to the King.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>02.04 - Blood Under the Skin.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>02.05 - Storytelling.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>02.06 - Slow Love.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>02.07 - Power Animal.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>02.08 - Crystals Have Power.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>02.09 - The Other Tarts.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>02.10 - To Cut a Woman&apos;s Hair.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>02.11 - The Chamber of Frozen Blades.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>02.12 - Her Parents.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>02.13 - The Pods.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>02.14 - The Silent King.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>02.15 - The Real You.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>02.16 - Guardians of Sunshine.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>02.17 - Death in Bloom.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>02.18 - Susan Strong.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>02.19 - Mystery Train.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>02.20 - Go With Me.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>02.21 - Belly of the Beast.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>02.22 - The Limit.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>02.23 - Video Makers.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>02.24 - Mortal Folly.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>02.25 - Mortal Recoil.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>02.26 - Heat Signature.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>03.01 - Conquest of Cuteness.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>03.02 - Morituri Te Salutamus.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>03.03 - Memory of a Memory.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>03.04 - Hitman.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>03.05 - Too Young.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>03.06 - The Monster.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>03.07 - Still.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>03.08 - Wizard Battle.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>03.09 - Fionna and Cake.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>03.10 - What Was Missing.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>03.11 - Apple Thief.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>03.12 - The Creeps.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>03.13 - From Bad to Worse.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>03.14 - Beautopia.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>03.15 - No One Can Hear You.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>03.16 - Jake Vs. Me-Mow.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>03.17 - Thank You.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>03.18 - The New Frontier.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>03.19 - Holly Jolly Secrets (Part I).mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>03.20 - Holly Jolly Secrets (Part II).mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>03.21 - Marceline&apos;s Closet.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>03.22 - Paper Pete.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>03.23 - Another Way.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>03.24 - Ghost Princess.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>03.25 - Dad&apos;s Dungeon.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>03.26 - Incendium.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>04.01 - Hot to the Touch.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>04.02 - Five Short Graybles.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>04.03 - Web Weirdos.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>04.04 - Dream of Love.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>04.05 - Return to the Nightosphere .mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>04.06 - Daddy&apos;s Little Monster.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>04.07 - In Your Footsteps.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>04.08 - Hug Wolf.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>04.09 - Princess Monster Wife.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>04.10 - Goliad.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>04.11 - Beyond This Earthly Realm.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>04.12 - Gotcha.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>04.13 - Princess Cookie.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>04.14 - Card Wars.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>04.15 -  Sons of Mars.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>04.16 - Burning Low.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>04.17 - BMO Noire.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>04.18 - King Worm.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>04.19 - Lady &amp; Peebles.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>04.20 - You Made Me.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>04.21 - Who Would Win.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>04.22 - Ignition Point.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>04.23 - The Hard Easy.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>04.24 - Reign of Gunters.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>04.25 - I Remember You.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>04.26 - The Lich.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.01 - Finn the Human.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.02 - Jake the Dog.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.03 - Five More Short Graybles.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.04 - Up a Tree.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.05 - All the Little People.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.06 - Jake the Dad.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.07 - Davey.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.08 - Mystery Dungeon.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.09 - All Your Fault.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.10 - Little Dude.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.11 - Bad Little Boy.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.12 - Vault of Bones.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.13 -The Great Bird Man.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.14 - Simon &amp; Marcy.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.15 - A Glitch Is a Glitch.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.16 - Puhoy.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.17 - BMO Lost.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.18 - Princess Potluck.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.19 - James Baxter the Horse.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.20 - Shh.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.21 - The Suitor.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.22 - The Party&apos;s Over, Isla de Señorita.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.23 - One last Job.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.24 - Another Five More Short Graybles.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.25 - Candy Streets.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.26 - Wizards Only, Fools.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.27 - Jake Suit.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.28 - Be More.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.29 - Sky Witch.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.30 - Frost &amp; Fire.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.31 - Too Old.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.32 - Earth &amp; Water.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.33 - Time Sandwich.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.34 - The Vault.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.35 - Love Games.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.36 - Dungeon Train.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.37 - Box Prince.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.38 - Red Starved.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.39 - We Fixed a Truck.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.40 - Play Date.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.41 - The Pit.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.42 - James.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.43 - Root Beer Guy.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.44 - Apple Wedding.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.45 - Blade of Grass.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.46 - Rattleballs.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.47 - Red Throne.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.48 - Betty.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.49 - Bad Timing.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.50 - Lemonhope Story (Part 1).mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.51 - Lemonhope Story (Part 2).mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05.52 - Billy&apos;s Bucket List.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+    </episodesText>
+    <currentEpisode>
+      <value>00.01 - Adventure Time Pilot.mp4</value>
+      <valid>true</valid>
+      <name></name>
+    </currentEpisode>
+  </metadata.Series>
+  <metadata.Series>
+    <series>
+      <value>Delocated - Season 3</value>
+      <valid>true</valid>
+      <name></name>
+    </series>
+    <episodesText>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Delocated - S03E01 - Lipples.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Delocated - S03E02 - Skins.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Delocated - S03E03 - Midnight Munchingtons.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Delocated - S03E04 - Camping.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Delocated - S03E05 - Warm-Up.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Delocated - S03E06 - Sample.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Delocated - S03E07 - Friend.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Delocated - S03E08 - TB&apos;s Mom.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Delocated - S03E09 - Jon Done Gon Nuts.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Delocated - S03E10 - Reunion Show.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+    </episodesText>
+    <currentEpisode reference="../episodesText/javafx.beans.property.SimpleStringProperty[3]"/>
+  </metadata.Series>
+  <metadata.Series>
+    <series>
+      <value>Dragonball ALL EPISODES</value>
+      <valid>true</valid>
+      <name></name>
+    </series>
+    <episodesText>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>001 - Secret Of The Dragon Balls.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>002 - The Emperor&apos;s Quest.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>003 - The Nimbus Cloud Of Roshi.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>004 - Oolong The Terrible.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>005 - Yamcha The Desert Bandit.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>006 - Keep An Eye On The Dragon Balls.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>007 - The Ox-King On Fire Mountain.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>008 - The Kamehameha Wave.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>009 - Boss Rabbit&apos;s Magic Touch.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>010 - The Dragon Balls Are Stolen.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>011 - The Penalty Is Pinball.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>012 - A Wish To The Eternal Dragon.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>013 - The Legend Of Goku.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>014 - Goku&apos;s Rival.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>015 - Look Out For Launch.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>016 - Find That Stone.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>017 - Milk Delivery.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>018 - The Turtle Hermit Way.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>019 - Tournament Begins.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>020 - Elimination Round.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>021 - Smells Like Trouble.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>022 - Quarterfinals Begin.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>023 - Monster Beast Giran.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>024 - Krillin&apos;s Frantic Attack.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>025 - Danger From Above.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>026 - The Grand Finals.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>027 - Number One Under The Moon.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>028 - The Final Blow.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>029 - The Roaming Lake.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>030 - Pilaf And The Mystery Force.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>031 - Wedding Plans.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>032 - The Flying Fortress - Vanished!.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>033 - The Legend Of A Dragon.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>034 - Cruel General Red.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>035 - Cold Reception.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>036 - Major Metallitron.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>037 - Ninja Murasaki Is Coming!.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>038 - Five Murasakis.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>039 - Mysterious Android No. 8.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>040 - Horrifying Buyon.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>041 - The Fall Of Muscle Tower.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>042 - The Secret Of Dr. Flappe.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>043 - A Trip To The City.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>044 - Master Thief, Hasky.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>045 - Danger In The Air.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>046 - Bulma&apos;s Bad Day.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>047 - Kame House Found!.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>048 - Deep Sea Blue.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>049 - Roshi Surprise.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>050 - The Trap Is Sprung.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>051 - Beware Of Robot.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>052 - The Pirate Treasure.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>053 - Blue, Black And Blue.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>054 - Escape From Pirate Cave.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>055 - Penguin Village.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>056 - Strange Visitor.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>057 - Arale vs Blue.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>058 - The Land Of Korin.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>059 - The Notorious Mercenary.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>060 - Tao Attacks.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>061 - Korin Tower.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>062 - Sacred Water.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>063 - The Return Of Goku.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>064 - The Last Of Mercenary Tao.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>065 - Confront The Red Ribbon Army.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>066 - A Real Bind.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>067 - The End Of Commander Red.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>068 - The Last Dragonball.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>069 - Who Is Fortuneteller Baba.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>070 - We Are The Five Warriors.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>071 - Deadly Battle.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>072 - Goku&apos;s Turn.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>073 - The Devilmite Beam.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>074 - The Mysterious Fifth Man.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>075 - The Strong Ones.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>076 - True Colours Of The Masked Man.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>077 - Pilaf&apos;s Tactics.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>078 - The Eternal Dragon Rises.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>079 - Terror And Plague.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>080 - Goku vs Sky Dragon.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>081 - Goku Goes To Demon Land.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>082 - The Rampage Of InoShikaCho.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>083 - Which Way To Papaya Island.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>084 - Rivals And Arrivals.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>085 - Preliminary Peril.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>086 - Then There Were Eight.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>087 - Yamcha vs Tien.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>088 - Yamcha&apos;s Big Break.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>089 - Full-Moon Vengeance.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>090 - The Dodon Wave.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>091 - Counting Controversy.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>092 - Goku Enters The Ring.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>093 - Tien Shinhan vs Jackie Chun.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>094 - Stepping Down.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>095 - Goku vs Krillin.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>096 - Tail&apos;s Tale.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>097 - Final Match Goku vs Tien.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>098 - Victory&apos;s Edge.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>099 - Tien&apos;s Insurrection.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>100 - The Spirit Cannon.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>101 - The Fallen.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>102 - Enter King Piccolo.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>103 - Tambourine Attacks.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>104 - Mark Of The Demon.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>105 - Here Comes Yajirobe.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>106 - Terrible Tambourine.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>107 - Tien&apos;s Atonement.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>108 - Goku&apos;s Revenge.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>109 - Goku vs King Piccolo.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>110 - Piccolo Closes In.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>111 - Roshi&apos;s Gambit.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>112 - King Piccolo&apos;s Wish.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>113 - Siege On Chow Castle.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>114 - Conquest And Power.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>115 - Awaken Darkness.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>116 - A Taste Of Destiny.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>117 - The Ultimate Sacrifice.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>118 - Prelude To Vengeance.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>119 - Battle Cry.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>120 - Goku Strikes Back.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>121 - The Biggest Crisis.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>122 - Final Showdown.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>123 - Lost And Found.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>124 - Temple Above The Clouds.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>125 - Earth&apos;s Guardian Emerges.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>126 - Eternal Dragon Resurrected.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>127 - Quicker Than Lightning.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>128 - Secret Of The Woods.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>129 - The Time Room.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>130 - Goku&apos;s Doll.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>131 - Walking Their Own Ways.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>132 - Hotter Than Lava.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>133 - Changes.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>134 - Preliminary Peril.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>135 - Battle Of The Eight.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>136 - Tien Shinhan vs Mercenary Tao.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>137 - Anonymous Proposal.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>138 - The Mysterious Hero.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>139 - Rematch.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>140 - Goku Gains Speed.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>141 - The Four Faces Of Tien.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>142 - Kami vs Piccolo.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>143 - Battle For The Future.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>144 - Super Kamehameha.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>145 - Junior No More.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>146 - Goku&apos;s Trap.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>147 - Goku Hangs On.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>148 - The Victor.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>149 - Dress In Flames.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>150 - The Fire-Eater.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>151 - Outrageous Octagon.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>152 - Mystery Of The Dark World.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>153 - The End, The Beginning.rmvb</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+    </episodesText>
+    <currentEpisode reference="../episodesText/javafx.beans.property.SimpleStringProperty[4]"/>
+  </metadata.Series>
+  <metadata.Series>
+    <series>
+      <value>Game.of.Thrones.S02.720p.BluRay.x264.ShAaNiG</value>
+      <valid>true</valid>
+      <name></name>
+    </series>
+    <episodesText>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S02E01.720p.BluRay.450MB.ShAaNiG.com.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S02E02.720p.BluRay.450MB.ShAaNiG.com.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S02E03.720p.BluRay.450MB.ShAaNiG.com.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S02E04.720p.BluRay.450MB.ShAaNiG.com.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S02E05.720p.BluRay.450MB.ShAaNiG.com.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S02E06.720p.BluRay.450MB.ShAaNiG.com.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S02E07.720p.BluRay.450MB.ShAaNiG.com.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S02E08.720p.BluRay.450MB.ShAaNiG.com.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S02E09.720p.BluRay.450MB.ShAaNiG.com.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S02E10.720p.BluRay.500MB.ShAaNiG.com.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+    </episodesText>
+    <currentEpisode>
+      <value>Game.of.Thrones.S02E01.720p.BluRay.450MB.ShAaNiG.com.mkv</value>
+      <valid>true</valid>
+      <name></name>
+    </currentEpisode>
+  </metadata.Series>
+  <metadata.Series>
+    <series>
+      <value>Game.of.Thrones.S04.720p.WEB-DL.x264.ShAaNiG</value>
+      <valid>true</valid>
+      <name></name>
+    </series>
+    <episodesText>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S04E01.720p.WEB-DL.450MB.ShAaNiG.com.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S04E02.720p.WEB-DL.450MB.ShAaNiG.com.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S04E03.720p.WEB-DL.450MB.ShAaNiG.com.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S04E04.720p.WEB-DL.450MB.ShAaNiG.com.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S04E05.720p.WEB-DL.450MB.ShAaNiG.com.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S04E06.720p.WEB-DL.450MB.ShAaNiG.com.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S04E07.720p.WEB-DL.450MB.ShAaNiG.com.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S04E08.720p.WEB-DL.450MB.ShAaNiG.com.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S04E09.720p.WEB-DL.450MB.ShAaNiG.com.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S04E10.720p.WEB-DL.500MB.ShAaNiG.com.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+    </episodesText>
+    <currentEpisode>
+      <value>Game.of.Thrones.S04E01.720p.WEB-DL.450MB.ShAaNiG.com.mkv</value>
+      <valid>true</valid>
+      <name></name>
+    </currentEpisode>
+  </metadata.Series>
+  <metadata.Series>
+    <series>
+      <value>Game.of.Thrones.Season.5.720p.BluRay.x264.ShAaNiG</value>
+      <valid>true</valid>
+      <name></name>
+    </series>
+    <episodesText>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S05E01.720p.BluRay.x264.ShAaNiG.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S05E02.720p.BluRay.x264.ShAaNiG.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S05E03.720p.BluRay.x264.ShAaNiG.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S05E04.720p.BluRay.x264.ShAaNiG.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S05E05.720p.BluRay.x264.ShAaNiG.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S05E06.720p.BluRay.x264.ShAaNiG.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S05E07.720p.BluRay.x264.ShAaNiG.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S05E08.720p.BluRay.x264.ShAaNiG.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S05E09.720p.BluRay.x264.ShAaNiG.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S05E10.720p.BluRay.x264.ShAaNiG.mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+    </episodesText>
+    <currentEpisode>
+      <value>Game.of.Thrones.S05E01.720p.BluRay.x264.ShAaNiG.mkv</value>
+      <valid>true</valid>
+      <name></name>
+    </currentEpisode>
+  </metadata.Series>
+  <metadata.Series>
+    <series>
+      <value>Game Of Thrones Season 1 - Complete</value>
+      <valid>true</valid>
+      <name></name>
+    </series>
+    <episodesText>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game of Thrones Title.jpg</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S01E01 - Winter Is Coming.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S01E02 - The Kingsroad.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S01E03 - Lord Snow.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S01E04 - Cripples, Bastards and Broken Things.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S01E05 - The Wolf and the Lion.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S01E06 - A Golden Crown.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S01E07 - You Win or You Die.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S01E08 - The Pointy End.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S01E09 - Baelor.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>S01E10 - Fire and Blood.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+    </episodesText>
+    <currentEpisode>
+      <value>Game of Thrones Title.jpg</value>
+      <valid>true</valid>
+      <name></name>
+    </currentEpisode>
+  </metadata.Series>
+  <metadata.Series>
+    <series>
+      <value>Game Of Thrones Season 6</value>
+      <valid>true</valid>
+      <name></name>
+    </series>
+    <episodesText>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game of Thrones S06E09 Battle of the Bastards (1080p x265 10bit Joy).mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+    </episodesText>
+    <currentEpisode>
+      <value>Game of Thrones S06E09 Battle of the Bastards (1080p x265 10bit Joy).mkv</value>
+      <valid>true</valid>
+      <name></name>
+    </currentEpisode>
+  </metadata.Series>
+  <metadata.Series>
+    <series>
+      <value>Game of Thrones - The Complete Season 3 [HDTV]</value>
+      <valid>true</valid>
+      <name></name>
+    </series>
+    <episodesText>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S03E01.HDTV.x264-2HD.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S03E02.HDTV.x264-2HD.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S03E03.PROPER.HDTV.x264-2HD.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S03E04.HDTV.x264-EVOLVE.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S03E05.PROPER.HDTV.x264-EVOLVE.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S03E06.HDTV.x264-2HD.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S03E07.HDTV.x264-2HD.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S03E08.PROPER.HDTV.x264-2HD.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S03E09.HDTV.x264-EVOLVE.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Game.of.Thrones.S03E10.HDTV.x264-EVOLVE.mp4</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Torrent Downloaded From ExtraTorrent.com.txt</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+    </episodesText>
+    <currentEpisode>
+      <value>Game.of.Thrones.S03E01.HDTV.x264-2HD.mp4</value>
+      <valid>true</valid>
+      <name></name>
+    </currentEpisode>
+  </metadata.Series>
+  <metadata.Series>
+    <series>
+      <value>Parks and Recreation Season 1</value>
+      <valid>true</valid>
+      <name></name>
+    </series>
+    <episodesText>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Parks and Recreation S01E01 HDTV XviD-LOL [eztv].avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Parks and Recreation S01E02 HDTV XviD-LOL [eztv].avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Parks and Recreation S01E03 HDTV XviD-LOL [eztv].avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Parks and Recreation S01E04 Boys Club HDTV XviD-FQM [eztv].avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Parks and Recreation S01E05 HDTV XviD-LOL [eztv].avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>Parks and Recreation S01E06 Rock Show HDTV XviD-FQM [eztv].avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+    </episodesText>
+    <currentEpisode>
+      <value>Parks and Recreation S01E01 HDTV XviD-LOL [eztv].avi</value>
+      <valid>true</valid>
+      <name></name>
+    </currentEpisode>
+  </metadata.Series>
+  <metadata.Series>
+    <series>
+      <value>Season.1</value>
+      <valid>true</valid>
+      <name></name>
+    </series>
+    <episodesText>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>01-Yesterday&apos;s-Jam.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>02-Calamity Jen.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>03-Fifty-Fifty.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>04-The Red door.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05-The Haunting of Bill Crouse.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>06-Aunt Irma Visits.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+    </episodesText>
+    <currentEpisode>
+      <value>01-Yesterday&apos;s-Jam.avi</value>
+      <valid>true</valid>
+      <name></name>
+    </currentEpisode>
+  </metadata.Series>
+  <metadata.Series>
+    <series>
+      <value>Season 2</value>
+      <valid>true</valid>
+      <name></name>
+    </series>
+    <episodesText>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>01-The Work Outing.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>02-Return of the Golden Child.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>03-Moss and the German.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>04-The Dinner Party.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05-Smoke and Mirrors.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>06-Men without Women.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+    </episodesText>
+    <currentEpisode>
+      <value>01-The Work Outing.avi</value>
+      <valid>true</valid>
+      <name></name>
+    </currentEpisode>
+  </metadata.Series>
+  <metadata.Series>
+    <series>
+      <value>Season 3</value>
+      <valid>true</valid>
+      <name></name>
+    </series>
+    <episodesText>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>01-From Hell.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>02-Are We Not Men.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>03-Tramps Like Us.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>04-The Speech.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>05-Friendface.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>06-Calendar Geeks.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+    </episodesText>
+    <currentEpisode>
+      <value>01-From Hell.avi</value>
+      <valid>true</valid>
+      <name></name>
+    </currentEpisode>
+  </metadata.Series>
+  <metadata.Series>
+    <series>
+      <value>Season 4</value>
+      <valid>true</valid>
+      <name></name>
+    </series>
+    <episodesText>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>The.IT.Crowd.S04E02.WS.PDTV.XviD-RiVER.[VTV].avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>The.IT.Crowd.S04E03.WS.PDTV.XviD-RiVER.[VTV].avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>The.IT.Crowd.S04E04.WS.PDTV.XviD-CaRaT.[VTV].avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>The_IT_Crowd.4x05.Bad_Boys.WS_PDTV_XviD-FoV.[VTV].avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>The_IT_Crowd.4x06.Reynholm_V_Reynholm.REPACK.WS_PDTV_XviD-FoV.[VTV].avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>The_IT_Crowd_S04E01_WEBRIP_XViD.avi</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+    </episodesText>
+    <currentEpisode>
+      <value>The.IT.Crowd.S04E02.WS.PDTV.XviD-RiVER.[VTV].avi</value>
+      <valid>true</valid>
+      <name></name>
+    </currentEpisode>
+  </metadata.Series>
+  <metadata.Series>
+    <series>
+      <value>one punch man</value>
+      <valid>true</valid>
+      <name></name>
+    </series>
+    <episodesText>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>[AnimeRG] One Punch Man - 06 [720p].mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>[AnimeRG] One Punch Man - 07 [720p].mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>[AnimeRG] One Punch Man - 08 [720p].mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>[AnimeRG] One Punch Man - 09 [720p].mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>[AnimeRG] One Punch Man - 10 [720p].mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>[AnimeRG] One Punch Man - 11 [720p].mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>[HorribleSubs] One-Punch Man - 01 [720p].mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>[HorribleSubs] One-Punch Man - 02 [720p].mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>[HorribleSubs] One-Punch Man - 04 [720p].mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>[HorribleSubs] One-Punch Man - 05 [720p].mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+      <javafx.beans.property.SimpleStringProperty>
+        <value>One-Punch.Man.03.1080p.[AnimeRG][KoTuWa].mkv</value>
+        <valid>true</valid>
+        <name></name>
+      </javafx.beans.property.SimpleStringProperty>
+    </episodesText>
+    <currentEpisode>
+      <value>[AnimeRG] One Punch Man - 06 [720p].mkv</value>
+      <valid>true</valid>
+      <name></name>
+    </currentEpisode>
+  </metadata.Series>
+</list>

@@ -28,6 +28,7 @@ public class LoadFromFile {
             XStream xStream = new XStream();
             List<Series> arraySeries = (List<Series>) xStream.fromXML(XMLSeries);
             AbstractSeriesList seriesList = new SeriesOnFile(FXCollections.observableList(arraySeries));
+            seriesList.setEpisodesToObservable();
             return seriesList;
         } else {
             AbstractSeriesList seriesList = new SeriesOnFile();

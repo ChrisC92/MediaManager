@@ -16,19 +16,26 @@ import java.util.Objects;
 
 public class Series implements java.io.Serializable {
     private SimpleStringProperty series;
-    private ObservableList<SimpleStringProperty> episodes;
+    private transient ObservableList<SimpleStringProperty> episodes;
+    private List<SimpleStringProperty> episodesText;
     private SimpleStringProperty currentEpisode;
 
     public Series(String series) {
         this.series = new SimpleStringProperty(series);
         this.episodes = FXCollections.observableArrayList();
-    }
+        this.episodesText = new ArrayList<>();
+}
 
+    public void listToObservable() {
+        episodes = FXCollections.observableArrayList(episodesText);
+    }
     public void addEpisode(String epName) {
         if (episodes.isEmpty()) {
             currentEpisode = new SimpleStringProperty(epName);
         }
-        episodes.add(new SimpleStringProperty(epName));
+        SimpleStringProperty toAdd = new SimpleStringProperty(epName);
+        episodes.add(toAdd);
+        episodesText.add(toAdd);
     }
 
     public void initialCurrentEpAssign(String epName) {

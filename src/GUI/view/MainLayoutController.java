@@ -122,9 +122,8 @@ public class MainLayoutController {
         setCurrentEpisode.setOnAction((event) -> {
             if (currentEpisodeSelected != null && onFileButton.isSelected()) {
                 currentSeriesSelected.setCurrentEpisode(currentEpisodeSelected.get());
-                currentSeriesSelected.setCurrentEpisode(currentEpisodeSelected.get());
                 bottomTextField.clear();
-                bottomTextField.appendText(currentEpisodeSelected.get());
+                bottomTextField.appendText("Change - " + currentEpisodeSelected.get());
                 currentEpisodeSelected = new SimpleStringProperty();
             } else if (allButton.isSelected()) {
                 bottomTextField.clear();
@@ -139,7 +138,7 @@ public class MainLayoutController {
      */
     private void episodeListInteraction() {
         episodeList.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) -> {
-            currentEpisodeSelected = newValue;
+                currentEpisodeSelected = newValue;
         }));
     }
 
