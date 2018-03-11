@@ -1,7 +1,5 @@
 # MediaManager
 
-![alt text](screenshot/Screen Shot 2018-03-11 at 17.37.46.png "Main Screen After Selecting New Current Episode")
-
 Tracks series that have been saved onto the users computer where the user can set current episode, this information is stored where there are two list options of the series that are currently on the file and also ones that have previously been deleted.
 
 Run from the src/GUI/MainApp class
