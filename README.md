@@ -1,12 +1,14 @@
 # MediaManager
 
-Tracks series that have been saved onto the users computer where the user can set current episode, this information is stored where there are two list options of the series that are currently on the file and also ones that have previously been deleted.
+GUI application that takes from a given file path of series directories that have been saved onto the users computer where the user can set current episode, this information is stored where there are two lists, one of anything that is currently on file and also one of anything that is on file and previously deleted.
+
+![alt text](screenshot/MainScreen.png "Main Screen After Selecting an Episode")
 
 Run from the src/GUI/MainApp class
 
 # Things To Note
-This applicaiton isn't smart enough to automatically group together a series if there are seperate series directories within a folder, so its best to have all the episodes grouped under the one directory.
+This application isn't smart enough to automatically group together a series if there are separate series directories within a folder, so its best to have all the episodes grouped under the one directory.
 
-# Acknoledgments
+# Acknowledgments
 
 For ordering naturally - https://github.com/paour/natorder  
