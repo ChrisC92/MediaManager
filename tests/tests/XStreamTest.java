@@ -1,10 +1,12 @@
-package xStream;
+package tests;
 
 
 import com.thoughtworks.xstream.XStream;
 import metadata.AbstractSeriesList;
 import metadata.SeriesOnFile;
 import metadata.SeriesSaved;
+import xStream.LoadFromFile;
+import xStream.SaveToFile;
 
 import java.io.File;
 

@@ -336,7 +336,7 @@
         <name></name>
       </javafx.beans.property.SimpleStringProperty>
       <javafx.beans.property.SimpleStringProperty>
-        <value>S07E23-Crossover*.mp4</value>
+        <value>S07E23-Crossover.mp4</value>
         <valid>true</valid>
         <name></name>
       </javafx.beans.property.SimpleStringProperty>
@@ -356,7 +356,7 @@
         <name></name>
       </javafx.beans.property.SimpleStringProperty>
       <javafx.beans.property.SimpleStringProperty>
-        <value>S07E27-Broke His Crown.mp4</value>
+        <value>S07E27-Broke His Crown*.mp4</value>
         <valid>true</valid>
         <name></name>
       </javafx.beans.property.SimpleStringProperty>
@@ -1452,7 +1452,11 @@
         <name></name>
       </javafx.beans.property.SimpleStringProperty>
     </episodesText>
-    <currentEpisode reference="../episodesText/javafx.beans.property.SimpleStringProperty[3]"/>
+    <currentEpisode>
+      <value>Delocated - S03E01 - Lipples.avi</value>
+      <valid>true</valid>
+      <name></name>
+    </currentEpisode>
   </metadata.Series>
   <metadata.Series>
     <series>
@@ -2227,7 +2231,11 @@
         <name></name>
       </javafx.beans.property.SimpleStringProperty>
     </episodesText>
-    <currentEpisode reference="../episodesText/javafx.beans.property.SimpleStringProperty[4]"/>
+    <currentEpisode>
+      <value>001 - Secret Of The Dragon Balls.rmvb</value>
+      <valid>true</valid>
+      <name></name>
+    </currentEpisode>
   </metadata.Series>
   <metadata.Series>
     <series>

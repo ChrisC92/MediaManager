@@ -1,4 +1,4 @@
-package GUI.view;
+package GUI.menus;
 
 import GUI.MainApp;
 import javafx.application.Platform;

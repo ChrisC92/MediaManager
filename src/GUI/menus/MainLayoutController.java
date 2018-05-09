@@ -1,7 +1,6 @@
-package GUI.view;
+package GUI.menus;
 
 import GUI.MainApp;
-import com.thoughtworks.xstream.XStream;
 import javafx.application.Platform;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
@@ -12,7 +11,7 @@ import javafx.util.Callback;
 import metadata.*;
 import xStream.LoadFromFile;
 import xStream.SaveToFile;
-import xStream.XStreamTest;
+
 
 import java.io.*;
 import java.util.Optional;
@@ -29,8 +28,6 @@ public class MainLayoutController {
 
     @FXML
     private Button setCurrentEpisode;
-
-    //TODO: delete button
 
     @FXML
     private ToggleButton onFileButton;
@@ -138,7 +135,7 @@ public class MainLayoutController {
      */
     private void episodeListInteraction() {
         episodeList.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) -> {
-                currentEpisodeSelected = newValue;
+            currentEpisodeSelected = newValue;
         }));
     }
 
@@ -199,7 +196,7 @@ public class MainLayoutController {
     /**
      * Deletes the file saved and then populates with the seriesOnFile
      */
-    public void deleteSavedFiles() {
+    void deleteSavedFiles() {
         allSeries = new SeriesSaved();
         populateSeriesLists(seriesOnFile);
         bottomTextField.clear();
@@ -214,7 +211,7 @@ public class MainLayoutController {
     /**
      * Saves the AllSeries list and also the filePath last used by the user to populate onFileList
      */
-    public void saveData() {
+    void saveData() {
         allSeries = AbstractSeriesList.combineSeries(allSeries, seriesOnFile);
         SaveToFile.saveSeriesToFile(allSeries);
         SaveToFile.saveFilePathToFile(seriesFilePath.getPath());

@@ -1,7 +1,7 @@
 package GUI;
 
-import GUI.view.MainLayoutController;
-import GUI.view.RootLayoutController;
+import GUI.menus.MainLayoutController;
+import GUI.menus.RootLayoutController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -37,7 +37,7 @@ public class MainApp extends Application {
     private void initRootLayout() {
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainApp.class.getResource("view/RootLayout.fxml"));
+            loader.setLocation(MainApp.class.getResource("menus/RootLayout.fxml"));
             rootLayout = loader.load();
 
             RootLayoutController rootController = loader.getController();
@@ -58,7 +58,7 @@ public class MainApp extends Application {
     private void initMainLayout() {
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainApp.class.getResource("view/MainLayout.fxml"));
+            loader.setLocation(MainApp.class.getResource("menus/MainLayout.fxml"));
             AnchorPane mainLayout = loader.load();
             rootLayout.setCenter(mainLayout);
             MainLayoutController mainController = loader.getController();
@@ -75,7 +75,7 @@ public class MainApp extends Application {
 
     public void linkToRootController() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("view/RootLayout.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("menus/RootLayout.fxml"));
             Parent root = (Parent) fxmlLoader.load();
             ((RootLayoutController) fxmlLoader.getController()).setStage(primaryStage);
         } catch (IOException io) {
