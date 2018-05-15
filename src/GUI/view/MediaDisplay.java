@@ -4,6 +4,7 @@ import metadata.AbstractSeriesList;
 import metadata.SeriesOnFile;
 
 import java.io.File;
+import java.io.IOException;
 
 import javafx.application.Application;
 import javafx.scene.Group;
@@ -16,29 +17,28 @@ public class MediaDisplay extends Application {
 
     private final File testEp = new File("/Users/ChrisCorner/Documents/Films_Series/Series/Adventure Time - Season 7/S07E01-Bonnie & Neddy.mp4");
     private MediaPlayer mediaPlayer;
-
-    public AbstractSeriesList getList() {
-        File filePath = new File("/Users/ChrisCorner/Documents/Films_Series/Series");
-        AbstractSeriesList seriesList = new SeriesOnFile(filePath);
-        return seriesList;
-    }
+    
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
-        primaryStage.setTitle("Media Player");
-        Group root = new Group();
-        Scene scene = new Scene(root, 540, 241);
+    public void start(Stage primaryStage) {
+        try {
+            primaryStage.setTitle("Media Player");
+            Group root = new Group();
+            Scene scene = new Scene(root, 540, 241);
 
-        Media media = new Media(testEp.toURI().toString());
-        mediaPlayer = new MediaPlayer(media);
-        mediaPlayer.setAutoPlay(true);
+            Media media = new Media(testEp.toURI().toString());
+            mediaPlayer = new MediaPlayer(media);
+            mediaPlayer.setAutoPlay(true);
 
-        MediaController mediaController = new MediaController(mediaPlayer);
-        scene.setRoot(mediaController);
+            MediaController mediaController = new MediaController(mediaPlayer);
+            scene.setRoot(mediaController);
 
-        primaryStage.setScene(scene);
-        primaryStage.sizeToScene();
-        primaryStage.show();
+            primaryStage.setScene(scene);
+            primaryStage.sizeToScene();
+            primaryStage.show();
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public static void main(String[] args) {

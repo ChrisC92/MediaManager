@@ -32,7 +32,7 @@ public class MainApp extends Application {
     }
 
     /**
-     * RootLayout contains the menu bar UI
+     * RootLayout contains the menu bar UI Scene object
      */
     private void initRootLayout() {
         try {

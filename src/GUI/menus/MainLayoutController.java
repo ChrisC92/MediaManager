@@ -30,6 +30,12 @@ public class MainLayoutController {
     private Button setCurrentEpisode;
 
     @FXML
+    private Button playCurrentEpisode;
+
+    @FXML
+    private Button playSelectedEpisode;
+
+    @FXML
     private ToggleButton onFileButton;
     @FXML
     private ToggleButton allButton;
@@ -72,6 +78,8 @@ public class MainLayoutController {
         episodeListInteraction();
         setCurrentEpInteraction();
         toggleButtonInteraction();
+        playCurrentEpisode();
+        playChosenEpisode();
     }
 
     private void initialFileSelect() {
@@ -125,6 +133,26 @@ public class MainLayoutController {
             } else if (allButton.isSelected()) {
                 bottomTextField.clear();
                 bottomTextField.appendText("Setting Current episode must work from the onFile list");
+            }
+        });
+    }
+
+    /**
+     *  Will start playing from selected series and updates current episode whenever it opens a new one
+     */
+    private void playCurrentEpisode() {
+        playCurrentEpisode.setOnAction((event) -> {
+
+        });
+    }
+
+    /**
+     *  Will play the selected episode however this will not affect the current episode
+     */
+    private void playChosenEpisode() {
+        playSelectedEpisode.setOnAction((event) -> {
+            if(currentEpisodeSelected != null && onFileButton.isSelected()) {
+
             }
         });
     }
