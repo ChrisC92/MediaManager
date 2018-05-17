@@ -15,10 +15,10 @@
 # Untracked files:
 #	.DS_Store
 #	.idea/libraries/
-#	.idea/misc.xStream
-#	.idea/modules.xStream
-#	.idea/uiDesigner.xStream
-#	.idea/workspace.xStream
+#	.idea/misc.saveandload
+#	.idea/modules.saveandload
+#	.idea/uiDesigner.saveandload
+#	.idea/workspace.saveandload
 Get SeriesInfo class - returns an array of series with episodes both as an array of Files and Strings
 
 CLass has two different ways of getting the info from a given file path, one stores the files however

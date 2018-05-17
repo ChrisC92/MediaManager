@@ -14,7 +14,6 @@ import java.util.List;
 public class SeriesOnFile extends AbstractSeriesList {
 
     public SeriesOnFile() {
-        //TODO: refactor to not use a method
         super(createSeriesList());
     }
 

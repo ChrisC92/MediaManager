@@ -5,8 +5,8 @@ import com.thoughtworks.xstream.XStream;
 import metadata.AbstractSeriesList;
 import metadata.SeriesOnFile;
 import metadata.SeriesSaved;
-import xStream.LoadFromFile;
-import xStream.SaveToFile;
+import saveandload.LoadFromFile;
+import saveandload.SaveToFile;
 
 import java.io.File;
 

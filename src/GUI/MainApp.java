@@ -66,8 +66,6 @@ public class MainApp extends Application {
             mainController.setStage(primaryStage);
             mainController.setMainApp(this);
             RootLayoutController.setMainController(mainController);
-
-
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -76,7 +74,7 @@ public class MainApp extends Application {
     public void linkToRootController() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("menus/RootLayout.fxml"));
-            Parent root = (Parent) fxmlLoader.load();
+            Parent root = fxmlLoader.load();
             ((RootLayoutController) fxmlLoader.getController()).setStage(primaryStage);
         } catch (IOException io) {
             io.printStackTrace();

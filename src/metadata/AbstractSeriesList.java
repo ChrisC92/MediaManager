@@ -7,10 +7,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-
 /**
- * Abstract class for the SeriesList, with all base components the subclasses alter the ways in which the data is retrieved
- * to populate the List
+ * Abstract class for the SeriesList, with all base components the subclasses alter the ways in which the data is
+ * retrieved to populate the List
  */
 
 public abstract class AbstractSeriesList {
@@ -92,10 +91,7 @@ public abstract class AbstractSeriesList {
     }
 
     public boolean isEmpty() {
-        if (seriesList.size() == 0) {
-            return true;
-        }
-        return false;
+        return seriesList.size() == 0;
     }
 
     @Override

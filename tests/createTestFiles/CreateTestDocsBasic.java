@@ -40,7 +40,7 @@ public class CreateTestDocsBasic {
         }
         file = file + fileName;
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter(file.toString()));
+            BufferedWriter writer = new BufferedWriter(new FileWriter(file));
             writer.write("This is an episode");
             writer.close();
         } catch (IOException e) {

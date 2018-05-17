@@ -1,10 +1,7 @@
 package metadata;
 
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import xStream.LoadFromFile;
-
-import java.io.*;
+import saveandload.LoadFromFile;
 
 public class SeriesSaved extends AbstractSeriesList {
 

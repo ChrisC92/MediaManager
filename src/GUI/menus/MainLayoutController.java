@@ -1,6 +1,7 @@
 package GUI.menus;
 
 import GUI.MainApp;
+import GUI.view.MediaDisplay;
 import javafx.application.Platform;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
@@ -8,12 +9,14 @@ import javafx.scene.control.*;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 import javafx.util.Callback;
-import metadata.*;
-import xStream.LoadFromFile;
-import xStream.SaveToFile;
+import metadata.AbstractSeriesList;
+import metadata.Series;
+import metadata.SeriesOnFile;
+import metadata.SeriesSaved;
+import saveandload.LoadFromFile;
+import saveandload.SaveToFile;
 
-
-import java.io.*;
+import java.io.File;
 import java.util.Optional;
 
 /**
@@ -107,7 +110,6 @@ public class MainLayoutController {
     }
 
     private void toggleButtonInteraction() {
-        //TODO: either handle when null or prevent being null
         buttonGroup.getSelectedToggle().selectedProperty().addListener(((observable,
                                                                          oldValue, newValue) -> {
             if (!seriesOnFile.isEmpty() || !allSeries.isEmpty())
@@ -152,7 +154,12 @@ public class MainLayoutController {
     private void playChosenEpisode() {
         playSelectedEpisode.setOnAction((event) -> {
             if(currentEpisodeSelected != null && onFileButton.isSelected()) {
-
+                StringBuilder sb = new StringBuilder(seriesFilePath.toString());
+                sb.append("/");
+                sb.append(currentSeriesSelected.getName());
+                sb.append("/");
+                sb.append(currentEpisodeSelected.getValue());
+                MediaDisplay.openDisplay(stage, new File(sb.toString()));
             }
         });
     }
@@ -176,7 +183,6 @@ public class MainLayoutController {
             if (newValue != null) {
                 currentSeriesSelected = newValue;
                 bottomTextField.clear();
-
                 episodeList.setItems(newValue.getEpisodes());
                 /** Set cell factory to render the episode names */
                 episodeList.setCellFactory(new Callback<ListView<SimpleStringProperty>, ListCell<SimpleStringProperty>>() {
