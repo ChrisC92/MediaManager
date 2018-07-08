@@ -17,7 +17,7 @@ import java.util.Objects;
 public class Series implements java.io.Serializable {
 
     private SimpleStringProperty series;
-    //Two episode lists as text List is able to be saved where the observable list if for GUI use only
+    //Two episode lists as text List is able to be saved where the observable list if for gui use only
     private transient ObservableList<SimpleStringProperty> episodes;
     private List<SimpleStringProperty> episodesText;
     private SimpleStringProperty currentEpisode;

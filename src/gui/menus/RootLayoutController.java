@@ -1,6 +1,6 @@
-package GUI.menus;
+package gui.menus;
 
-import GUI.MainApp;
+import gui.MainApp;
 import javafx.application.Platform;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
@@ -16,19 +16,14 @@ import java.util.ResourceBundle;
 
 
 /**
- * Root layout of the GUI. Provides the basic layout which contains the menu bar and space
+ * Root layout of the gui. Provides the basic layout which contains the menu bar and space
  * where other JavaFX elements can be placed
  */
 
-public class RootLayoutController implements Initializable {
+public class RootLayoutController {
     private Stage stage;
     private MainApp mainApp;
     private static MainLayoutController mainController;
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-
-    }
 
     public void doExit() {
         ButtonType saveButton = new ButtonType("Save", ButtonBar.ButtonData.OK_DONE);

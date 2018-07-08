@@ -1,7 +1,7 @@
-package GUI;
+package gui;
 
-import GUI.menus.MainLayoutController;
-import GUI.menus.RootLayoutController;
+import gui.menus.MainLayoutController;
+import gui.menus.RootLayoutController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

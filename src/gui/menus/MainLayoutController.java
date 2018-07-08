@@ -1,7 +1,7 @@
-package GUI.menus;
+package gui.menus;
 
-import GUI.MainApp;
-import GUI.view.MediaDisplay;
+import gui.MainApp;
+import gui.mediaplayer.MediaDisplay;
 import javafx.application.Platform;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
@@ -159,7 +159,7 @@ public class MainLayoutController {
                 sb.append(currentSeriesSelected.getName());
                 sb.append("/");
                 sb.append(currentEpisodeSelected.getValue());
-                MediaDisplay.openDisplay(stage, new File(sb.toString()));
+                MediaDisplay.playEpisode(stage, new File(sb.toString()));
             }
         });
     }
