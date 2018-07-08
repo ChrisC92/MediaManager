@@ -43,19 +43,20 @@ public class MediaController {
     private MediaView mediaView;
 
 
-    private boolean endOfMedia = false;
+    private boolean atEndOfMedia = false;
 
     private MediaDisplay mainApp;
 
 
     @FXML
     public void initialize() {
+        setSliderValues();
 
     }
 
     // sets both the volume and the time sliders
-    private void setSliderValues(MediaPlayer mp) {
-        Duration stopTime = mp.getStopTime();
+    private void setSliderValues() {
+        Duration stopTime = mediaPlayer.getStopTime();
         timeSlider.setMax(stopTime.toSeconds());
         timeSlider.setMin(0.0);
         volumeSlider.setMin(0.0);
@@ -65,7 +66,25 @@ public class MediaController {
     @FXML
     private void playPause() {
         play.setOnAction(event -> {
+            MediaPlayer.Status status = mediaPlayer.getStatus();
 
+            if(status == MediaPlayer.Status.UNKNOWN || status == MediaPlayer.Status.HALTED ) {
+                // don't do anything in these states
+                return;
+            }
+
+            if(status == MediaPlayer.Status.PAUSED
+                    || status == MediaPlayer.Status.READY
+                    || status == MediaPlayer.Status.STOPPED) {
+                //rewind if at end of media
+                if(atEndOfMedia) {
+                    mediaPlayer.seek(mediaPlayer.getStartTime());
+                    atEndOfMedia = false;
+                }
+                mediaPlayer.play();
+            } else {
+                mediaPlayer.pause();
+            }
         });
     }
 
