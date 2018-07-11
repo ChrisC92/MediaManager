@@ -7,22 +7,6 @@
 <?import javafx.scene.media.*?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.mediaplayer.MediaController">
-   <top>
-      <MenuBar BorderPane.alignment="CENTER">
-        <menus>
-          <Menu mnemonicParsing="false" text="File">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
-   </top>
    <center>
       <MediaView fx:id="mediaView" fitHeight="200.0" fitWidth="200.0" BorderPane.alignment="CENTER" />
    </center>
@@ -39,7 +23,7 @@
                   <Insets left="5.0" top="5.0" />
                </HBox.margin>
             </Button>
-            <Slider fx:id="timeSlider" prefHeight="20.0" prefWidth="290.0">
+            <Slider fx:id="timeSlider" prefHeight="20.0" prefWidth="270.0">
                <HBox.margin>
                   <Insets left="10.0" top="14.0" />
                </HBox.margin>
@@ -47,14 +31,14 @@
                   <Insets left="5.0" />
                </padding>
             </Slider>
-            <Label fx:id="playTime" prefHeight="20.0" prefWidth="95.0" text="Time" textAlignment="CENTER">
+            <Label fx:id="playTime" prefHeight="20.0" prefWidth="85.0" text="Time" textAlignment="CENTER">
                <HBox.margin>
                   <Insets top="14.0" />
                </HBox.margin>
             </Label>
             <Button fx:id="muteVolume" mnemonicParsing="false" onAction="#mute" prefHeight="35.0" prefWidth="40.0" text="V">
                <HBox.margin>
-                  <Insets left="15.0" top="5.0" />
+                  <Insets left="5.0" top="5.0" />
                </HBox.margin>
             </Button>
             <Slider fx:id="volumeSlider" prefHeight="20.0" prefWidth="90.0">
@@ -62,6 +46,11 @@
                   <Insets left="5.0" top="14.0" />
                </HBox.margin>
             </Slider>
+            <Button fx:id="fullScreen" mnemonicParsing="false" onAction="#setFullScreen" prefHeight="35.0" prefWidth="40.0" text="F">
+               <HBox.margin>
+                  <Insets left="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
          </children></HBox>
    </bottom>
 </BorderPane>

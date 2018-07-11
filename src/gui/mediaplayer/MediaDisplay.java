@@ -12,10 +12,10 @@ import java.util.Queue;
 public class MediaDisplay extends Application {
 
     private File testEp = new File("/Users/ChrisCorner/Documents/Films_Series/Series/Adventure Time - Season 7/S07E01-Bonnie & Neddy.mp4");
-
+    private Stage primaryStage;
     @Override
     public void start(Stage stage) throws Exception {
-        Stage primaryStage = stage;
+        primaryStage = stage;
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/mediaplayer/MediaController.fxml"));
         BorderPane pane = loader.load();
         Scene scene = new Scene(pane, 650, 400);
@@ -32,11 +32,14 @@ public class MediaDisplay extends Application {
     }
 
     private void bindSize(MediaController controller, Scene scene) {
-        controller.timerSliderWidthProperty().bind(scene.widthProperty().subtract(300));
+        controller.timerSliderWidthProperty().bind(scene.widthProperty().subtract(380));
         controller.mediaViewWidthProperty().bind(scene.widthProperty());
-        controller.mediaViewHeightProperty().bind(scene.heightProperty().subtract(74));
+        controller.mediaViewHeightProperty().bind(scene.heightProperty().subtract(46));
     }
 
+    public Stage getPrimaryStage() {
+        return primaryStage;
+    }
 
     public static void main(String[] args) {
         launch(args);

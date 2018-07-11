@@ -32,6 +32,9 @@ public class MediaController {
     private Button muteVolume;
 
     @FXML
+    private Button fullScreen;
+
+    @FXML
     private Label playTime;
 
     @FXML
@@ -52,6 +55,7 @@ public class MediaController {
     @FXML
     private HBox mediaControl;
 
+
     private boolean atEndOfMedia = false;
 
     private MediaDisplay mainApp;
@@ -71,6 +75,8 @@ public class MediaController {
         // list of methods below initializes each class and adds listeners to controls
         playPause();
         mute();
+        setFullScreen();
+        stop();
     }
 
     protected void updateTime() {
@@ -138,8 +144,8 @@ public class MediaController {
     @FXML
     private void stop() {
 
-        MediaPlayer.Status status = mediaPlayer.getStatus();
         stop.setOnAction(event -> {
+            MediaPlayer.Status status = mediaPlayer.getStatus();
             if (status == MediaPlayer.Status.UNKNOWN || status == MediaPlayer.Status.HALTED) {
                 // don't do anything in these states
                 return;
@@ -166,6 +172,13 @@ public class MediaController {
                 mediaPlayer.setVolume(0.5);
                 volumeSlider.setValue(0.5);
             }
+        });
+    }
+
+    @FXML
+    private void setFullScreen() {
+        fullScreen.setOnAction(event -> {
+            mainApp.getPrimaryStage().setFullScreen(true);
         });
     }
 
