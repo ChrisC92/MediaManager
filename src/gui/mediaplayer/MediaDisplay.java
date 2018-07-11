@@ -34,7 +34,7 @@ public class MediaDisplay extends Application {
     private void bindSize(MediaController controller, Scene scene) {
         controller.timerSliderWidthProperty().bind(scene.widthProperty().subtract(300));
         controller.mediaViewWidthProperty().bind(scene.widthProperty());
-        controller.mediaViewHeightProperty().bind(scene.heightProperty().subtract(70));
+        controller.mediaViewHeightProperty().bind(scene.heightProperty().subtract(74));
     }
 
 

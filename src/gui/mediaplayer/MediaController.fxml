@@ -27,7 +27,7 @@
       <MediaView fx:id="mediaView" fitHeight="200.0" fitWidth="200.0" BorderPane.alignment="CENTER" />
    </center>
    <bottom>
-      <HBox prefHeight="44.0" prefWidth="600.0" style="-fx-background-color: grey;" BorderPane.alignment="CENTER">
+      <HBox fx:id="mediaControl" prefHeight="45.0" prefWidth="600.0" style="-fx-background-color: grey;" BorderPane.alignment="CENTER">
          <children>
             <Button fx:id="play" mnemonicParsing="false" onAction="#playPause" prefHeight="35.0" prefWidth="40.0" text="&gt;">
                <HBox.margin>
@@ -39,19 +39,22 @@
                   <Insets left="5.0" top="5.0" />
                </HBox.margin>
             </Button>
-            <Slider fx:id="timeSlider" prefHeight="20.0" prefWidth="300.0">
+            <Slider fx:id="timeSlider" prefHeight="20.0" prefWidth="290.0">
                <HBox.margin>
                   <Insets left="10.0" top="14.0" />
                </HBox.margin>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
             </Slider>
-            <Label fx:id="time" prefHeight="20.0" prefWidth="50.0" text="Time" textAlignment="CENTER">
+            <Label fx:id="playTime" prefHeight="20.0" prefWidth="95.0" text="Time" textAlignment="CENTER">
                <HBox.margin>
                   <Insets top="14.0" />
                </HBox.margin>
             </Label>
-            <Button fx:id="muteVolume" mnemonicParsing="false" prefHeight="35.0" prefWidth="40.0" text="V">
+            <Button fx:id="muteVolume" mnemonicParsing="false" onAction="#mute" prefHeight="35.0" prefWidth="40.0" text="V">
                <HBox.margin>
-                  <Insets left="20.0" top="5.0" />
+                  <Insets left="15.0" top="5.0" />
                </HBox.margin>
             </Button>
             <Slider fx:id="volumeSlider" prefHeight="20.0" prefWidth="90.0">

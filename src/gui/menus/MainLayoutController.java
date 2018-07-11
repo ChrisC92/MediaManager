@@ -75,6 +75,7 @@ public class MainLayoutController {
         allButton.setSelected(true);
         allSeries = new SeriesSaved();
 
+        // list of methods below initializes each class and adds listeners to controls
         initialFileSelect();
         populateSeriesLists(allSeries);
         displayedSeriesInteraction();
