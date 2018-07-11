@@ -4,16 +4,16 @@ package gui.mediaplayer;
 import gui.mediaplayer.util.FormatTime;
 import javafx.animation.FadeTransition;
 import javafx.application.Platform;
-import javafx.beans.InvalidationListener;
-import javafx.beans.Observable;
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.layout.HBox;
 import javafx.scene.media.Media;
+import javafx.scene.media.MediaException;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 import javafx.util.Duration;
@@ -165,7 +165,7 @@ public class MediaController {
     @FXML
     private void mute() {
         muteVolume.setOnAction(event -> {
-            if(mediaPlayer.getVolume() != 0) {
+            if (mediaPlayer.getVolume() != 0) {
                 mediaPlayer.setVolume(0);
                 volumeSlider.setValue(0);
             } else {
@@ -182,24 +182,39 @@ public class MediaController {
         });
     }
 
-    void playEpisode() {
-        File file = mainApp.getTestEp();
-        media = new Media(file.toURI().toString());
-        mediaPlayer = new MediaPlayer(media);
-        mediaView.setMediaPlayer(mediaPlayer);
+    public void playEpisode(File episode) {
+        if (mediaIsPlayable(episode)) {
+            media = new Media(episode.toURI().toString());
+            mediaPlayer = new MediaPlayer(media);
+            mediaView.setMediaPlayer(mediaPlayer);
 
-        mediaPlayer.setOnReady(() -> {
-            endTime = mediaPlayer.getStopTime();
-            mediaPlayer.setAutoPlay(true);
-            mediaPlayer.currentTimeProperty().addListener(observable -> {
-                updateTime();
+            mediaPlayer.setOnReady(() -> {
+                endTime = mediaPlayer.getStopTime();
+                mediaPlayer.setAutoPlay(true);
+                mediaPlayer.currentTimeProperty().addListener(observable -> {
+                    updateTime();
+                });
+                mediaPlayer.play();
+                setSliderValues();
+                mediaView.setPreserveRatio(false);
+                mediaView.autosize();
             });
-            mediaPlayer.play();
-            setSliderValues();
-            mediaView.setPreserveRatio(false);
-            mediaView.autosize();
-        });
+        } else {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Media Unsupported");
+            alert.setHeaderText("!");
+            alert.setContentText("The media selected is unsupported");
+            alert.showAndWait();
+        }
+    }
 
+    private static boolean mediaIsPlayable(File episode) {
+        try {
+            Media media = new Media(episode.toURI().toString());
+        } catch (MediaException e) {
+            return false;
+        }
+        return true;
     }
 
 

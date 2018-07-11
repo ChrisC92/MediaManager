@@ -27,7 +27,7 @@ public class MainLayoutController {
 
 
     @FXML
-    private TextField bottomTextField;
+    private TextField textField;
 
     @FXML
     private Button setCurrentEpisode;
@@ -41,7 +41,7 @@ public class MainLayoutController {
     @FXML
     private ToggleButton onFileButton;
     @FXML
-    private ToggleButton allButton;
+    private ToggleButton allSeriesButton;
     final ToggleGroup buttonGroup = new ToggleGroup();
 
     @FXML
@@ -71,8 +71,8 @@ public class MainLayoutController {
     @FXML
     private void initialize() {
         onFileButton.setToggleGroup(buttonGroup);
-        allButton.setToggleGroup(buttonGroup);
-        allButton.setSelected(true);
+        allSeriesButton.setToggleGroup(buttonGroup);
+        allSeriesButton.setSelected(true);
         allSeries = new SeriesSaved();
 
         // list of methods below initializes each class and adds listeners to controls
@@ -114,7 +114,7 @@ public class MainLayoutController {
         buttonGroup.getSelectedToggle().selectedProperty().addListener(((observable,
                                                                          oldValue, newValue) -> {
             if (!seriesOnFile.isEmpty() || !allSeries.isEmpty())
-                if (allButton.isSelected()) {
+                if (allSeriesButton.isSelected()) {
                     populateSeriesLists(allSeries);
                 } else if (onFileButton.isSelected()) {
                     populateSeriesLists(seriesOnFile);
@@ -130,18 +130,18 @@ public class MainLayoutController {
         setCurrentEpisode.setOnAction((event) -> {
             if (currentEpisodeSelected != null && onFileButton.isSelected()) {
                 currentSeriesSelected.setCurrentEpisode(currentEpisodeSelected.get());
-                bottomTextField.clear();
-                bottomTextField.appendText("Change - " + currentEpisodeSelected.get());
+                textField.clear();
+                textField.appendText("Change - " + currentEpisodeSelected.get());
                 currentEpisodeSelected = new SimpleStringProperty();
-            } else if (allButton.isSelected()) {
-                bottomTextField.clear();
-                bottomTextField.appendText("Setting Current episode must work from the onFile list");
+            } else if (allSeriesButton.isSelected()) {
+                textField.clear();
+                textField.appendText("Setting Current episode must work from the onFile list");
             }
         });
     }
 
     /**
-     *  Will start playing from selected series and updates current episode whenever it opens a new one
+     * Will start playing from selected series and updates current episode whenever it opens a new one
      */
     private void playCurrentEpisode() {
         playCurrentEpisode.setOnAction((event) -> {
@@ -150,17 +150,25 @@ public class MainLayoutController {
     }
 
     /**
-     *  Will play the selected episode however this will not affect the current episode
+     * Will play the selected episode however this will not affect the current episode
      */
     private void playChosenEpisode() {
         playSelectedEpisode.setOnAction((event) -> {
-            if(currentEpisodeSelected != null && onFileButton.isSelected()) {
+            MediaDisplay mediaDisplay = new MediaDisplay();
+            if (currentEpisodeSelected != null && onFileButton.isSelected()) {
                 StringBuilder sb = new StringBuilder(seriesFilePath.toString());
                 sb.append("/");
                 sb.append(currentSeriesSelected.getName());
                 sb.append("/");
                 sb.append(currentEpisodeSelected.getValue());
-                MediaDisplay.playEpisode(stage, new File(sb.toString()));
+                try {
+                    mediaDisplay.playEpisode(stage, new File(sb.toString()));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            } else if (allSeriesButton.isSelected()) {
+                textField.clear();
+                textField.appendText("Unable to open chosen if All Series Button is selected");
             }
         });
     }
@@ -183,7 +191,7 @@ public class MainLayoutController {
         seriesDisplayed.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) -> {
             if (newValue != null) {
                 currentSeriesSelected = newValue;
-                bottomTextField.clear();
+                textField.clear();
                 episodeList.setItems(newValue.getEpisodes());
                 /** Set cell factory to render the episode names */
                 episodeList.setCellFactory(new Callback<ListView<SimpleStringProperty>, ListCell<SimpleStringProperty>>() {
@@ -202,7 +210,7 @@ public class MainLayoutController {
                         };
                     }
                 });
-                bottomTextField.appendText(newValue.getCurrentEpisode());
+                textField.appendText(newValue.getCurrentEpisode());
             }
         }));
     }
@@ -234,8 +242,8 @@ public class MainLayoutController {
     void deleteSavedFiles() {
         allSeries = new SeriesSaved();
         populateSeriesLists(seriesOnFile);
-        bottomTextField.clear();
-        bottomTextField.appendText("File has been deleted");
+        textField.clear();
+        textField.appendText("File has been deleted");
     }
 
 
@@ -258,8 +266,8 @@ public class MainLayoutController {
         allSeries = AbstractSeriesList.combineSeries(allSeries, seriesOnFile);
         populateSeriesLists(seriesOnFile);
         onFileButton.setSelected(true);
-        bottomTextField.clear();
-        bottomTextField.appendText("Series from file populated");
+        textField.clear();
+        textField.appendText("Series from file populated");
     }
 
     public void setStage(Stage primaryStage) {

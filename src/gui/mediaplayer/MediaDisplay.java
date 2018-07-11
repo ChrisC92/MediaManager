@@ -1,6 +1,5 @@
 package gui.mediaplayer;
 
-import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
@@ -9,12 +8,11 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.util.Queue;
 
-public class MediaDisplay extends Application {
+public class MediaDisplay {
 
-    private File testEp = new File("/Users/ChrisCorner/Documents/Films_Series/Series/Adventure Time - Season 7/S07E01-Bonnie & Neddy.mp4");
     private Stage primaryStage;
-    @Override
-    public void start(Stage stage) throws Exception {
+
+    public void playEpisode(Stage stage, File episode) throws Exception {
         primaryStage = stage;
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/mediaplayer/MediaController.fxml"));
         BorderPane pane = loader.load();
@@ -23,15 +21,16 @@ public class MediaDisplay extends Application {
         MediaController controller = loader.getController();
         bindSize(controller, scene);
         controller.setMainApp(this);
-        controller.playEpisode();
+        controller.playEpisode(episode);
         primaryStage.show();
     }
 
-    private void setTestEp(File testEp) {
-        this.testEp = testEp;
+    public static void playPlaylist(Stage stage, Queue playlist) {
+        //TODO: complete playPlaylist method
     }
 
-    private void bindSize(MediaController controller, Scene scene) {
+
+    private static void bindSize(MediaController controller, Scene scene) {
         controller.timerSliderWidthProperty().bind(scene.widthProperty().subtract(380));
         controller.mediaViewWidthProperty().bind(scene.widthProperty());
         controller.mediaViewHeightProperty().bind(scene.heightProperty().subtract(46));
@@ -39,21 +38,5 @@ public class MediaDisplay extends Application {
 
     public Stage getPrimaryStage() {
         return primaryStage;
-    }
-
-    public static void main(String[] args) {
-        launch(args);
-    }
-
-    public File getTestEp() {
-        return testEp;
-    }
-
-    public static void playEpisode(Stage stage, File episode){
-        // TODO: once code is completed and tested implement to static method
-    }
-
-    public static void playPlaylist(Stage stage, Queue playlist) {
-        //TODO: complete playPlaylist method
     }
 }
